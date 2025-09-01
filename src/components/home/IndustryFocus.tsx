@@ -3,35 +3,47 @@ import { Shirt, Gem, Tv, Home, Building2, ShoppingBag } from "lucide-react";
 export default function IndustryFocus() {
   const industries = [
     {
-      icon: <Shirt className="h-10 w-10 text-primary" />,
+      icon: (
+        <Shirt className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
       title: "Fashion & Apparels",
       description:
         "Trendy and high-quality lifestyle products for the modern consumer.",
     },
     {
-      icon: <Gem className="h-10 w-10 text-primary" />,
+      icon: (
+        <Gem className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
       title: "Luxury Accessories",
       description: "Premium global brands delivering elegance and durability.",
     },
     {
-      icon: <Tv className="h-10 w-10 text-primary" />,
+      icon: (
+        <Tv className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
       title: "Consumer Durables",
       description: "Reliable products that elevate everyday living.",
     },
     {
-      icon: <Home className="h-10 w-10 text-primary" />,
+      icon: (
+        <Home className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
       title: "Consumer Appliances",
       description:
         "Smart appliances making households efficient and connected.",
     },
     {
-      icon: <Building2 className="h-10 w-10 text-primary" />,
+      icon: (
+        <Building2 className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
       title: "Coworking Spaces",
       description:
         "Supplying essential lifestyle and tech accessories across work hubs.",
     },
     {
-      icon: <ShoppingBag className="h-10 w-10 text-primary" />,
+      icon: (
+        <ShoppingBag className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
       title: "D2C Distribution",
       description:
         "Trusted partner for international brands expanding in India.",

@@ -21,7 +21,7 @@ const FlyoutLink = ({
       onMouseLeave={() => setOpen(false)}
       className="relative"
     >
-      <button className="flex items-center font-medium text-gray-700 hover:text-primary">
+      <button className="flex items-center font-medium text-gray-700 hover:text-primary-primary">
         {children}
       </button>
 
@@ -48,10 +48,13 @@ const FlyoutLink = ({
 // About Us Dropdown Content
 const AboutContent = () => (
   <div className="w-48 p-4 space-y-2">
-    <Link to="/about" className="block text-sm hover:underline">
+    <Link to="/about" className="block text-sm  hover:text-primary-primary">
       Our Story
     </Link>
-    <Link to="/management" className="block text-sm hover:underline">
+    <Link
+      to="/management"
+      className="block text-sm  hover:text-primary-primary"
+    >
       Leadership Team
     </Link>
   </div>
@@ -60,16 +63,22 @@ const AboutContent = () => (
 // Solutions Dropdown Content
 const SolutionsContent = () => (
   <div className="w-56 p-4 space-y-2">
-    <Link to="/industry" className="block text-sm hover:underline">
+    <Link to="/industry" className="block text-sm hover:text-primary-primary">
       Industries We Serve
     </Link>
-    <Link to="/competencies" className="block text-sm hover:underline">
+    <Link
+      to="/competencies"
+      className="block text-sm hover:text-primary-primary"
+    >
       Our Expertise
     </Link>
-    <Link to="/channels" className="block text-sm hover:underline">
+    <Link to="/channels" className="block text-sm hover:text-primary-primary">
       Distribution Network
     </Link>
-    <Link to="/specialists" className="block text-sm hover:underline">
+    <Link
+      to="/specialists"
+      className="block text-sm hover:text-primary-primary"
+    >
       Business Models
     </Link>
   </div>
@@ -90,15 +99,25 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8 items-center z-50">
             <FlyoutLink FlyoutContent={AboutContent}>
-              <span className="hover:underline underline-offset-8 transition-all z-50">About Us</span>
+              <span className="hover:underline underline-offset-8 transition-all z-50">
+                About Us
+              </span>
             </FlyoutLink>
             <FlyoutLink FlyoutContent={SolutionsContent}>
-              <span className="hover:underline underline-offset-8 transition-all z-50">Solutions</span>
+              <span className="hover:underline underline-offset-8 transition-all z-50">
+                Solutions
+              </span>
             </FlyoutLink>
-            <Link to="/brands" className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50">
+            <Link
+              to="/brands"
+              className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
+            >
               Partners
             </Link>
-            <Link to="/contact" className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50">
+            <Link
+              to="/contact"
+              className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
+            >
               Contact Us
             </Link>
           </div>
@@ -109,7 +128,11 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-primary focus:outline-none z-50"
             >
-              {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+              {isOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -121,25 +144,43 @@ export default function Navbar() {
           <Link to="/about" className="block text-gray-700 hover:text-primary">
             Our Story
           </Link>
-          <Link to="/management" className="block text-gray-700 hover:text-primary">
+          <Link
+            to="/management"
+            className="block text-gray-700 hover:text-primary"
+          >
             Leadership Team
           </Link>
-          <Link to="/industry" className="block text-gray-700 hover:text-primary">
+          <Link
+            to="/industry"
+            className="block text-gray-700 hover:text-primary"
+          >
             Industries We Serve
           </Link>
-          <Link to="/competencies" className="block text-gray-700 hover:text-primary">
+          <Link
+            to="/competencies"
+            className="block text-gray-700 hover:text-primary"
+          >
             Our Expertise
           </Link>
-          <Link to="/channels" className="block text-gray-700 hover:text-primary">
+          <Link
+            to="/channels"
+            className="block text-gray-700 hover:text-primary"
+          >
             Distribution Network
           </Link>
-          <Link to="/specialists" className="block text-gray-700 hover:text-primary">
+          <Link
+            to="/specialists"
+            className="block text-gray-700 hover:text-primary"
+          >
             Business Models
           </Link>
           <Link to="/brands" className="block text-gray-700 hover:text-primary">
             Partners
           </Link>
-          <Link to="/contact" className="block text-gray-700 hover:text-primary">
+          <Link
+            to="/contact"
+            className="block text-gray-700 hover:text-primary"
+          >
             Contact Us
           </Link>
         </div>

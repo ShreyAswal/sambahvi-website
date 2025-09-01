@@ -24,7 +24,8 @@ export default function ContactCTA() {
             Get in Touch
           </h2>
           <p className="text-lg text-gray-700 mb-6">
-            Interested in partnering with Sambahvi Agencies or have questions? Fill the form or reach out directly. We’re happy to help!
+            Interested in partnering with Sambahvi Agencies or have questions?
+            Fill the form or reach out directly. We’re happy to help!
           </p>
           <p className="flex items-center justify-center lg:justify-start gap-2 text-gray-900 font-medium mb-2">
             📧 contact@sambahvi.com
@@ -70,9 +71,9 @@ export default function ContactCTA() {
             50% { transform: translateX(-20px); }
             100% { transform: translateX(0); }
           }
-          .animate-wave {
-            animation: wave 6s ease-in-out infinite;
-          }
+          // .animate-wave {
+          //   animation: wave 6s ease-in-out infinite;
+          // }
         `}
       </style>
     </section>

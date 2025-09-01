@@ -1,9 +1,8 @@
-import Hero from "../components/Hero";
-import BrandsSection from "../components/BrandsSection";
-import Competencies from "../components/Competencies";
-import Footer from "../components/Footer";
-import IndustryFocus from "../components/IndustryFocus";
-import ContactCTA from "../components/ContactCTA";
+import Hero from "../components/home/Hero";
+import BrandsSection from "../components/home/BrandsSection";
+import Competencies from "../components/home/Competencies";
+import IndustryFocus from "../components/home/IndustryFocus";
+import ContactCTA from "../components/home/ContactCTA";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <IndustryFocus />
       {/* <Competencies /> */}
       <ContactCTA />
-      {/* <Footer /> */}
     </>
   );
 }

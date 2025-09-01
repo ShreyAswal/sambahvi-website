@@ -81,7 +81,6 @@ export default function CompetenciesSection() {
   return (
     <section className="relative bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        
         {/* Left: Cards */}
         <div className="space-y-6 lg:overflow-y-auto lg:h-[500px] pr-2">
           {competencies.map((item, index) => (

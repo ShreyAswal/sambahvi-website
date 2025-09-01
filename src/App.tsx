@@ -26,12 +26,17 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} /> {/* Our Story */}
-            <Route path="/industry" element={<Industry />} /> {/* Industries We Serve */}
-            <Route path="/competencies" element={<Competencies />} /> {/* Our Expertise */}
-            <Route path="/channels" element={<Channels />} /> {/* Distribution Network */}
-            <Route path="/specialists" element={<Specialists />} /> {/* Solutions */}
+            <Route path="/industry" element={<Industry />} />{" "}
+            {/* Industries We Serve */}
+            <Route path="/competencies" element={<Competencies />} />{" "}
+            {/* Our Expertise */}
+            <Route path="/channels" element={<Channels />} />{" "}
+            {/* Distribution Network */}
+            <Route path="/specialists" element={<Specialists />} />{" "}
+            {/* Solutions */}
             <Route path="/brands" element={<Brands />} /> {/* Our Partners */}
-            <Route path="/management" element={<Management />} /> {/* Leadership Team */}
+            <Route path="/management" element={<Management />} />{" "}
+            {/* Leadership Team */}
             <Route path="/contact" element={<Contact />} /> {/* Contact Us */}
           </Routes>
         </main>
