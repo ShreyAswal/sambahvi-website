@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 interface HeroBannerProps {
   title: string;
   tagline: string;
