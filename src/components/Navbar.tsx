@@ -89,12 +89,7 @@ export default function Navbar() {
 
   return (
     <nav className="shadow-md z-50 sticky top-0 bg-white">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
+      
         <div className="max-w-8xl mx-auto px-5 sm:px-6 lg:px-10">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -143,7 +138,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </motion.div>
 
       {/* Mobile Nav */}
       {isOpen && (

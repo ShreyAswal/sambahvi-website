@@ -51,55 +51,55 @@ export default function Hero() {
       {/* Supporting Paragraph Section - BELOW video */}
       <section className="relative bg-lightGray py-16 px-6 text-center">
         <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <div className="absolute -top-10 left-0 right-0 h-10 bg-gradient-to-t from-gray-100 to-transparent" />
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <div className="absolute -top-10 left-0 right-0 h-10 bg-gradient-to-t from-gray-100 to-transparent" />
 
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xl md:text-2xl font-sans font-medium text-gray-800 leading-relaxed mb-8">
-            Sambahvi Agencies Pvt. Ltd. is the{" "}
-            <span className="font-semibold text-gray-900">
-              exclusive e-commerce distributor
-            </span>{" "}
-            for premium global lifestyle and tech brands like{" "}
-            <span className="font-semibold text-gray-900">
-              Victorinox, Wenger, and Police
-            </span>
-            . With a{" "}
-            <span className="font-semibold">10,000 sq. ft. warehouse</span> and
-            a growing portfolio, we deliver{" "}
-            <span className="font-semibold">
-              innovation, quality, and trust
-            </span>{" "}
-            to Indian consumers.
-          </p>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl font-sans font-medium text-gray-800 leading-relaxed mb-8">
+              Sambahvi Agencies Pvt. Ltd. is the{" "}
+              <span className="font-semibold text-gray-900">
+                exclusive e-commerce distributor
+              </span>{" "}
+              for premium global lifestyle and tech brands like{" "}
+              <span className="font-semibold text-gray-900">
+                Victorinox, Wenger, and Police
+              </span>
+              . With a{" "}
+              <span className="font-semibold">10,000 sq. ft. warehouse</span>{" "}
+              and a growing portfolio, we deliver{" "}
+              <span className="font-semibold">
+                innovation, quality, and trust
+              </span>{" "}
+              to Indian consumers.
+            </p>
 
-          {/* CTA */}
-          <a
-            href="/about"
-            className="group inline-flex items-center gap-6 bg-black text-white px-10 py-3 rounded-lg font-semibold shadow-md transition-all hover:bg-gray-800"
-          >
-            Learn More
-            {/* SVG Arrow */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className=" w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+            {/* CTA */}
+            <a
+              href="/about"
+              className="group inline-flex items-center gap-6 bg-black text-white px-10 py-3 rounded-lg font-semibold shadow-md transition-all hover:bg-gray-800"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
-        </div>
+              Learn More
+              {/* SVG Arrow */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className=" w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+          </div>
         </motion.div>
       </section>
     </>

@@ -58,33 +58,33 @@ export default function IndustryFocus() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-      {/* Top Divider */}
-      <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent" />
+        {/* Top Divider */}
+        <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-          Industry Focus
-        </h2>
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            Industry Focus
+          </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((item, idx) => (
-            <div
-              key={idx}
-              className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-gray-200 hover:border-primary/40"
-            >
-              <div className="flex flex-col items-center">
-                {item.icon}
-                <h3 className="mt-4 text-xl font-semibold text-gray-900">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-gray-600 text-sm transform translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
-                  {item.description}
-                </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-gray-200 hover:border-primary/40"
+              >
+                <div className="flex flex-col items-center">
+                  {item.icon}
+                  <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-gray-600 text-sm transform translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
       </motion.div>
     </section>
   );
