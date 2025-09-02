@@ -7,8 +7,7 @@ export default function OurStory() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           {/* Text Content */}
