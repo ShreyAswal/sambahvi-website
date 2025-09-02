@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
 export default function ContactCTA() {
   return (
     <section className="relative py-24 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
       {/* Animated Wave Background */}
       <div className="absolute inset-0 -z-10">
         <svg
@@ -62,6 +69,7 @@ export default function ContactCTA() {
           </form>
         </div>
       </div>
+      </motion.div>
 
       {/* Tailwind CSS Animation */}
       <style>
@@ -76,6 +84,7 @@ export default function ContactCTA() {
           // }
         `}
       </style>
+
     </section>
   );
 }

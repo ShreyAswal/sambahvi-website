@@ -1,5 +1,5 @@
 import { Shirt, Gem, Tv, Home, Building2, ShoppingBag } from "lucide-react";
-
+import { motion } from "framer-motion";
 export default function IndustryFocus() {
   const industries = [
     {
@@ -52,6 +52,12 @@ export default function IndustryFocus() {
 
   return (
     <section className="relative py-20 bg-gray-50 py-20">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
       {/* Top Divider */}
       <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent" />
 
@@ -79,6 +85,7 @@ export default function IndustryFocus() {
           ))}
         </div>
       </div>
+      </motion.div>
     </section>
   );
 }

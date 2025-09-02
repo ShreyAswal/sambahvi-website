@@ -1,5 +1,6 @@
 import video from "../../assets/homePageVideo/heroPageVid.mp4";
 import video2 from "../../assets/homePageVideo/HeroPageVid2.mp4";
+import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
@@ -49,6 +50,12 @@ export default function Hero() {
       </section>
       {/* Supporting Paragraph Section - BELOW video */}
       <section className="relative bg-lightGray py-16 px-6 text-center">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <div className="absolute -top-10 left-0 right-0 h-10 bg-gradient-to-t from-gray-100 to-transparent" />
 
         <div className="max-w-3xl mx-auto">
@@ -93,6 +100,7 @@ export default function Hero() {
             </svg>
           </a>
         </div>
+        </motion.div>
       </section>
     </>
   );

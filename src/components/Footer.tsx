@@ -1,8 +1,14 @@
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <footer className="relative bg-gray-900 text-white overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
       {/* Optional top wave for continuity */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -z-10">
         <svg
@@ -115,6 +121,7 @@ export default function Footer() {
           
         `}
       </style>
+      </motion.div>
     </footer>
   );
 }

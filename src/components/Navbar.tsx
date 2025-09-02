@@ -89,54 +89,61 @@ export default function Navbar() {
 
   return (
     <nav className="shadow-md z-50 sticky top-0 bg-white">
-      <div className="max-w-8xl mx-auto px-5 sm:px-6 lg:px-10">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center z-50">
-            <img src={logo} alt="Sambahvi Logo" className="h-20 w-32" />
-          </Link>
-
-          {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8 items-center z-50">
-            <FlyoutLink FlyoutContent={AboutContent}>
-              <span className="hover:underline underline-offset-8 transition-all z-50">
-                About Us
-              </span>
-            </FlyoutLink>
-            <FlyoutLink FlyoutContent={SolutionsContent}>
-              <span className="hover:underline underline-offset-8 transition-all z-50">
-                Solutions
-              </span>
-            </FlyoutLink>
-            <Link
-              to="/brands"
-              className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
-            >
-              Partners
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <div className="max-w-8xl mx-auto px-5 sm:px-6 lg:px-10">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <Link to="/" className="flex items-center z-50">
+              <img src={logo} alt="Sambahvi Logo" className="h-20 w-32" />
             </Link>
-            <Link
-              to="/contact"
-              className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
-            >
-              Contact Us
-            </Link>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden z-50">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary focus:outline-none z-50"
-            >
-              {isOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
-            </button>
+            {/* Desktop Nav */}
+            <div className="hidden md:flex space-x-8 items-center z-50">
+              <FlyoutLink FlyoutContent={AboutContent}>
+                <span className="hover:underline underline-offset-8 transition-all z-50">
+                  About Us
+                </span>
+              </FlyoutLink>
+              <FlyoutLink FlyoutContent={SolutionsContent}>
+                <span className="hover:underline underline-offset-8 transition-all z-50">
+                  Solutions
+                </span>
+              </FlyoutLink>
+              <Link
+                to="/brands"
+                className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
+              >
+                Partners
+              </Link>
+              <Link
+                to="/contact"
+                className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
+              >
+                Contact Us
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden z-50">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-700 hover:text-primary focus:outline-none z-50"
+              >
+                {isOpen ? (
+                  <XMarkIcon className="h-6 w-6" />
+                ) : (
+                  <Bars3Icon className="h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile Nav */}
       {isOpen && (

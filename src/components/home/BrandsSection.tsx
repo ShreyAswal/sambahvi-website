@@ -13,6 +13,7 @@ import firstcry from "../../assets/brands/firstcry-logo.png";
 import limeroad from "../../assets/brands/limeroad-logo.jpg";
 import industrybuying from "../../assets/brands/industrybuying-logo.png";
 import background from "../../assets/backgrounds/low-poly-grid-haikei.svg";
+import { motion } from "framer-motion";
 
 export default function BrandsSection() {
   const logos = [
@@ -36,6 +37,12 @@ export default function BrandsSection() {
 
   return (
     <section className="relative py-20 bg-gray-50">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
       {/* Smooth fade from top */}
       <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-100 to-transparent z-10"></div>
 
@@ -94,6 +101,7 @@ export default function BrandsSection() {
           </div>
         </div>
       </div>
+      </motion.div>
     </section>
   );
 }
