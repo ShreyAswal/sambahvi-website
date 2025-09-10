@@ -33,11 +33,11 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex gap-4 pt-10">
             <a
-              href="/brands"
+              href="/about"
               className="bg-amber-400 text-black px-6 py-3 rounded-lg font-semibold shadow-md 
            hover:bg-black hover:text-white transition"
             >
-              Explore Brands
+              Discover Our Story
             </a>
             <a
               href="/contact"
@@ -52,6 +52,7 @@ export default function Hero() {
       <section className="relative bg-lightGray py-16 px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}

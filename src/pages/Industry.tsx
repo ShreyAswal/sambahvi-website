@@ -19,7 +19,7 @@ const industries = [
   {
     icon: <Tv className="h-10 w-10 text-primary-primary group-hover:text-accent transition-colors duration-300" />,
     title: "Consumer Durables",
-    description: "Reliable products that elevate everyday living.",
+    description: "Trusted essentials designed to enhance daily life.",
   },
   {
     icon: <Home className="h-10 w-10 text-primary-primary group-hover:text-accent transition-colors duration-300" />,

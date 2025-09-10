@@ -13,6 +13,7 @@ import Brands from "./pages/Brands";
 import Management from "./pages/Management";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./helper/ScrollToTop";
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         {/* Navbar appears on all pages */}
         <Navbar />
-
+          <ScrollToTop /> {/* this ensures top scroll on page change */}
         {/* Page Content */}
         <main className="flex-grow p-6">
           <Routes>

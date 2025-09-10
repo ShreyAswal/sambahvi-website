@@ -1,5 +1,6 @@
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
+
 export default function Footer() {
   return (
     <footer className="relative bg-gray-900 text-white overflow-hidden">
@@ -24,41 +25,56 @@ export default function Footer() {
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-3 gap-12 text-center md:text-left relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-4 gap-12 text-center md:text-left relative z-10">
+          {/* Main Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Main Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/about" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Our Story
+                </a>
+              </li>
+              <li>
+                <a href="/industry" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Industries We Serve
+                </a>
+              </li>
+              <li>
+                <a href="/competencies" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Our Expertise
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="/about"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
-                >
-                  Our Story
+                <a href="/channels" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Distribution Network
                 </a>
               </li>
               <li>
-                <a
-                  href="/solutions"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
-                >
-                  Solutions
+                <a href="/specialists" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Specialists
                 </a>
               </li>
               <li>
-                <a
-                  href="/industry"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
-                >
-                  Industries
+                <a href="/brands" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Our Partners
                 </a>
               </li>
               <li>
-                <a
-                  href="/contact"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
-                >
-                  Contact Us
+                <a href="/management" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Leadership Team
                 </a>
               </li>
             </ul>
@@ -70,17 +86,15 @@ export default function Footer() {
             <p className="mb-2">📧 contact@sambahvi.com</p>
             <p className="mb-4">📞 +91 12345 67890</p>
             <div className="flex justify-center md:justify-start gap-4 text-xl">
-              {[FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map(
-                (Icon, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className="text-white transform transition-transform duration-300 hover:scale-125 hover:text-[#1490ca]"
-                  >
-                    <Icon />
-                  </a>
-                )
-              )}
+              {[FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map((Icon, idx) => (
+                <a
+                  key={idx}
+                  href="#"
+                  className="text-white transform transition-transform duration-300 hover:scale-125 hover:text-[#1490ca]"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -109,18 +123,6 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Sambahvi Agencies Pvt. Ltd. All
           rights reserved.
         </div>
-
-        {/* Wave animation */}
-        <style>
-          {`
-          @keyframes wave {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(-20px); }
-            100% { transform: translateX(0); }
-          }
-          
-        `}
-        </style>
       </motion.div>
     </footer>
   );

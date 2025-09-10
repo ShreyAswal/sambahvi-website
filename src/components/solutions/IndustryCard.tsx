@@ -13,14 +13,14 @@ const IndustryCard: React.FC<IndustryCardProps> = ({
   title,
   description,
 }) => (
-  <motion.div
-    className=" to-gray-50 rounded-2xl p-6 shadow-md hover:shadow-lg text-center"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.3 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
-  >
-    <div className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-gray-200 hover:border-primary-primary">
+  <div className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-gray-200 hover:border-primary-primary">
+    <motion.div
+      className=" to-gray-50 rounded-2xl p-6 shadow-md hover:shadow-lg text-center"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="flex flex-col items-center">
         {icon}
         <h3 className="mt-4 text-xl font-semibold text-gray-900">{title}</h3>
@@ -28,8 +28,8 @@ const IndustryCard: React.FC<IndustryCardProps> = ({
           {description}
         </p>
       </div>
-    </div>
-  </motion.div>
+    </motion.div>
+  </div>
 );
 
 export default IndustryCard;

@@ -111,13 +111,13 @@ export default function Navbar() {
               </FlyoutLink>
               <Link
                 to="/brands"
-                className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
+                className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50  hover:text-primary-primary"
               >
                 Partners
               </Link>
               <Link
                 to="/contact"
-                className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50"
+                className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50  hover:text-primary-primary"
               >
                 Contact Us
               </Link>
