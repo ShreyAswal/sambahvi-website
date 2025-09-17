@@ -1,3 +1,8 @@
+import BrandIntro from "../components/brands/BrandIntro";
+
 export default function Brands() {
-  return <h1 className="text-3xl font-bold">Brands Page</h1>;
+  return (
+    <BrandIntro/>
+    
+  )
 }

@@ -45,21 +45,6 @@ const FlyoutLink = ({
   );
 };
 
-// About Us Dropdown Content
-const AboutContent = () => (
-  <div className="w-48 p-4 space-y-2">
-    <Link to="/about" className="block text-sm  hover:text-primary-primary">
-      Our Story
-    </Link>
-    <Link
-      to="/management"
-      className="block text-sm  hover:text-primary-primary"
-    >
-      Leadership Team
-    </Link>
-  </div>
-);
-
 // Solutions Dropdown Content
 const SolutionsContent = () => (
   <div className="w-56 p-4 space-y-2">
@@ -84,6 +69,14 @@ const SolutionsContent = () => (
   </div>
 );
 
+// Partners Dropdown Content
+const PartnersContent = () => (
+  <div className="w-40 p-4 space-y-2">
+    <Link to="/brands" className="block text-sm hover:text-primary-primary">Brands</Link>
+    <Link to="/channels" className="block text-sm hover:text-primary-primary">Channels</Link>
+  </div>
+);
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -99,9 +92,17 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex space-x-8 items-center z-50">
-              <FlyoutLink FlyoutContent={AboutContent}>
+              {/* About Us as direct link */}
+              <Link
+                to="/about"
+                className="font-medium text-gray-700 hover:text-primary-primary hover:underline underline-offset-8 transition-all z-50"
+              >
+                About Us
+              </Link>
+              {/* Partners Dropdown: Brands and Channels */}
+              <FlyoutLink FlyoutContent={PartnersContent}>
                 <span className="hover:underline underline-offset-8 transition-all z-50">
-                  About Us
+                  Partners
                 </span>
               </FlyoutLink>
               <FlyoutLink FlyoutContent={SolutionsContent}>
@@ -109,12 +110,6 @@ export default function Navbar() {
                   Solutions
                 </span>
               </FlyoutLink>
-              <Link
-                to="/brands"
-                className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50  hover:text-primary-primary"
-              >
-                Partners
-              </Link>
               <Link
                 to="/contact"
                 className="font-medium text-gray-700 hover:text-primary hover:underline underline-offset-8 transition-all z-50  hover:text-primary-primary"
@@ -142,46 +137,22 @@ export default function Navbar() {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden px-4 pb-3 space-y-2">
-          <Link to="/about" className="block text-gray-700 hover:text-primary">
-            Our Story
+          <Link to="/about" className="block text-gray-700 hover:text-primary-primary">
+            About Us
           </Link>
-          <Link
-            to="/management"
-            className="block text-gray-700 hover:text-primary"
-          >
-            Leadership Team
-          </Link>
-          <Link
-            to="/industry"
-            className="block text-gray-700 hover:text-primary"
-          >
-            Industries We Serve
-          </Link>
-          <Link
-            to="/competencies"
-            className="block text-gray-700 hover:text-primary"
-          >
-            Our Expertise
-          </Link>
-          <Link
-            to="/channels"
-            className="block text-gray-700 hover:text-primary"
-          >
-            Distribution Network
-          </Link>
-          <Link
-            to="/specialists"
-            className="block text-gray-700 hover:text-primary"
-          >
-            Business Models
-          </Link>
-          <Link to="/brands" className="block text-gray-700 hover:text-primary">
-            Partners
-          </Link>
-          <Link
-            to="/contact"
-            className="block text-gray-700 hover:text-primary"
-          >
+          <div className="border-t border-gray-200 my-2" />
+          <div>
+            <span className="block text-gray-500 text-xs uppercase mb-1">Partners</span>
+            <Link to="/brands" className="block text-gray-700 hover:text-primary-primary pl-2">Brands</Link>
+            <Link to="/channels" className="block text-gray-700 hover:text-primary-primary pl-2">Channels</Link>
+          </div>
+          <div className="border-t border-gray-200 my-2" />
+          <span className="block text-gray-500 text-xs uppercase mb-1">Solutions</span>
+          <Link to="/industry" className="block text-gray-700 hover:text-primary-primary pl-2">Industries We Serve</Link>
+          <Link to="/competencies" className="block text-gray-700 hover:text-primary-primary pl-2">Our Expertise</Link>
+          <Link to="/channels" className="block text-gray-700 hover:text-primary-primary pl-2">Distribution Network</Link>
+          <Link to="/specialists" className="block text-gray-700 hover:text-primary-primary pl-2">Business Models</Link>
+          <Link to="/contact" className="block text-gray-700 hover:text-primary">
             Contact Us
           </Link>
         </div>

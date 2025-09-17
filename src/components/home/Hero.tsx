@@ -39,12 +39,6 @@ export default function Hero() {
             >
               Discover Our Story
             </a>
-            <a
-              href="/contact"
-              className="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition"
-            >
-              Contact Us
-            </a>
           </div>
         </div>
       </section>
@@ -60,46 +54,47 @@ export default function Hero() {
           <div className="absolute -top-10 left-0 right-0 h-10 bg-gradient-to-t from-gray-100 to-transparent" />
 
           <div className="max-w-3xl mx-auto">
-            <p className="text-xl md:text-2xl font-sans font-medium text-gray-800 leading-relaxed mb-8">
-              Sambahvi Agencies Pvt. Ltd. is the{" "}
-              <span className="font-semibold text-gray-900">
-                exclusive e-commerce distributor
-              </span>{" "}
-              for premium global lifestyle and tech brands like{" "}
-              <span className="font-semibold text-gray-900">
-                Victorinox, Wenger, and Police
-              </span>
-              . With a{" "}
-              <span className="font-semibold">10,000 sq. ft. warehouse</span>{" "}
-              and a growing portfolio, we deliver{" "}
-              <span className="font-semibold">
-                innovation, quality, and trust
-              </span>{" "}
-              to Indian consumers.
-            </p>
-
-            {/* CTA */}
-            <a
-              href="/about"
-              className="group inline-flex items-center gap-6 bg-black text-white px-10 py-3 rounded-lg font-semibold shadow-md transition-all hover:bg-gray-800"
-            >
-              Learn More
-              {/* SVG Arrow */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className=" w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
+            <div className="relative bg-white/80 rounded-2xl shadow-lg px-6 py-8 md:px-10 md:py-10 border border-gray-200">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary-primary mb-4">
+                Who We Are
+              </h2>
+              <p className="text-base md:text-lg font-sans text-gray-800 leading-relaxed mb-0 text-left">
+                Sambahvi Agencies Pvt. Ltd. is an{" "}
+                <span className="font-bold text-primary-primary">
+                  authorized and exclusive e-commerce distributor
+                </span>{" "}
+                for a distinguished portfolio of global brands including
+                <span className="font-semibold text-gray-900">
+                  {" "}
+                  Victorinox, Wenger, and Police
+                </span>
+                , alongside other leading names across{" "}
+                <span className="text-primary-primary font-semibold">
+                  lifestyle, fashion, audio, wellness, imaging, eyewear, and
+                  tech accessories
+                </span>
+                .
+                <br className="hidden md:block" />
+                With a{" "}
+                <span className="font-semibold">
+                  10,000 sq. ft. warehouse
+                </span>{" "}
+                set to commence operations shortly, we will soon be stocking and
+                distributing premium products from{" "}
+                <span className="font-semibold text-gray-900">
+                  Aecooly, Doughnut, Edifier, Hyperice, Kodak, Shokz, Tifosi,
+                  Tomtoc, and Ugreen
+                </span>
+                .
+                <br className="hidden md:block" />
+                Our focus is to deliver{" "}
+                <span className="font-semibold text-primary-primary">
+                  innovative, high-quality, and performance-driven products
+                </span>{" "}
+                to Indian consumers through efficient distribution and seamless
+                online availability.
+              </p>
+            </div>
           </div>
         </motion.div>
       </section>
