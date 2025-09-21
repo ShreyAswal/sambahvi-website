@@ -1,7 +1,27 @@
 import { Shirt, Gem, Tv, Home, Building2, ShoppingBag } from "lucide-react";
 import { motion } from "framer-motion";
+
 export default function IndustryFocus() {
-  const industries = [
+  const highlighted = [
+    {
+      icon: (
+        <Building2 className="h-12 w-12 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
+      title: "Coworking Spaces",
+      description:
+        "Supplying essential lifestyle and tech accessories across work hubs.",
+    },
+    {
+      icon: (
+        <ShoppingBag className="h-12 w-12 text-primary group-hover:text-accent transition-colors duration-300" />
+      ),
+      title: "D2C Distribution",
+      description:
+        "Trusted partner for international brands expanding in India.",
+    },
+  ];
+
+  const others = [
     {
       icon: (
         <Shirt className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
@@ -32,33 +52,16 @@ export default function IndustryFocus() {
       description:
         "Smart appliances making households efficient and connected.",
     },
-    {
-      icon: (
-        <Building2 className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
-      ),
-      title: "Coworking Spaces",
-      description:
-        "Supplying essential lifestyle and tech accessories across work hubs.",
-    },
-    {
-      icon: (
-        <ShoppingBag className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
-      ),
-      title: "D2C Distribution",
-      description:
-        "Trusted partner for international brands expanding in India.",
-    },
   ];
 
   return (
-    <section className="relative py-20 bg-gray-50 py-20">
+    <section className="relative py-20 bg-gray-50">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        {/* Top Divider */}
         <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
@@ -66,8 +69,34 @@ export default function IndustryFocus() {
             Industry Focus
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((item, idx) => (
+          {/* Highlighted Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            {highlighted.map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative bg-white rounded-xl p-10 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)] transition duration-300 cursor-pointer border border-gold hover:border-primary/40"
+              >
+                {/* Featured Ribbon */}
+                <div className="absolute top-3 left-3 bg-amber-400 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                  Featured
+                </div>
+
+                <div className="flex flex-col items-center">
+                  {item.icon}
+                  <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-gray-600 text-sm transform translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Other Industries */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {others.map((item, idx) => (
               <div
                 key={idx}
                 className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-gray-200 hover:border-primary/40"

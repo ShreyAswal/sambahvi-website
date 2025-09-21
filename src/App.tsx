@@ -6,9 +6,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Industry from "./pages/Industry";
-import Competencies from "./pages/Competencies";
+import Expertise from "./pages/Expertise";
 import Channels from "./pages/Channels";
-import Specialists from "./pages/Specialists";
 import Brands from "./pages/Brands";
 import Management from "./pages/Management";
 import Contact from "./pages/Contact";
@@ -29,11 +28,10 @@ export default function App() {
             <Route path="/about" element={<About />} /> {/* Our Story */}
             <Route path="/industry" element={<Industry />} />{" "}
             {/* Industries We Serve */}
-            <Route path="/competencies" element={<Competencies />} />{" "}
+            <Route path="/expertise" element={<Expertise />} />{" "}
             {/* Our Expertise */}
             <Route path="/channels" element={<Channels />} />{" "}
             {/* Distribution Network */}
-            <Route path="/specialists" element={<Specialists />} />{" "}
             {/* Solutions */}
             <Route path="/brands" element={<Brands />} /> {/* Our Partners */}
             <Route path="/management" element={<Management />} />{" "}

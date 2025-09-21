@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import block from "../../assets/backgrounds/low-poly-grid-haikei.svg";
+// import { Gem } from "lucide-react";
+
 export default function ContactCTA() {
   return (
     <section className="relative py-24 overflow-hidden">
@@ -42,32 +45,26 @@ export default function ContactCTA() {
             </p>
           </div>
 
-          {/* Right Column - Form */}
-          <div className="bg-white bg-opacity-90 p-8 rounded-xl shadow-lg z-10">
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
-              />
-              <textarea
-                placeholder="Your Message"
-                rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
-              />
-              <button
-                type="submit"
-                className="w-full bg-[#1490ca] text-black px-6 py-3 rounded-lg font-semibold shadow-md  hover:bg-black hover:text-white transition"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+          {/* Right Column - Premium Visual Block */}
+          <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={{
+    opacity: 1,
+    y: [-10, -30, -20], // more pronounced floating
+    boxShadow: [
+      "0 8px 40px 0 rgba(20, 144, 202, 0.18), 0 24px 80px 0 rgba(20, 144, 202, 0.22), 0 1.5px 4px 0 rgba(0,0,0,0.10)",
+      "0 16px 80px 0 rgba(20, 144, 202, 0.22), 0 32px 120px 0 rgba(20, 144, 202, 0.28), 0 2px 8px 0 rgba(0,0,0,0.12)",
+      "0 8px 40px 0 rgba(20, 144, 202, 0.18), 0 24px 80px 0 rgba(20, 144, 202, 0.22), 0 1.5px 4px 0 rgba(0,0,0,0.10)",
+    ],
+  }}
+            className="w-full max-w-md aspect-square mx-auto rounded-3xl ring-2 ring-indigo-200/40 overflow-hidden flex items-center justify-center"
+          >
+            <img
+              src={block}
+              alt="Block"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
         </div>
       </motion.div>
 

@@ -61,6 +61,7 @@ const industries = [
   },
 ];
 
+
 export default function IndustriesTeaser() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);

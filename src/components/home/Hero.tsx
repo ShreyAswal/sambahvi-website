@@ -1,4 +1,4 @@
-import video from "../../assets/homePageVideo/heroPageVid.mp4";
+// import video from "../../assets/homePageVideo/heroPageVid.mp4";
 import video2 from "../../assets/homePageVideo/HeroPageVid2.mp4";
 import { motion } from "framer-motion";
 export default function Hero() {

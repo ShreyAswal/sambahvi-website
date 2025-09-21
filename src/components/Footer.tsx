@@ -41,7 +41,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/competencies" className="hover:text-[#1490ca] transition-colors duration-300">
+                <a href="/expertise" className="hover:text-[#1490ca] transition-colors duration-300">
                   Our Expertise
                 </a>
               </li>

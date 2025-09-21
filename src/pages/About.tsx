@@ -1,4 +1,4 @@
-import HeroBanner from "../components/about/HeroBanner";
+import HeroBanner from "../components/HeroBanner";
 import CompanyStory from "../components/about/CompanyStory";
 import VisionMission from "../components/about/VisionMission";
 import ValuesGrid from "../components/about/ValuesGrid";
