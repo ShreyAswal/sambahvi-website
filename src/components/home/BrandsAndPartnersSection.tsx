@@ -1,6 +1,6 @@
 import victorinox from "../../assets/brands/Victorinox-logo.png";
 import wenger from "../../assets/brands/Wenger-logo.png";
-import police from "../../assets/brands/Police-logo-1536x864.png";
+import police from "../../assets/brands/police-logo.png";
 import travelblue from "../../assets/brands/Travel-Blue-Logo.png";
 import amazon from "../../assets/brands/amazon-logo.png";
 import flipkart from "../../assets/brands/flipkart-logo.png";
