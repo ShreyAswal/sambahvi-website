@@ -4,6 +4,7 @@ import VisionMission from "../components/about/VisionMission";
 import ValuesGrid from "../components/about/ValuesGrid";
 import IndustriesTeaser from "../components/about/IndustriesTeaser";
 import CompanyTimeline from "../components/about/CompanyTimeline";
+import LeadershipTeam from "../components/about/LeadershipTeam";
 
 export default function AboutPage() {
   return (
@@ -13,6 +14,7 @@ export default function AboutPage() {
         tagline="Empowering brands. Enabling growth. Delivering trust."
       />
       <CompanyStory />
+      <LeadershipTeam />
       <VisionMission />
       <CompanyTimeline />
       <ValuesGrid />
