@@ -1,4 +1,11 @@
-import { Truck, Store, Package, Users, Building2, Sparkles } from "lucide-react";
+import {
+  Truck,
+  Store,
+  Package,
+  Users,
+  Building2,
+  Sparkles,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 const container = {
@@ -35,14 +42,12 @@ const models = [
   },
   {
     title: "Franchisee Development",
-    description:
-      "Across consumer durables, fashion, and premium fashion.",
+    description: "Across consumer durables, fashion, and premium fashion.",
     icon: <Users className="w-8 h-8 text-blue-600" />,
   },
   {
     title: "Retail Expansion",
-    description:
-      "Mall, high street, department stores, concessions, airports.",
+    description: "Mall, high street, department stores, concessions, airports.",
     icon: <Building2 className="w-8 h-8 text-blue-600" />,
   },
   {
@@ -57,13 +62,13 @@ export default function BusinessModel() {
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 relative inline-block">
-  Business Models We Drive
-  <span className="absolute left-0 -bottom-2 w-16 h-1 bg-[#2563eb] rounded-full"></span>
-</h2>
+          Business Models We Drive
+          <span className="absolute left-0 -bottom-2 w-16 h-1 bg-[#2563eb] rounded-full"></span>
+        </h2>
         <motion.div
           variants={container}
           initial="hidden"
-          whileInView="show"
+          animate="show"
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
