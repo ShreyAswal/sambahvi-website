@@ -30,24 +30,22 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Main Links</h3>
             <ul className="space-y-2">
+              
+              
+               <li>
+                <a href="/brands" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Brands
+                </a>
+              </li>
+              <li>
+                <a href="/channels" className="hover:text-[#1490ca] transition-colors duration-300">
+                Channels
+                </a>
+              </li>
+              
               <li>
                 <a href="/about" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Our Story
-                </a>
-              </li>
-              <li>
-                <a href="/industry" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Industries We Serve
-                </a>
-              </li>
-              <li>
-                <a href="/expertise" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Our Expertise
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Contact Us
+                  About Us
                 </a>
               </li>
             </ul>
@@ -58,23 +56,19 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/channels" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Distribution Network
+                <a href="/expertise" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Our Expertise
                 </a>
               </li>
               <li>
-                <a href="/specialists" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Specialists
+                <a href="/industry" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Industries We Serve
                 </a>
               </li>
+             
               <li>
-                <a href="/brands" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Our Partners
-                </a>
-              </li>
-              <li>
-                <a href="/management" className="hover:text-[#1490ca] transition-colors duration-300">
-                  Leadership Team
+                <a href="/contact" className="hover:text-[#1490ca] transition-colors duration-300">
+                  Contact Us
                 </a>
               </li>
             </ul>

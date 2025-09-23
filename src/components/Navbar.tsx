@@ -60,9 +60,9 @@ const SolutionsContent = () => (
     >
       Our Expertise
     </Link>
-    <Link to="/channels" className="block text-sm hover:text-primary-primary">
+    {/* <Link to="/channels" className="block text-sm hover:text-primary-primary">
       Distribution Network
-    </Link>
+    </Link> */}
   </div>
 );
 
@@ -177,12 +177,12 @@ export default function Navbar() {
           >
             Our Expertise
           </Link>
-          <Link
+          {/* <Link
             to="/channels"
             className="block text-gray-700 hover:text-primary-primary pl-2"
           >
             Distribution Network
-          </Link>
+          </Link> */}
           
           <div className="border-t border-gray-200 my-2" />
 
