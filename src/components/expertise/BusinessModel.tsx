@@ -76,7 +76,7 @@ export default function BusinessModel() {
             <motion.div
               key={index}
               variants={item}
-              className="relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-3 hover:scale-[1.02]"
+              className="relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-[1.02]"
             >
               <div className="flex justify-center mb-4">{model.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{model.title}</h3>

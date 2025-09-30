@@ -74,30 +74,30 @@ export default function BrandsAndPartnersSection() {
             {brandLogos.map((logo, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center p-4 bg-white/90 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                className="group flex items-center justify-center p-4 bg-white/90 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300"
               >
                 <img
                   src={logo}
                   alt={`Brand Logo ${i}`}
-                  className="h-16 w-24 object-contain transition-transform duration-300 hover:scale-110"
+                  className="h-16 w-24 object-contain transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
             ))}
           </div>
-{/* CTA for Brands */}
-<div className="text-center mt-8">
-  <a
-    href="/brands"
-    className="inline-flex items-center gap-2 font-semibold text-gray-800 relative group"
-  >
-    Explore All Brands
-    <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary-dark">
-      →
-    </span>
-    {/* Underline animation */}
-    <span className="absolute left-0 -bottom-1 w-0 h-[3px] bg-primary-dark transition-all duration-300 group-hover:w-full"></span>
-  </a>
-</div>
+          {/* CTA for Brands */}
+          <div className="text-center mt-8">
+            <a
+              href="/brands"
+              className="inline-flex items-center gap-2 font-semibold text-gray-800 relative group"
+            >
+              Explore All Brands
+              <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary-dark">
+                →
+              </span>
+              {/* Underline animation */}
+              <span className="absolute left-0 -bottom-1 w-0 h-[3px] bg-primary-dark transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </div>
         </div>
 
         {/* Divider */}
@@ -116,30 +116,30 @@ export default function BrandsAndPartnersSection() {
             {partnerLogos.map((logo, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center p-4 bg-white/90 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                className="group flex items-center justify-center p-4 bg-white/90 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300"
               >
                 <img
                   src={logo}
                   alt={`Partner Logo ${i}`}
-                  className="h-16 w-24 object-contain transition-transform duration-300 hover:scale-110"
+                  className="h-16 w-24 object-contain transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
             ))}
           </div>
-         {/* CTA for Partners */}
-<div className="text-center mt-8">
-  <a
-    href="/channels"
-    className="inline-flex items-center gap-2 font-semibold text-gray-800 relative group"
-  >
-    See All Partners
-    <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary-dark">
-      →
-    </span>
-    {/*  Underline animation */}
-    <span className="absolute left-0 -bottom-1 w-0 h-[3px] bg-primary-dark transition-all duration-300 group-hover:w-full"></span>
-  </a>
-</div>
+          {/* CTA for Partners */}
+          <div className="text-center mt-8">
+            <a
+              href="/channels"
+              className="inline-flex items-center gap-2 font-semibold text-gray-800 relative group"
+            >
+              See All Partners
+              <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary-dark">
+                →
+              </span>
+              {/*  Underline animation */}
+              <span className="absolute left-0 -bottom-1 w-0 h-[3px] bg-primary-dark transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </div>
         </div>
       </motion.div>
     </section>
