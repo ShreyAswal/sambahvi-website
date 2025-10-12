@@ -2,55 +2,70 @@ import { Eye, Target } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function VisionMission() {
-  const cards = [
-    {
-      title: "Our Vision",
-      description:
-        "To inspire and empower communities through innovation, making technology seamless and impactful for everyone.",
-      Icon: Eye,
-    },
-    {
-      title: "Our Mission",
-      description:
-        "To deliver trusted solutions that bridge people and technology, driven by curiosity, collaboration, and a human-first approach.",
-      Icon: Target,
-    },
-  ];
-
   return (
-    <section className="relative bg-white py-20 px-6 md:px-12 lg:px-20">
-      <motion.div
-        // className=" to-gray-50 rounded-2xl p-6 shadow-md hover:shadow-lg text-center"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Vision & Mission
-          </h2>
-          <p className="text-gray-600 mt-4 text-lg">
-            What drives us forward and keeps us grounded.
+    <section className="relative py-20 px-6 md:px-12 lg:px-20 bg-white">
+  {/* Decorative Accent Bar */}
+  <div className="absolute left-1/2 -translate-x-1/2 top-0 w-32 h-2 rounded-b-full bg-[#024950] opacity-70" />
+
+  <div className="max-w-3xl mx-auto text-center">
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#024950] mb-6"
+    >
+      Vision & Mission
+    </motion.h2>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, delay: 0.2 }}
+      className="text-gray-700 text-lg mb-10"
+    >
+      The beliefs that guide every partnership, every milestone, and every solution we deliver.
+    </motion.p>
+
+    {/* Unified Statement Block */}
+  <div className="relative bg-[#F9FAFB] rounded-2xl border border-[#AFDDE5] shadow-sm px-8 py-10 flex flex-col gap-8 items-center">
+      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#1490ca1a] to-transparent blur-md pointer-events-none" />
+      <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+        <div className="flex flex-col items-center md:items-start">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <Eye className="w-10 h-10 text-[#1490ca] mb-2" />
+          </motion.div>
+          <h3 className="text-xl font-bold text-[#024950] mb-1">Our Vision</h3>
+          <p className="text-gray-700 text-base max-w-xs">
+            Our victory lies in your success. True growth comes when our partners, customers, and communities win first — our win is built on your win.
           </p>
         </div>
-
-        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-          {cards.map(({ title, description, Icon }, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -10 }}
-              className="group bg-gray-50 rounded-2xl p-8 shadow-sm text-center hover:shadow-md transition cursor-pointer"
-            >
-              <Icon className="w-12 h-12 text-[#27acea] mx-auto mb-6 transition-colors duration-300 group-hover:text-[#2563eb]" />
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4 group-hover:text-[#2563eb] transition-colors duration-300">
-                {title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">{description}</p>
-            </motion.div>
-          ))}
+  <div className="hidden md:block w-px h-16 bg-gradient-to-b from-[#1490ca] via-[#4fb5e0] to-transparent mx-8 opacity-70" />
+        <div className="flex flex-col items-center md:items-start">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <Target className="w-10 h-10 text-[#1490ca] mb-2" />
+          </motion.div>
+          <h3 className="text-xl font-bold text-[#024950] mb-1">Our Mission</h3>
+          <p className="text-gray-700 text-base max-w-xs">
+            To deliver trusted solutions that bridge people and technology, driven by curiosity, collaboration, and a human-first approach.
+          </p>
         </div>
-      </motion.div>
-    </section>
+      </div>
+      <p className="text-gray-600 mt-10 text-base italic">
+        Together, we move forward — with purpose, trust, and shared ambition.
+      </p>
+    </div>
+  </div>
+</section>
   );
 }

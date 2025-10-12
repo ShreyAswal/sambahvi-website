@@ -52,7 +52,7 @@ export default function CompanyTimeline() {
           </div>
 
           {/* Timeline dot */}
-          <div className="relative z-10 w-6 h-6 bg-[#27acea] rounded-full border-4 border-white shadow-md mx-6" />
+          <div className="relative z-10 w-6 h-6 bg-[#1490ca] rounded-full border-4 border-white shadow-md mx-6" />
 
           {/* Right side content */}
           <div
