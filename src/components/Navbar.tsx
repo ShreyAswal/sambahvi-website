@@ -49,7 +49,7 @@ const FlyoutLink = ({
 const SolutionsContent = () => (
   <div className="w-56 p-4 space-y-2">
     <Link
-      to="/industry"
+      to="/industries"
       className="block text-sm hover:text-primary-primary"
     >
       Industries We Serve
@@ -166,7 +166,7 @@ export default function Navbar() {
             Solutions
           </span>
           <Link
-            to="/industry"
+            to="/industries"
             className="block text-gray-700 hover:text-primary-primary pl-2"
           >
             Industries We Serve

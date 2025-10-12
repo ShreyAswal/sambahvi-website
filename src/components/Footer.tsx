@@ -61,7 +61,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/industry" className="hover:text-[#1490ca] transition-colors duration-300">
+                <a href="/industries" className="hover:text-[#1490ca] transition-colors duration-300">
                   Industries We Serve
                 </a>
               </li>
