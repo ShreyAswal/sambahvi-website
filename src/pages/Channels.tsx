@@ -1,5 +1,5 @@
 import ChannelPartnersIntro from "../components/channels/ChannelPartnersIntro";
-import PartnersLogosGrid from "../components/channels/PartnersLogosGrid";
+// import PartnersLogosGrid from "../components/home/PartnersLogosGrid";
 import HeroBanner from "../components/HeroBanner";
 
 export default function Channels() {
@@ -10,7 +10,7 @@ export default function Channels() {
         tagline="Collaborating with leading platforms to deliver our brands to customers everywhere."
       />
       <ChannelPartnersIntro />
-      <PartnersLogosGrid />
+      {/* <PartnersLogosGrid /> */}
     </>
   );
 }

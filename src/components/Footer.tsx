@@ -77,8 +77,8 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="mb-2">📧 contact@sambahvi.com</p>
-            <p className="mb-4">📞 +91 12345 67890</p>
+            <p className="mb-2">📧 cmd@saplonline.com</p>
+            <p className="mb-4">📞 +91 90359 08886</p>
             <div className="flex justify-center md:justify-start gap-4 text-xl">
               {[FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map((Icon, idx) => (
                 <a

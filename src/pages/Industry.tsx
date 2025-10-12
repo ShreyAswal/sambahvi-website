@@ -1,9 +1,9 @@
 // src/components/solutions/IndustriesPage.tsx
 import React from "react";
-import HeroBannerIndustries from "../components/solutions/HeroBannerIndustries";
 import IndustriesGrid from "../components/solutions/IndustriesGrid";
 import CTASection from "../components/solutions/CTASection";
 import { Shirt, Gem, Tv, Home, Building2, ShoppingBag } from "lucide-react";
+import HeroBanner from "../components/HeroBanner";
 
 const industries = [
   {
@@ -40,7 +40,7 @@ const industries = [
 
 const IndustriesPage: React.FC = () => (
   <>
-    <HeroBannerIndustries
+    <HeroBanner
       title="Industries We Serve"
       tagline="Empowering diverse sectors with innovative solutions and trusted partnerships."
     />

@@ -1,4 +1,3 @@
-import BrandLogosGrid from "../components/brands/BrandLogosGrid";
 import BrandShowcase from "../components/brands/BrandShowcase";
 import HeroBanner from "../components/HeroBanner";
 
@@ -6,10 +5,10 @@ export default function Brands() {
   return (
     <>
     <HeroBanner
-            title="About Sambahvi Agencies"
-            tagline="Empowering brands. Enabling growth. Delivering trust."
+            title="Our Brand Partners"
+            tagline="India's trusted gateway for global and premium lifestyle brands."
           />
-          <BrandLogosGrid />
+          {/* <BrandLogosGrid /> */}
           <BrandShowcase />
     </>
     

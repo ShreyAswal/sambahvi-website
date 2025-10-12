@@ -1,5 +1,5 @@
 // src/components/solutions/IndustriesWeServe.tsx
-import { Shirt, Gem, Tv, Home, Building2, ShoppingBag } from "lucide-react";
+// import { Shirt, Gem, Tv, Home, Building2, ShoppingBag } from "lucide-react";
 import IndustryCard from "./IndustryCard";
 
 // const industries = [
