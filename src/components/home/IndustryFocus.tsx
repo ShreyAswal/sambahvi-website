@@ -1,5 +1,7 @@
 import { Shirt, Gem, Tv, Home, Building2, ShoppingBag } from "lucide-react";
 import { motion } from "framer-motion";
+import IndustryModal from "./IndustryModel";
+import { useState, useEffect } from "react";
 
 export default function IndustryFocus() {
   const highlighted = [
@@ -54,8 +56,27 @@ export default function IndustryFocus() {
     },
   ];
 
+  const [modalData, setModalData] = useState({
+    open: false,
+    title: "",
+    images: [] as string[],
+  });
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (modalData.open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    // Clean up on unmount
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [modalData.open]);
+
   return (
-    <section className="relative py-20 bg-gray-50">
+    <section className="relative py-20 bg-gradient-to-b from-white to-gray-50 px-6 md:px-12 lg:px-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -75,6 +96,24 @@ export default function IndustryFocus() {
               <div
                 key={idx}
                 className="group relative bg-white rounded-xl p-10 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)] transition duration-300 cursor-pointer border border-gold hover:border-primary/40"
+                onClick={() =>
+                  setModalData({
+                    open: true,
+                    title: item.title,
+                    images:
+                      item.title === "Coworking Spaces"
+                        ? [
+                            "src/assets/office/office1.webp",
+                            "src/assets/office/office2.webp",
+                            "src/assets/office/office3.webp",
+                          ]
+                        : [
+                            "src/assets/office/office1.webp",
+                            "src/assets/office/office2.webp",
+                            "src/assets/office/office3.webp"
+                          ],
+                  })
+                }
               >
                 {/* Featured Ribbon */}
                 <div className="absolute top-3 left-3 bg-amber-400 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
@@ -115,6 +154,14 @@ export default function IndustryFocus() {
           </div>
         </div>
       </motion.div>
+      {modalData.open && (
+        <IndustryModal
+          isOpen={modalData.open}
+          onClose={() => setModalData({ open: false, title: "", images: [] })}
+          images={modalData.images}
+          title={modalData.title}
+        />
+      )}
     </section>
   );
 }

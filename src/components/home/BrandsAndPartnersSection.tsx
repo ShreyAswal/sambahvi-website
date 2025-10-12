@@ -1,40 +1,42 @@
-import victorinox from "../../assets/brands/Victorinox-logo.png";
-import wenger from "../../assets/brands/Wenger-logo.png";
-import police from "../../assets/brands/police-logo.png";
-import travelblue from "../../assets/brands/Travel-Blue-Logo.png";
-import amazon from "../../assets/partners/amazon-logo.png";
-import flipkart from "../../assets/partners/flipkart-logo.png";
-import myntra from "../../assets/partners/myntra-logo.png";
-import tatacliq from "../../assets/partners/tata-cliq-logo.png";
-import tatacliqluxury from "../../assets/partners/tata-cliq-luxury-logo.png";
-import ajio from "../../assets/partners/ajio-logo.png";
-import fancode from "../../assets/brands/fancode-logo.png";
-import firstcry from "../../assets/partners/firstcry-logo.png";
-import limeroad from "../../assets/partners/limeroad-logo.png";
-import industrybuying from "../../assets/partners/industrybuying-logo.png";
+// import victorinox from "../../assets/brands/Victorinox-logo.png";
+// import wenger from "../../assets/brands/Wenger-logo.png";
+// import police from "../../assets/brands/police-logo.png";
+// import travelblue from "../../assets/brands/Travel-Blue-Logo.png";
+// import amazon from "../../assets/partners/amazon-logo.png";
+// import flipkart from "../../assets/partners/flipkart-logo.png";
+// import myntra from "../../assets/partners/myntra-logo.png";
+// import tatacliq from "../../assets/partners/tata-cliq-logo.png";
+// import tatacliqluxury from "../../assets/partners/tata-cliq-luxury-logo.png";
+// import ajio from "../../assets/partners/ajio-logo.png";
+// import fancode from "../../assets/brands/fancode-logo.png";
+// import firstcry from "../../assets/partners/firstcry-logo.png";
+// import limeroad from "../../assets/partners/limeroad-logo.png";
+// import industrybuying from "../../assets/partners/industrybuying-logo.png";
 import background from "../../assets/backgrounds/low-poly-grid-haikei.svg";
 import { motion } from "framer-motion";
+import BrandLogosGrid from "./BrandLogosGrid";
+import PartnersLogosGrid from "./PartnersLogosGrid";
 
 export default function BrandsAndPartnersSection() {
-  const brandLogos = [
-    victorinox,
-    wenger,
-    police,
-    travelblue,
-    fancode,
-    firstcry,
-  ];
+  // const brandLogos = [
+  //   victorinox,
+  //   wenger,
+  //   police,
+  //   travelblue,
+  //   fancode,
+  //   firstcry,
+  // ];
 
-  const partnerLogos = [
-    amazon,
-    flipkart,
-    myntra,
-    ajio,
-    tatacliq,
-    tatacliqluxury,
-    limeroad,
-    industrybuying,
-  ];
+  // const partnerLogos = [
+  //   amazon,
+  //   flipkart,
+  //   myntra,
+  //   ajio,
+  //   tatacliq,
+  //   tatacliqluxury,
+  //   limeroad,
+  //   industrybuying,
+  // ];
 
   return (
     <section className="relative py-20 bg-gray-50">
@@ -70,20 +72,9 @@ export default function BrandsAndPartnersSection() {
           <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
             Exclusive distributor for world-renowned lifestyle and tech brands.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
-            {brandLogos.map((logo, i) => (
-              <div
-                key={i}
-                className="group flex items-center justify-center p-4 bg-white/90 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300"
-              >
-                <img
-                  src={logo}
-                  alt={`Brand Logo ${i}`}
-                  className="h-16 w-24 object-contain transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6"> */}
+            <BrandLogosGrid />
+          {/* </div> */}
           {/* CTA for Brands */}
           <div className="text-center mt-8">
             <a
@@ -112,20 +103,7 @@ export default function BrandsAndPartnersSection() {
             Partnered with India’s leading marketplaces to deliver premium
             products closer to consumers.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {partnerLogos.map((logo, i) => (
-              <div
-                key={i}
-                className="group flex items-center justify-center p-4 bg-white/90 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300"
-              >
-                <img
-                  src={logo}
-                  alt={`Partner Logo ${i}`}
-                  className="h-16 w-24 object-contain transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
+          <PartnersLogosGrid />
           {/* CTA for Partners */}
           <div className="text-center mt-8">
             <a

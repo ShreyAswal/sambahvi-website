@@ -1,86 +1,86 @@
 import { motion } from "framer-motion";
-import block from "../../assets/backgrounds/low-poly-grid-haikei.svg";
-// import { Gem } from "lucide-react";
+import logo from "../../assets/websiteLogo/SambahviMainLogo.png"; // replace with actual logo path
 
 export default function ContactCTA() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        {/* Animated Wave Background */}
-        <div className="absolute inset-0 -z-10">
-          <svg
-            className="w-full h-full object-cover animate-wave"
-            viewBox="0 0 1440 320"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#1490ca"
-              fillOpacity="0.3"
-              d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,186.7C672,192,768,160,864,149.3C960,139,1056,149,1152,165.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L0,320Z"
-            />
-          </svg>
-        </div>
+    <section className="relative py-20 bg-[#024950] text-white overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-10 items-center">
+        
+        {/* Left - Text */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center lg:text-left space-y-4"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Let’s Build Something Together
+          </h2>
+          <p className="text-lg text-[#AFDDE5] max-w-md mx-auto lg:mx-0">
+            Have a project in mind or want to explore partnership opportunities?
+            We’d love to connect and create impact together.
+          </p>
 
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text */}
-          <div className="text-center lg:text-left z-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-lg text-gray-700 mb-6">
-              Interested in partnering with Sambahvi Agencies or have questions?
-              Fill the form or reach out directly. We’re happy to help!
-            </p>
-            <p className="flex items-center justify-center lg:justify-start gap-2 text-gray-900 font-medium mb-2">
-              📧 contact@sambahvi.com
-            </p>
-            <p className="flex items-center justify-center lg:justify-start gap-2 text-gray-900 font-medium">
-              📞 +91 12345 67890
-            </p>
-          </div>
+          <div className="mt-6 space-y-2">
+  <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">
+    📧 
+    <a 
+      href="mailto:cmd@saplonline.com" 
+      className="text-[#0FA4AF] hover:underline transition"
+    >
+      cmd@saplonline.com
+    </a>
+  </p>
+  <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">
+    📞 
+    <a 
+      href="tel:+919035908886" 
+      className="text-[#0FA4AF] hover:underline transition"
+    >
+      9035908886
+    </a>
+  </p>
+</div>
 
-          {/* Right Column - Premium Visual Block */}
+        </motion.div>
+
+        {/* Right - Floating Logo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          className="flex justify-center"
+        >
           <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  animate={{
-    opacity: 1,
-    y: [-10, -30, -20], // more pronounced floating
-    boxShadow: [
-      "0 8px 40px 0 rgba(20, 144, 202, 0.18), 0 24px 80px 0 rgba(20, 144, 202, 0.22), 0 1.5px 4px 0 rgba(0,0,0,0.10)",
-      "0 16px 80px 0 rgba(20, 144, 202, 0.22), 0 32px 120px 0 rgba(20, 144, 202, 0.28), 0 2px 8px 0 rgba(0,0,0,0.12)",
-      "0 8px 40px 0 rgba(20, 144, 202, 0.18), 0 24px 80px 0 rgba(20, 144, 202, 0.22), 0 1.5px 4px 0 rgba(0,0,0,0.10)",
-    ],
-  }}
-            className="w-full max-w-md aspect-square mx-auto rounded-3xl ring-2 ring-indigo-200/40 overflow-hidden flex items-center justify-center"
+            animate={{
+              y: [-10, 10, -10],
+              boxShadow: [
+                "0 0 0px rgba(15,164,175,0.0)",
+                "0 0 30px rgba(15,164,175,0.4)",
+                "0 0 0px rgba(15,164,175,0.0)",
+              ],
+            }}
+            transition={{
+              duration: 6,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+            className="bg-[#003135]/60 backdrop-blur-md p-8 rounded-3xl ring-2 ring-[#0FA4AF]/30 flex items-center justify-center"
           >
             <img
-              src={block}
-              alt="Block"
-              className="w-full h-full object-cover"
+              src={logo}
+              alt="Company Logo"
+              className="w-40 md:w-48 h-auto object-contain drop-shadow-[0_0_20px_rgba(175,221,229,0.4)]"
             />
           </motion.div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
 
-      {/* Tailwind CSS Animation */}
-      <style>
-        {`
-          @keyframes wave {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(-20px); }
-            100% { transform: translateX(0); }
-          }
-          // .animate-wave {
-          //   animation: wave 6s ease-in-out infinite;
-          // }
-        `}
-      </style>
+      {/* Decorative Glow */}
+      <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-[#0FA4AF]/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-80 h-80 bg-[#AFDDE5]/10 rounded-full blur-3xl"></div>
     </section>
   );
 }
