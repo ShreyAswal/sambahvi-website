@@ -1,4 +1,5 @@
 import ChannelPartnersIntro from "../components/channels/ChannelPartnersIntro";
+import OmnichannelGrowth from "../components/channels/OmniChannelGrowth";
 // import PartnersLogosGrid from "../components/home/PartnersLogosGrid";
 import HeroBanner from "../components/HeroBanner";
 
@@ -10,6 +11,7 @@ export default function Channels() {
         tagline="Collaborating with leading platforms to deliver our brands to customers everywhere."
       />
       <ChannelPartnersIntro />
+      <OmnichannelGrowth />
       {/* <PartnersLogosGrid /> */}
     </>
   );
