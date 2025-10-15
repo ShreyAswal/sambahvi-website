@@ -30,21 +30,28 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Main Links</h3>
             <ul className="space-y-2">
-              
-              
-               <li>
-                <a href="/brands" className="hover:text-[#1490ca] transition-colors duration-300">
+              <li>
+                <a
+                  href="/brands"
+                  className="hover:text-[#1490ca] transition-colors duration-300"
+                >
                   Brands
                 </a>
               </li>
               <li>
-                <a href="/channels" className="hover:text-[#1490ca] transition-colors duration-300">
-                Channels
+                <a
+                  href="/channels"
+                  className="hover:text-[#1490ca] transition-colors duration-300"
+                >
+                  Channels
                 </a>
               </li>
-              
+
               <li>
-                <a href="/about" className="hover:text-[#1490ca] transition-colors duration-300">
+                <a
+                  href="/about"
+                  className="hover:text-[#1490ca] transition-colors duration-300"
+                >
                   About Us
                 </a>
               </li>
@@ -56,18 +63,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/expertise" className="hover:text-[#1490ca] transition-colors duration-300">
+                <a
+                  href="/expertise"
+                  className="hover:text-[#1490ca] transition-colors duration-300"
+                >
                   Our Expertise
                 </a>
               </li>
               <li>
-                <a href="/industries" className="hover:text-[#1490ca] transition-colors duration-300">
+                <a
+                  href="/industries"
+                  className="hover:text-[#1490ca] transition-colors duration-300"
+                >
                   Industries We Serve
                 </a>
               </li>
-             
+
               <li>
-                <a href="/contact" className="hover:text-[#1490ca] transition-colors duration-300">
+                <a
+                  href="/contact"
+                  className="hover:text-[#1490ca] transition-colors duration-300"
+                >
                   Contact Us
                 </a>
               </li>
@@ -80,40 +96,33 @@ export default function Footer() {
             <p className="mb-2">📧 cmd@saplonline.com</p>
             <p className="mb-4">📞 +91 90359 08886</p>
             <div className="flex justify-center md:justify-start gap-4 text-xl">
-              {[FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map((Icon, idx) => (
-                <a
-                  key={idx}
-                  href="#"
-                  className="text-white transform transition-transform duration-300 hover:scale-125 hover:text-[#1490ca]"
-                >
-                  <Icon />
-                </a>
-              ))}
+              {[FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map(
+                (Icon, idx) => (
+                  <a
+                    key={idx}
+                    href="#"
+                    className="text-white transform transition-transform duration-300 hover:scale-125 hover:text-[#1490ca]"
+                  >
+                    <Icon />
+                  </a>
+                )
+              )}
             </div>
           </div>
 
-          {/* Newsletter / CTA */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
-            <p className="mb-4">Subscribe for updates and insights.</p>
-            <form className="flex flex-col sm:flex-row gap-2 justify-center md:justify-start">
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="px-4 py-2 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#1490ca] text-gray-900"
-              />
-              <button
-                type="submit"
-                className="bg-amberCustom text-black px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-black hover:text-white transition"
-              >
-                Subscribe
-              </button>
-            </form>
+          {/* CTA */}
+          <div className="flex flex-col items-center md:items-start justify-center h-full">
+            <img
+              src="src/assets/websiteLogo/sambhavilogo.png"
+              alt="Sambahvi Agencies Logo"
+              className="h-36 w-auto ml-16 drop-shadow-lg border-t border-gray-500/40 rounded-3xl transition-all duration-300 hover:scale-105 hover:brightness-110 hover:ring-4 hover:ring-[#1490ca]/30 cursor-pointer"
+              onClick={() => (window.location.href = "/")}
+            />
           </div>
         </div>
 
         {/* Bottom Copyright */}
-        <div className="border-t border-gray-700 mt-8 py-4 text-center text-sm text-gray-400 relative z-10">
+        <div className="mt-8 py-4 text-center text-sm text-gray-400 relative z-10">
           &copy; {new Date().getFullYear()} Sambahvi Agencies Pvt. Ltd. All
           rights reserved.
         </div>

@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import logo from "../../assets/websiteLogo/SambahviMainLogo.png"; // replace with actual logo path
+import logo from "../../assets/websiteLogo/sambhavilogo.png"; // replace with actual logo path
 
 export default function ContactCTA() {
   return (
     <section className="relative py-20 bg-[#024950] text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-10 items-center">
-        
         {/* Left - Text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -23,26 +22,25 @@ export default function ContactCTA() {
           </p>
 
           <div className="mt-6 space-y-2">
-  <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">
-    📧 
-    <a 
-      href="mailto:cmd@saplonline.com" 
-      className="text-[#0FA4AF] hover:underline transition"
-    >
-      cmd@saplonline.com
-    </a>
-  </p>
-  <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">
-    📞 
-    <a 
-      href="tel:+919035908886" 
-      className="text-[#0FA4AF] hover:underline transition"
-    >
-      9035908886
-    </a>
-  </p>
-</div>
-
+            <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">
+              📧
+              <a
+                href="mailto:cmd@saplonline.com"
+                className="text-[#0FA4AF] hover:underline transition"
+              >
+                cmd@saplonline.com
+              </a>
+            </p>
+            <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">
+              📞
+              <a
+                href="tel:+919035908886"
+                className="text-[#0FA4AF] hover:underline transition"
+              >
+                9035908886
+              </a>
+            </p>
+          </div>
         </motion.div>
 
         {/* Right - Floating Logo */}
@@ -51,7 +49,7 @@ export default function ContactCTA() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="flex justify-center"
+          className="flex justify-center ml-6"
         >
           <motion.div
             animate={{
@@ -72,7 +70,7 @@ export default function ContactCTA() {
             <img
               src={logo}
               alt="Company Logo"
-              className="w-40 md:w-48 h-auto object-contain drop-shadow-[0_0_20px_rgba(175,221,229,0.4)]"
+              className="w-40 h-auto object-contain drop-shadow-[0_0_20px_rgba(175,221,229,0.4)]"
             />
           </motion.div>
         </motion.div>
