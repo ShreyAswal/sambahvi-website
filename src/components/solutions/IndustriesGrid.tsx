@@ -41,6 +41,13 @@ export default function IndustriesWeServe() {
         "src/assets/office/office5.jpg",
         "src/assets/office/office6.jpg",
         "src/assets/office/office7.jpg",
+        "src/assets/office/office8.jpg",
+        "src/assets/office/office9.jpg",
+        "src/assets/office/office10.jpg",
+        "src/assets/office/office11.jpg",
+        "src/assets/office/office12.jpg",
+        "src/assets/office/office13.jpg"
+
       ],
     },
     {
@@ -49,12 +56,14 @@ export default function IndustriesWeServe() {
       description:
         "Scalable partnerships and bulk-ready inventory designed for smooth nationwide operations.",
       images: [
-        "src/assets/office/office8.jpg",
-        "src/assets/office/office9.jpg",
-        "src/assets/office/office10.jpg",
-        "src/assets/office/office11.jpg",
-        "src/assets/office/office12.jpg",
-        "src/assets/office/office13.jpg",
+        "src/assets/distribution/d2c1.jpg",
+        "src/assets/distribution/d2c2.jpg",
+        "src/assets/distribution/d2c3.jpg",
+        "src/assets/distribution/d2c4.jpg",
+        "src/assets/distribution/d2c5.jpg",
+        "src/assets/distribution/d2c6.jpg",
+        "src/assets/distribution/d2c7.jpg",
+        "src/assets/distribution/d2c8.jpg",
       ],
     },
   ];
