@@ -30,8 +30,8 @@ export default function VisionMission() {
     {/* Unified Statement Block */}
   <div className="relative bg-[#F9FAFB] rounded-2xl border border-[#AFDDE5] shadow-sm px-8 py-10 flex flex-col gap-8 items-center">
       <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#1490ca1a] to-transparent blur-md pointer-events-none" />
-      <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-        <div className="flex flex-col items-center md:items-start">
+  <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+  <div className="flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -46,7 +46,7 @@ export default function VisionMission() {
           </p>
         </div>
   <div className="hidden md:block w-px h-16 bg-gradient-to-b from-[#1490ca] via-[#4fb5e0] to-transparent mx-8 opacity-70" />
-        <div className="flex flex-col items-center md:items-start">
+  <div className="flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}

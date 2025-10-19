@@ -15,8 +15,8 @@ export default function AboutPage() {
       />
       <CompanyStory />
       <LeadershipTeam />
-      <VisionMission />
       <CompanyTimeline />
+      <VisionMission />
       <ValuesGrid />
       <IndustriesTeaser
         title="Industries We Serve"

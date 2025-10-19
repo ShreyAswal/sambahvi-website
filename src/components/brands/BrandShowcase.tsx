@@ -24,13 +24,13 @@ export default function BrandShowcase() {
             {/* Brand Cards */}
             <div className="flex flex-col gap-12">
               {category.brands.map((brand, i) => {
-                const isReversed = i % 2 !== 0;
+                // const isReversed = i % 2 !== 0;
                 return (
                   <motion.div
                     key={i}
                     initial={{
                       opacity: 0,
-                      x: isReversed ? 100 : -100,
+                      // x: isReversed ? 100 : -100,
                     }}
                     whileInView={{
                       opacity: 1,
@@ -38,9 +38,8 @@ export default function BrandShowcase() {
                     }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
-                    className={`bg-white rounded-2xl shadow-md hover:shadow-xl border border-[#e5e7eb] transition-all overflow-hidden group ${
-                      isReversed ? "md:flex-row-reverse" : ""
-                    } flex flex-col md:flex-row items-center`}
+                    className={`bg-white rounded-2xl shadow-md hover:shadow-xl border border-[#e5e7eb] transition-all overflow-hidden group 
+                     flex flex-col md:flex-row items-center`}
                   >
                     <div className="relative w-full md:w-1/2 flex justify-center md:justify-center items-center bg-gradient-to-br from-white to-[#f5f9fc] p-10">
                       {/* Subtle gradient overlay for hover */}
