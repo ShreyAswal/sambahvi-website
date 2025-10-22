@@ -110,8 +110,8 @@ export default function IndustriesWeServe() {
   return (
     <section className="relative py-24 bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 md:px-12 lg:px-20 overflow-hidden">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 1 }}
+        animate={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-7xl mx-auto text-center"

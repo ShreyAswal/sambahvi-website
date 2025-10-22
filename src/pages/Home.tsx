@@ -3,7 +3,7 @@ import LifestyleDistribution from "../components/home/LifestyleDistribution"
 import BrandsAndPartnersSection from "../components/home/BrandsAndPartnersSection";
 // import Competencies from "../components/home/Competencies";
 import IndustryFocus from "../components/home/IndustryFocus";
-import ContactCTA from "../components/home/ContactCTA";
+// import ContactCTA from "../components/home/ContactCTA";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <BrandsAndPartnersSection />
       <IndustryFocus />
       {/* <Competencies /> */}
-      <ContactCTA />
+      {/* <ContactCTA /> */}
     </>
   );
 }

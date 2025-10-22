@@ -55,7 +55,7 @@ import HeroBanner from "../components/HeroBanner";
 const IndustriesPage: React.FC = () => (
   <>
     <HeroBanner
-      title="Industries We Serve"
+      title="Industries"
       tagline="We empower businesses across diverse sectors by providing premium products that combine style, functionality, and innovation. Our collaborations help partners grow, scale, and enhance customer experiences."
     />
     <IndustriesGrid />

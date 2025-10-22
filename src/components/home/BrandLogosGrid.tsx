@@ -32,14 +32,12 @@ export default function BrandLogosGrid() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center 
-                 hover:shadow-md hover:-translate-y-1 border border-transparent 
-                 hover:border-blue-500 transition-all"
+              className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center transform-gpu transition-all duration-300 group overflow-hidden border border-transparent hover:-translate-y-1 hover:shadow-lg group-hover:ring-8 group-hover:ring-primary-primary/10"
             >
               <motion.img
                 src={`src/assets/brands/${brand.logo}`}
                 alt={brand.name}
-                className="h-14 w-auto object-contain  hover:grayscale-0 transition duration-300"
+                  className="h-14 w-auto object-contain transition duration-300"
                 whileHover={{ scale: 1.05 }}
               />
             </motion.div>

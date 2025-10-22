@@ -22,7 +22,7 @@ export default function App() {
         <Navbar />
           <ScrollToTop /> {/* this ensures top scroll on page change */}
         {/* Page Content */}
-        <main className="flex-grow p-6">
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} /> {/* Our Story */}

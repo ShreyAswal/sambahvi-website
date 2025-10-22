@@ -19,7 +19,7 @@ export default function PartnersLogosGrid() {
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center 
                  hover:shadow-md hover:-translate-y-1 border border-transparent 
-                 hover:border-blue-500 transition-all"
+                 transition-all"
             >
               <motion.img
                 src={`src/assets/partners/${partner.logo}`}
