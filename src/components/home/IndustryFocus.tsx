@@ -108,9 +108,9 @@ export default function IndustryFocus() {
                             "src/assets/office/office3.webp",
                           ]
                         : [
-                            "src/assets/distribution/d2c1.jpg",
-                            "src/assets/distribution/d2c6.jpg",
-                            "src/assets/distribution/d2c2.jpg"
+                          "src/assets/distribution/d2c5.jpg",
+                          "src/assets/distribution/d2c2.jpg",
+                          "src/assets/distribution/d2c1.jpg",
                           ],
                   })
                 }

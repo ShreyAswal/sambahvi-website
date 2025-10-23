@@ -56,11 +56,11 @@ export default function IndustriesWeServe() {
       description:
         "Scalable partnerships and bulk-ready inventory designed for smooth nationwide operations.",
       images: [
+        "src/assets/distribution/d2c5.jpg",
         "src/assets/distribution/d2c1.jpg",
         "src/assets/distribution/d2c2.jpg",
         "src/assets/distribution/d2c3.jpg",
         "src/assets/distribution/d2c4.jpg",
-        "src/assets/distribution/d2c5.jpg",
         "src/assets/distribution/d2c6.jpg",
         "src/assets/distribution/d2c7.jpg",
         "src/assets/distribution/d2c8.jpg",
