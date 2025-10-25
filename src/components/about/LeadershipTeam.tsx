@@ -7,14 +7,14 @@ const leadershipTeam = [
     title: "Business Leader & Consultant",
     bio: "25+ years of experience across top consumer and lifestyle brands including Samsonite, IFB-Bosch, Arvind Brands, Luxottica, Safilo Group, and Kurlon. Expertise in brand building, retail expansion, D2C, licensing, and business transformation.",
     image: "Ashutosh.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ashutoshv/",
   },
   {
     name: "Ankita Jain",
     title: "CEO, Pandesara Infrastructure Ltd",
     bio: "Experienced professional with strong background in infrastructure, legal affairs, and operations. Known for leadership in regulatory and project-driven environments across Gujarat.",
-    image: "Manish.png",
-    linkedin: "#",
+    image: "Ankita.jpg",
+    linkedin: "http://linkedin.com/in/ankita-jain-268b4b59",
   },
 ];
 
@@ -54,7 +54,9 @@ export default function LeadershipTeam() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-[#024950] font-medium mb-3">{member.title}</p>
+                  <p className="text-[#024950] font-medium mb-3">
+                    {member.title}
+                  </p>
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">
                     {member.bio}
                   </p>
