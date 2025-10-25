@@ -43,7 +43,8 @@ export default function BrandShowcase() {
                   >
                     <div className="relative w-full md:w-1/2 flex justify-center md:justify-center items-center bg-gradient-to-br from-white to-[#f5f9fc] p-10">
                       {/* Subtle gradient overlay for hover */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-gradient-to-r from-[#1490ca] via-[#27acea] to-[#4fb5e0] transition-all duration-500" />
+                      {/* gradient overlay: visible by default on small screens, hover-controlled on md+ */}
+                      <div className="absolute inset-0 opacity-10 md:opacity-0 md:group-hover:opacity-10 bg-gradient-to-r from-[#1490ca] via-[#27acea] to-[#4fb5e0] transition-all duration-500" />
 
                       <motion.div
                         whileHover={{ scale: 1.05, rotate: 1 }}
@@ -78,10 +79,10 @@ export default function BrandShowcase() {
              border border-[#024950] bg-transparent relative overflow-hidden
              transition-all duration-300 group"
                       >
-                        <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                        <span className="relative z-10 text-white md:text-[#024950] md:group-hover:text-white transition-colors duration-300">
                           Visit Website
                         </span>
-                        <span className="absolute inset-0 bg-[#024950] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                        <span className="absolute inset-0 bg-[#024950] scale-x-100 md:scale-x-0 md:group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
                       </a>
                     </div>
 

@@ -125,10 +125,10 @@ export default function OmnichannelGrowth() {
                 } items-stretch overflow-hidden rounded-3xl shadow-lg bg-white`}
               >
                 {/* Logo Panel */}
-                <div className="md:w-1/3 relative flex justify-center items-center bg-[#E6F4F1]">
-                  <div className="absolute inset-0 bg-gradient-radial from-white/80 via-transparent to-transparent" />
+                <div className="md:w-1/3 relative flex justify-center items-center bg-[#E6F4F1] h-48 md:h-auto">
+                  <div className="absolute inset-0 opacity-10 md:opacity-0 md:group-hover:opacity-10 bg-gradient-to-r from-[#1490ca] via-[#27acea] to-[#4fb5e0] transition-all duration-500" />
                   <motion.div
-                    className="bg-white p-8 rounded-2xl shadow-md z-10"
+                    className="bg-white p-4 rounded-2xl flex items-center justify-center w-40 h-24 lg:w-48 lg:h-28 shadow-md z-10"
                     whileHover={{
                       rotateY: isReversed ? -10 : 10,
                       rotateX: 5,
@@ -139,7 +139,7 @@ export default function OmnichannelGrowth() {
                     <img
                       src={`src/assets/partners/${logoSrc}`}
                       alt={channel.name}
-                      className="h-20 w-auto object-contain"
+                      className="max-h-full max-w-full object-contain"
                     />
                   </motion.div>
                 </div>
