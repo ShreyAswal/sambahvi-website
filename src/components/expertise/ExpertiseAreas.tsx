@@ -44,10 +44,14 @@ export default function CoreExpertise() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 relative inline-block">
- Our Expertise
-  <span className="absolute left-0 -bottom-2 w-10 h-1 bg-[#2563eb] rounded-full"></span>
-</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 relative inline-block mx-auto lg:mx-0 text-center lg:text-left">
+          <span className="inline-block relative">
+            Core
+            <span className="absolute left-6 -bottom-2 w-10 h-1 bg-[#2563eb] rounded-full transform -translate-x-1/2 lg:hidden" />
+          </span>{" "}
+          Capabilities
+          <span className="hidden lg:block absolute left-0 -bottom-2 w-10 h-1 bg-[#2563eb] rounded-full" />
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {expertise.map((item, idx) => (

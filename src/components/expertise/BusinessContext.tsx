@@ -136,33 +136,23 @@ export default function BusinessContent({
                         </div>
 
                         <div className="md:w-1/2 flex items-start">
-                          <div className="w-full grid grid-cols-1 gap-4">
-                            {m.examples?.map((ex, idx) => (
-                              <article
-                                key={idx}
-                                className="p-4 rounded-lg border border-gray-100 bg-gray-50"
-                              >
-                                <h6 className="text-sm font-semibold text-gray-900">
-                                  {ex.title}
-                                </h6>
-                                {ex.result && (
-                                  <div className="text-xs text-primary-primary font-medium mt-1">
-                                    {ex.result}
-                                  </div>
-                                )}
-                                {ex.metric && (
-                                  <div className="text-xs text-gray-600 mt-1">
-                                    {ex.metric}
-                                  </div>
-                                )}
-                                {ex.blurb && (
-                                  <p className="text-sm text-gray-700 mt-2">
-                                    {ex.blurb}
-                                  </p>
-                                )}
-                              </article>
-                            ))}
-                          </div>
+                          <motion.div
+                            key={m.id + "-case"}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full bg-gray-50 border border-gray-100 rounded-xl p-6 shadow-sm overflow-y-hidden max-h-[420px]"
+                          >
+                            <h5 className="text-base font-semibold text-gray-800 mb-3">
+                              <span className="inline-flex items-center gap-2">
+                                <m.Icon className="w-5 h-5 text-primary-primary" />
+                                Case Study
+                              </span>
+                            </h5>
+                            <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
+                              {m.caseStudy}
+                            </p>
+                          </motion.div>
                         </div>
                       </div>
 
@@ -185,9 +175,23 @@ export default function BusinessContent({
                               behavior: "smooth",
                             });
                           }}
-                          className="text-sm text-primary-primary underline"
+                          aria-label="Next model"
+                          title="Next model"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary-primary px-3 py-1.5 rounded-full border border-primary-primary/10 bg-white hover:bg-primary-primary/5 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-primary/20"
                         >
-                          Next model
+                          <span>Next model</span>
+                          <svg
+                            className="w-4 h-4 text-primary-primary"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden
+                          >
+                            <path d="M9 18l6-6-6-6" />
+                          </svg>
                         </button>
                       </div>
                     </motion.div>

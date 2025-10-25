@@ -16,6 +16,7 @@ export type Model = {
   short: string;
   description: string[];
   idealFor: string;
+  caseStudy?: string; // ← add this
   examples?: {
     title: string;
     result?: string;
@@ -38,56 +39,13 @@ export const MODELS: Model[] = [
     ],
     idealFor:
       "New brands, D2C labels, and online resellers seeking a zero-inventory model.",
-    examples: [
-      {
-        title: "D2C Label A — Zero-Inventory Launch",
-        result: "Onboarded without inventory risk",
-        metric: "+60% SKU coverage in 8 weeks",
-        blurb:
-          "Launched core SKUs through dropship and marketplace integrations to test demand before committing to stock.",
-      },
-      {
-        title: "Homeware Brand B — Peak Season Scaling",
-        result: "Handled surges smoothly",
-        metric: "99% fulfillment accuracy",
-        blurb:
-          "Temporary partner warehouse capacity scaled to match seasonal demand without long-term storage costs.",
-      },
-    ],
+    caseStudy:
+      "Our dropshipping model provides a comprehensive, end-to-end logistics solution for global consumer appliance brands seeking to strengthen their D2C and offline presence in India. We have successfully partnered with world-renowned brands to manage every touchpoint of their retail journey — from product listing and order processing to in-store demonstrations, consumer installations, and after-sales service. By seamlessly integrating warehousing, logistics, and retail operations, we ensure a consistent brand experience and operational efficiency. Acting as a true extension of the brand, we help companies solve their entire last-mile challenge, ensuring customer satisfaction and brand consistency across all platforms.",
     Icon: Truck,
   },
   {
-    id: "buy-sell",
-    title: "Buy-and-Sell Fulfillment",
-    short: "Tailored for online marketplace sales.",
-    description: [
-      "Inventory Ownership: We purchase selected SKUs and manage pricing.",
-      "Marketplace Ops: Listings, promotions, and operations managed by our team.",
-      "Fulfillment: Warehousing + delivery via marketplace or our logistics network.",
-    ],
-    idealFor:
-      "Established sellers and brands wanting scalable marketplace presence.",
-    examples: [
-      {
-        title: "Fashion Brand X — Market Expansion",
-        result: "2.4x increase in weekly sales",
-        metric: "+140% revenue in 12 weeks",
-        blurb:
-          "We handled SKU selection, pricing and marketplace promotions to increase velocity without discounting.",
-      },
-      {
-        title: "Electronics Reseller Y — Logistics Optimization",
-        result: "Improved SLAs",
-        metric: "99.2% on-time delivery",
-        blurb:
-          "Consolidated fulfillment routes and optimized packing to reduce delays and returns.",
-      },
-    ],
-    Icon: Store,
-  },
-  {
     id: "bulk-liquidation",
-    title: "Bulk Purchase & Liquidation",
+    title: "Bulk Purchase / Liquidation Model",
     short: "Brand-respecting liquidation for slow-moving or closeout stock.",
     description: [
       "Procurement: We buy excess inventory at negotiated bulk rates.",
@@ -96,27 +54,28 @@ export const MODELS: Model[] = [
     ],
     idealFor:
       "Brands needing discreet, structured liquidation without market dilution.",
-    examples: [
-      {
-        title: "Apparel Closeout C — Channel Control",
-        result: "Reduced market leakage",
-        metric: "-30% brand exposure on open marketplaces",
-        blurb:
-          "Selective channeling ensured inventory cleared without hurting full-price retail channels.",
-      },
-      {
-        title: "Accessory Line D — Bulk Offload",
-        result: "Fast cash realization",
-        metric: "Cleared 85% stock in 6 weeks",
-        blurb:
-          "Strategic bundling and limited-time promos preserved brand perception while moving inventory.",
-      },
-    ],
+    caseStudy:
+      "When a multinational retailer decided to shut its retail operations, it was left with a significant amount of unsold inventory. Instead of relying on traditional models like Sale or Return (SOR) or Pay on Sales (POS), which they typically avoid, we offered a practical solution — purchasing the entire inventory outright and liquidating it through approved channels. This approach allowed the brand to maintain normal business continuity while efficiently clearing stock without diluting its market presence. Our structured, brand-respecting liquidation strategy ensures that every transaction protects the brand’s integrity and market positioning, while solving the excess inventory problem in a responsible and profitable manner.",
     Icon: Package,
   },
   {
+    id: "buy-sell",
+    title: "Buy-and-Sell Fulfillment Model",
+    short: "Tailored for online marketplace sales.",
+    description: [
+      "Inventory Ownership: We purchase selected SKUs and manage pricing.",
+      "Marketplace Ops: Listings, promotions, and operations managed by our team.",
+      "Fulfillment: Warehousing + delivery via marketplace or our logistics network.",
+    ],
+    idealFor:
+      "Established sellers and brands wanting scalable marketplace presence.",
+    caseStudy:
+      "For a leading global travel retail brand seeking to strengthen its presence in a specific geography, we became their complete operational partner — managing both their online and offline business. Our team handled every aspect, including pick, pack, dispatch, returns, and after-sales service, ensuring a seamless experience across all channels. This model allows us to function as a true extension of the company, adhering to its brand philosophy, guidelines, and operational policies. The result is a unified, high-performance marketplace presence that drives sales, maintains brand identity, and offers a consistent customer experience.",
+    Icon: Store,
+  },
+  {
     id: "franchisee",
-    title: "Franchisee Development",
+    title: "Franchisee Business Development",
     short: "End-to-end franchise development across categories.",
     description: [
       "Category Focus: Consumer durables, fashion, premium fashion.",
@@ -125,22 +84,8 @@ export const MODELS: Model[] = [
     ],
     idealFor:
       "Brands seeking capital-efficient retail expansion via franchise partners.",
-    examples: [
-      {
-        title: "Lifestyle Brand E — Pilot Rollout",
-        result: "Successful pilot conversion",
-        metric: "3 pilot stores -> 12 in 9 months",
-        blurb:
-          "Managed franchise onboarding and local operations to validate the retail playbook.",
-      },
-      {
-        title: "Durables Brand F — Ops Support",
-        result: "Consistent standards",
-        metric: "90% store compliance score",
-        blurb:
-          "Operational SOPs and field training reduced setup time and improved customer experience.",
-      },
-    ],
+    caseStudy:
+      "We enable brands in the consumer durable and fashion lifestyle segments to expand their retail footprint through well-structured franchise partnerships. Our expertise covers end-to-end franchise development — from onboarding potential partners to retail setup, marketing support, and store sale-out operations. Over time, we have built a trusted network of energetic and capable entrepreneurs eager to represent premium brands across categories. By combining our industry experience with local business networks, we deliver asset-light retail expansion that enhances offline brand visibility and consumer experience while driving long-term growth.",
     Icon: Users,
   },
   {
@@ -154,27 +99,13 @@ export const MODELS: Model[] = [
     ],
     idealFor:
       "Brands targeting visibility-driven, experience-led retail presence.",
-    examples: [
-      {
-        title: "Flagship Launch G — Experience Design",
-        result: "Strong footfall",
-        metric: "+22% walk-in conversion",
-        blurb:
-          "Curated merchandising and trained store staff elevated early customer satisfaction metrics.",
-      },
-      {
-        title: "Airport Outlet H — Travel Retail",
-        result: "High-ticket conversions",
-        metric: "Average transaction value +35%",
-        blurb:
-          "Optimized product mix and display for travel shoppers increased basket sizes.",
-      },
-    ],
+    caseStudy:
+      "Our retail operations span multiple formats — from flagship stores and high-street outlets to department store concessions and airport retail. We manage every operational detail, including visual merchandising, inventory planning, staffing, and customer engagement, to ensure a consistent and premium brand experience. Each store is tailored to the audience and environment, maintaining high standards of design and service. This multi-format approach enables brands to achieve maximum visibility and experiential engagement, ensuring that every consumer interaction strengthens the brand’s perception and desirability.",
     Icon: Building2,
   },
   {
     id: "co-branding",
-    title: "Co-Branding & Partnerships",
+    title: "Co-Branding",
     short: "Strategic cross-brand collaborations and limited collections.",
     description: [
       "Partnerships: Cross-category tie-ups for product or campaign collaborations.",
@@ -183,22 +114,8 @@ export const MODELS: Model[] = [
     ],
     idealFor:
       "Brands seeking buzz, category tests, or elevated positioning through synergy.",
-    examples: [
-      {
-        title: "Limited Collab I — Launch Campaign",
-        result: "Strong engagement",
-        metric: "+80% social uplift",
-        blurb:
-          "Cross-brand campaign and co-created product drove engagement and swift sell-through.",
-      },
-      {
-        title: "Capsule Collection J — New Audience",
-        result: "New buyer acquisition",
-        metric: "+18% new customers",
-        blurb:
-          "Partnered designs introduced the brand to adjacent audiences and drove trial purchases.",
-      },
-    ],
+    caseStudy:
+      "We actively facilitate strategic co-branding collaborations across consumer, fashion, and accessory categories to create impactful, limited-edition collections and high-engagement campaigns. Our role covers the complete process — from conceptualization and creative direction to production and marketing execution. These partnerships allow brands to cross-pollinate audiences, enhance brand perception, and generate fresh excitement in the market. By uniting complementary strengths under a cohesive strategy, our co-branding initiatives drive visibility, innovation, and meaningful consumer connection.",
     Icon: Sparkles,
   },
 ];
@@ -218,9 +135,15 @@ export default function BusinessModel() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 relative inline-block">
-          Business Models We Drive
-          <span className="absolute left-0 -bottom-3 w-16 h-1 rounded-full bg-primary-primary" />
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 relative inline-block mx-auto lg:mx-0 text-center lg:text-left">
+          <span className="inline-block relative">
+            Business
+            {/* small-screen underline anchored to the word 'Business' */}
+            <span className="absolute left-6 -bottom-3 w-12 h-1 rounded-full bg-primary-primary transform -translate-x-1/2 lg:hidden" />
+          </span>{" "}
+          Models We Drive
+          {/* large-screen underline: left-aligned under the heading start */}
+          <span className="hidden lg:block absolute left-0 -bottom-3 w-16 h-1 rounded-full bg-primary-primary" />
         </h2>
 
         <BusinessContent
