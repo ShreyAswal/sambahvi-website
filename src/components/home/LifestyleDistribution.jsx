@@ -42,10 +42,15 @@ export default function LifestyleDistribution() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 relative inline-block text-center"
+              className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 relative inline-block text-center leading-10"
             >
-              Redefining Lifestyle Distribution Across India
-              <span className="absolute left-0 mx-auto -bottom-2 w-16 h-1 bg-primary-primary rounded-full"></span>
+              <span className="inline-block relative">
+                Redefining
+                <span className="absolute left-6 -bottom-1 w-12 h-1 bg-primary-primary rounded-full transform -translate-x-1/2 lg:hidden" />
+              </span>{" "}
+              Lifestyle Distribution Across India
+              {/* large-screen underline: left-aligned under heading start */}
+              <span className="hidden lg:block absolute left-0 -bottom-2 w-16 h-1 bg-primary-primary rounded-full" />
             </motion.h2>
           </div>
           {/* </div> */}
@@ -70,7 +75,7 @@ export default function LifestyleDistribution() {
           <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-12"></div>
         </div>
         {/* Supporting Paragraphs */}
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto p-5">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

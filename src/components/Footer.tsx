@@ -115,7 +115,7 @@ export default function Footer() {
             <img
               src="src/assets/websiteLogo/sambhavilogo.png"
               alt="Sambahvi Agencies Logo"
-              className="h-36 w-auto ml-16 drop-shadow-lg border-t border-gray-500/40 rounded-3xl transition-all duration-300 hover:scale-105 hover:brightness-110 hover:ring-4 hover:ring-[#1490ca]/30 cursor-pointer"
+              className="h-36 w-auto mx-auto md:ml-16 drop-shadow-lg border-t border-gray-500/40 rounded-3xl transition-all duration-300 hover:scale-105 hover:brightness-110 hover:ring-4 hover:ring-[#1490ca]/30 cursor-pointer"
               onClick={() => (window.location.href = "/")}
             />
           </div>
