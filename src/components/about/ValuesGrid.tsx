@@ -71,55 +71,54 @@ export default function OurValues() {
         </motion.p>
 
         {/* Flowing Value Layout */}
-<div className="relative flex flex-col items-center gap-14">
-  {/* Top row: 3 values */}
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-14 w-full">
-    {values.slice(0, 3).map((value, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="flex flex-col items-center text-center space-y-3"
-      >
-        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0FA4AF]/10 mb-2">
-          {value.icon}
+        <div className="relative flex flex-col items-center gap-14">
+          {/* Top row: 3 values */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-14 w-full">
+            {values.slice(0, 3).map((value, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex flex-col items-center text-center space-y-3"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0FA4AF]/10 mb-2">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-[#024950]">
+                  {value.title}
+                </h3>
+                <p className="text-gray-700 text-sm max-w-xs leading-relaxed">
+                  {value.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+          {/* Bottom row: 2 values, centered below gaps */}
+          <div className="flex flex-col md:flex-row justify-center lg:gap-0 gap-14 md:gap-32 mt-2 w-full items-center">
+            {values.slice(3, 5).map((value, index) => (
+              <motion.div
+                key={index + 3}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
+                className="flex flex-col items-center text-center space-y-3 w-full md:min-w-[260px]"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0FA4AF]/10 mb-2">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-[#024950]">
+                  {value.title}
+                </h3>
+                <p className="text-gray-700 text-sm max-w-xs leading-relaxed">
+                  {value.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        <h3 className="text-xl font-semibold text-[#024950]">
-          {value.title}
-        </h3>
-        <p className="text-gray-700 text-sm max-w-xs leading-relaxed">
-          {value.text}
-        </p>
-      </motion.div>
-    ))}
-  </div>
-  {/* Bottom row: 2 values, centered below gaps */}
-  <div className="flex flex-row justify-center gap-32 mt-2 w-full">
-    {values.slice(3, 5).map((value, index) => (
-      <motion.div
-        key={index + 3}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
-        className="flex flex-col items-center text-center space-y-3"
-        style={{ minWidth: "260px" }}
-      >
-        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0FA4AF]/10 mb-2">
-          {value.icon}
-        </div>
-        <h3 className="text-xl font-semibold text-[#024950]">
-          {value.title}
-        </h3>
-        <p className="text-gray-700 text-sm max-w-xs leading-relaxed">
-          {value.text}
-        </p>
-      </motion.div>
-    ))}
-  </div>
-</div>
 
         {/* Closing Line */}
         <motion.p

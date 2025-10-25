@@ -85,19 +85,28 @@ export default function IndustriesTeaser() {
 
         {/* Auto-Scroll Container */}
         <div
-          className="overflow-hidden h-60 lg:h-56 cursor-pointer pt-8"
+          className="overflow-hidden h-52 sm:h-56 lg:h-60 cursor-pointer pt-6 sm:pt-8"
           ref={containerRef}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <div className="flex gap-6 w-max">
+          <div className="flex gap-3 sm:gap-4 md:gap-6 w-max">
             {[...industries, ...industries].map((industry, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-48 sm:w-52 md:w-56 lg:w-60 p-8 bg-white/90 rounded-2xl shadow-md border border-[#AFDDE5]/60 text-center group transition-all duration-200 hover:bg-[#AFDDE5]"
+                className="
+          flex-shrink-0
+          w-32 xs:w-36 sm:w-44 md:w-52 lg:w-60
+          p-4 sm:p-6 md:p-8
+          bg-white/90 rounded-xl sm:rounded-2xl
+          shadow-md border border-[#AFDDE5]/60 text-center
+          group transition-all duration-200 hover:bg-[#AFDDE5]
+        "
               >
-                <div className="flex justify-center mb-4">{industry.icon}</div>
-                <h3 className="mt-2 font-semibold text-[#003135] text-base">
+                <div className="flex justify-center mb-3 sm:mb-4 text-xl sm:text-2xl">
+                  {industry.icon}
+                </div>
+                <h3 className="mt-1 sm:mt-2 font-semibold text-[#003135] text-sm sm:text-base">
                   {industry.name}
                 </h3>
               </div>
@@ -121,7 +130,7 @@ export default function IndustriesTeaser() {
             partners scale their business while delivering exceptional value to
             their customers.
           </p>
-          
+
           <a
             href="/industries"
             className="inline-block mt-10 px-8 py-3 rounded-lg font-semibold
