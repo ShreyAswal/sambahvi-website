@@ -46,8 +46,7 @@ export default function IndustriesWeServe() {
         "src/assets/office/office10.jpg",
         "src/assets/office/office11.jpg",
         "src/assets/office/office12.jpg",
-        "src/assets/office/office13.jpg"
-
+        "src/assets/office/office13.jpg",
       ],
     },
     {
@@ -156,7 +155,6 @@ export default function IndustriesWeServe() {
             </motion.div>
           ))}
         </div>
-
         {/* Other Industries Grid */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 justify-center justify-items-center relative z-10 cursor-pointer">
           {others.map(({ Icon, title, description }) => (
@@ -164,10 +162,23 @@ export default function IndustriesWeServe() {
               key={title}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="group relative bg-white border border-[#E6F3F3] rounded-2xl shadow-sm overflow-hidden transition-all duration-500 w-full max-w-[320px]"
+              className={
+                "group relative bg-white text-[#01292C] border border-[#E6F3F3] rounded-2xl shadow-sm overflow-hidden transition-all duration-500 w-full max-w-[320px]"
+              }
             >
-              {/* Main face */}
-              <div className="flex flex-col items-center justify-center text-center p-8 h-64 relative z-10">
+              {/* Mobile (always visible) layout */}
+              <div className="flex flex-col items-center justify-center text-center p-8 h-auto md:hidden">
+                <div className="mb-4">
+                  <div className="inline-flex items-center justify-center rounded-lg p-3 bg-white">
+                    <Icon className="w-12 h-12 text-[#024950]" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold mb-3">{title}</h3>
+                <p className="text-sm leading-relaxed">{description}</p>
+              </div>
+
+              {/* Desktop / Tablet Hover Layout */}
+              <div className="hidden md:flex flex-col items-center justify-center text-center p-8 h-64 relative z-10">
                 <div className="mb-4 transition-transform duration-500 ease-out group-hover:-translate-y-10">
                   <div className="inline-flex items-center justify-center rounded-lg p-3 bg-white transform transition-transform duration-300 scale-100 group-hover:scale-110 opacity-90 group-hover:opacity-100">
                     <Icon className="w-12 h-12 text-[#024950]" />
@@ -179,9 +190,9 @@ export default function IndustriesWeServe() {
                 </h3>
               </div>
 
-              {/* Reveal panel - slides up on hover */}
+              {/* Hover reveal for medium+ */}
               <div
-                className="absolute left-0 right-0 bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-450 ease-in-out"
+                className="hidden md:block absolute left-0 right-0 bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-450 ease-in-out"
                 style={{ transitionDuration: "420ms" }}
               >
                 <div className="p-6 bg-gradient-to-b from-[#024950]/95 to-[#003135]/95 text-white rounded-b-2xl">

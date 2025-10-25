@@ -20,7 +20,6 @@ export default function IndustryModal({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [userInteracted, setUserInteracted] = useState(false);
 
-  // derive selected image from index (safe fallback)
   const selectedImage =
     images && images.length > 0 ? images[selectedIndex] : "";
 
@@ -32,13 +31,11 @@ export default function IndustryModal({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
-  // reset index when images change or modal opens
   useEffect(() => {
     setSelectedIndex(0);
     setUserInteracted(false);
   }, [images, isOpen]);
 
-  // auto-advance every 2 seconds while modal is open
   useEffect(() => {
     if (!isOpen || !images || images.length <= 1 || userInteracted) return;
     const id = window.setInterval(() => {
@@ -65,14 +62,20 @@ export default function IndustryModal({
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="relative bg-white rounded-3xl shadow-2xl w-[80vw] h-[80vh] flex overflow-hidden"
+          // Responsive: stacked on mobile, row on md+
+          className="relative bg-white rounded-3xl shadow-2xl w-[90vw] h-[85vh] flex flex-col md:flex-row overflow-hidden"
         >
-          {/* Left: Info + Thumbnails */}
-          <div className="w-[40%] p-8 overflow-y-auto border-r border-gray-200">
-            <h3 className="text-2xl font-bold text-[#024950] mb-4">{title}</h3>
-            <p className="text-gray-600 mb-6">{description}</p>
+          {/* Info Section (Top 40% on mobile, Left 40% on desktop) */}
+          <div className="w-full md:w-[40%] h-[40%] md:h-full p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-200 overflow-y-auto">
+            <h3 className="text-xl md:text-2xl font-bold text-[#024950] mb-3 md:mb-4">
+              {title}
+            </h3>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              {description}
+            </p>
 
-            <div className="grid grid-cols-3 gap-4">
+            {/* Only show thumbnails for md+ screens */}
+            <div className="hidden md:grid grid-cols-3 gap-4 mt-6">
               {images.map((img, i) => (
                 <motion.img
                   key={i}
@@ -93,8 +96,8 @@ export default function IndustryModal({
             </div>
           </div>
 
-          {/* Right: Large Image Viewer */}
-          <div className="w-[60%] flex items-center justify-center bg-gray-50 relative">
+          {/* Image Section (Bottom 60% on mobile, Right 60% on desktop) */}
+          <div className="w-full md:w-[60%] h-[60%] md:h-full flex items-center justify-center bg-gray-50 relative overflow-hidden p-6 md:p-8 rounded-2xl -mt-6 md:mt-0">
             <AnimatePresence mode="wait">
               <motion.img
                 key={selectedImage}
@@ -104,7 +107,7 @@ export default function IndustryModal({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="max-h-[90%] max-w-[90%] rounded-2xl shadow-lg object-contain"
+                className="max-h-[80vh] w-auto max-w-full rounded-2xl object-contain bg-transparent"
               />
             </AnimatePresence>
           </div>
@@ -112,7 +115,7 @@ export default function IndustryModal({
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition"
+            className="absolute top-3 right-3 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition"
           >
             <X className="w-5 h-5 text-gray-700" />
           </button>
