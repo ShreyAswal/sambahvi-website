@@ -132,7 +132,7 @@ const categories = [
         description:
           "An Italian design house known for bold eyewear and accessories that embody individuality and modern urban style.",
         link: "https://www.policelifestyle.com/",
-  images: ["police1.png", "police2.png", "police3.png", "police4.png", "police5.png","police6.png", "police7.png", "police8.png", "police9.png", "police10.png"],
+        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
       },
       {
         name: "Doughnut",
@@ -140,7 +140,7 @@ const categories = [
         description:
           "A Hong Kong-based backpack brand merging outdoor utility with fashion-forward design and premium craftsmanship.",
         link: "https://doughnutofficial.com/",
-  images: ["doughnut1.png", "doughnut2.png", "doughnut3.png"],
+        images: ["1.webp", "2.webp", "3.webp", "4.webp", "5.jpg"],
       },
       {
         name: "Aecooly",
@@ -148,7 +148,15 @@ const categories = [
         description:
           "A fast-growing lifestyle and backpack brand offering trendy, functional, and urban carry solutions.",
         link: "https://aecooly.com/",
-  images: ["aecooly1.png", "aecooly2.png", "aecooly3.png"],
+        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+      },
+      {
+        name: "Tifosi",
+        logo: "Tifosi-logo.png",
+        description:
+          "A high-performance eyewear brand specializing in sports sunglasses and optical gear, built for durability and style for athletes and outdoor enthusiasts.",
+        link: "https://tifosioptics.com",
+        images: ["1.jpg", "2.jpg", "3.webp", "4.jpeg", "5.webp"],
       },
     ],
   },
@@ -156,12 +164,28 @@ const categories = [
     title: "Technology & Gadgets",
     brands: [
       {
+        name: "Hyperice",
+        logo: "Hyperice-logo.png",
+        description:
+          "Performance technology brand offering recovery and movement enhancement tools trusted by athletes worldwide.",
+        link: "https://hyperice.com/",
+        images: ["1.webp", "2.webp", "3.webp", "4.webp"],
+      },
+      {
+        name: "Kodak",
+        logo: "Kodak-logo.png",
+        description:
+          "An iconic imaging brand providing digital accessories, storage solutions, and photographic equipment for creative professionals and everyday users.",
+        link: "https://kodak.com",
+        images: ["1.webp", "2.jpeg", "3.webp", "4.avif", "5.jpg"],
+      },
+      {
         name: "Edifier",
         logo: "Edifier-logo.png",
         description:
           "Global leader in premium audio devices designed to deliver immersive sound with aesthetic precision.",
         link: "https://www.edifier.com/",
-  images: ["edifier1.png", "edifier2.png", "edifier3.png"],
+        images: ["1.jpg", "2.webp", "3.jpg", "4.jpeg"],
       },
       {
         name: "Shokz",
@@ -169,15 +193,15 @@ const categories = [
         description:
           "Pioneers in bone-conduction headphones designed for safety, comfort, and open-ear listening.",
         link: "https://shokz.com/",
-  images: ["shokz1.png", "shokz2.png", "shokz3.png"],
+        images: ["1.jpeg", "2.webp", "3.jpeg"],
       },
       {
-        name: "Hyperice",
-        logo: "Hyperice-logo.png",
+        name: "Ugreen",
+        logo: "Ugreen-logo.png",
         description:
-          "Performance technology brand offering recovery and movement enhancement tools trusted by athletes worldwide.",
-        link: "https://hyperice.com/",
-  images: ["hyperice1.png", "hyperice2.png", "hyperice3.png"],
+          "A top-tier global brand for consumer electronics accessories — chargers, cables, hubs, and storage devices designed for modern tech users.",
+        link: "https://ugreen.com",
+        images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.webp"],
       },
     ],
   },
@@ -190,7 +214,7 @@ const categories = [
         description:
           "Renowned for Swiss precision, Victorinox offers premium travel gear designed for functionality and endurance.",
         link: "https://www.victorinox.com/",
-  images: ["victorinox1.png", "victorinox2.png", "victorinox3.png"],
+        images: ["1.jpg", "2.jpg", "3.jpeg", "4.webp", "5.webp"],
       },
       {
         name: "Wenger",
@@ -198,7 +222,15 @@ const categories = [
         description:
           "Swiss brand offering backpacks and lifestyle accessories crafted with durability and sleek design.",
         link: "https://www.wenger.ch/",
-  images: ["wenger1.png", "wenger2.png", "wenger3.png"],
+        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+      },
+      {
+        name: "Tomtoc",
+        logo: "Tomtoc-logo.png",
+        description:
+          "Specializing in premium laptop sleeves, travel organizers, and tech protection gear that combine style with robust device protection.",
+        link: "https://tomtoc.com",
+        images: ["1.jpg", "2.png", "3.png", "4.jpg", "5.jpg", "6.jpg"],
       },
       {
         name: "Travel Blue",
@@ -206,7 +238,16 @@ const categories = [
         description:
           "Leading travel accessories brand dedicated to sustainability and convenience for global travelers.",
         link: "https://www.travel-blue.com/",
-  images: ["travelblue1.png", "travelblue2.png", "travelblue3.png"],
+        images: [
+          "1.jpg",
+          "2.jpg",
+          "3.jpg",
+          "4.jpg",
+          "5.jpg",
+          "6.webp",
+          "7.webp",
+          "8.jpg",
+        ],
       },
     ],
   },
