@@ -92,17 +92,70 @@ export default function BrandShowcase() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6 }}
-                      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-[#f9fafb] border-t border-[#e5e7eb] p-4 w-full"
+                      className="bg-[#f9fafb] border-t border-[#e5e7eb] p-4 w-full"
                     >
-                      {brand.images.map((img, index) => (
-                        <motion.img
-                          key={index}
-                          src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
-                          alt={`${brand.name} product ${index + 1}`}
-                          className="rounded-lg object-cover h-36 w-full hover:scale-[1.03] transition-transform duration-300 shadow-sm"
-                          loading="lazy"
-                        />
-                      ))}
+                      {brand.images.length <= 1 ? (
+                        <div className="flex justify-center">
+                          {brand.images.map((img, idx) => (
+                            <div key={idx} className="p-1 rounded-md bg-white overflow-visible">
+                              <motion.img
+                                src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
+                                alt={`${brand.name} product ${idx + 1}`}
+                                className="rounded-sm object-contain h-36 w-full max-w-md transition-transform duration-300 transform-gpu relative z-0 hover:z-10 hover:scale-105 shadow-sm"
+                                loading="lazy"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        (() => {
+                          const total = brand.images.length;
+                          const topCount = Math.ceil(total / 2);
+                          const top = brand.images.slice(0, topCount);
+                          const bottom = brand.images.slice(topCount);
+                          const itemWidth = `${100 / topCount}%`;
+
+                          return (
+                            <div className="space-y-2">
+                              <div className="flex gap-2">
+                                {top.map((img, idx) => (
+                                  <div
+                                    key={idx}
+                                    className="p-1 rounded-md bg-white overflow-visible"
+                                    style={{ flexBasis: itemWidth, maxWidth: itemWidth }}
+                                  >
+                                    <motion.img
+                                      src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
+                                      alt={`${brand.name} product ${idx + 1}`}
+                                      className="rounded-sm object-contain h-36 w-full transition-transform duration-300 transform-gpu relative z-0 hover:z-10 hover:scale-105 shadow-sm"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                ))}
+                              </div>
+
+                              {bottom.length > 0 && (
+                                <div className="flex gap-2 justify-center">
+                                  {bottom.map((img, idx) => (
+                                    <div
+                                      key={idx}
+                                      className="p-1 rounded-md bg-white overflow-visible"
+                                      style={{ flexBasis: itemWidth, maxWidth: itemWidth }}
+                                    >
+                                      <motion.img
+                                        src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
+                                        alt={`${brand.name} product ${topCount + idx + 1}`}
+                                        className="rounded-sm object-contain h-36 w-full transition-transform duration-300 transform-gpu relative z-0 hover:z-10 hover:scale-105 shadow-sm"
+                                        loading="lazy"
+                                      />
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })()
+                      )}
                     </motion.div>
                   </motion.div>
                 );
