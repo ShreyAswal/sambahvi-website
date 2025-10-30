@@ -1,4 +1,3 @@
-import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -95,19 +94,6 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <p className="mb-2">📧 cmd@saplonline.com</p>
             <p className="mb-4">📞 +91 90359 08886</p>
-            <div className="flex justify-center md:justify-start gap-4 text-xl">
-              {[FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map(
-                (Icon, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className="text-white transform transition-transform duration-300 hover:scale-125 hover:text-[#1490ca]"
-                  >
-                    <Icon />
-                  </a>
-                )
-              )}
-            </div>
           </div>
 
           {/* CTA */}
