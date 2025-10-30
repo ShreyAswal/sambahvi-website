@@ -18,20 +18,7 @@ export default function AboutPage() {
       <CompanyTimeline />
       <VisionMission />
       <ValuesGrid />
-      <IndustriesTeaser
-        title="Industries We Serve"
-        subtitle="We help businesses across sectors scale and innovate."
-        ctaText="Explore Services"
-        ctaLink="/services"
-        industries={[
-          "Consumer Electronics",
-          "Retail & E-commerce",
-          "Healthcare",
-          "Finance & Banking",
-          "FMCG",
-          "Education",
-        ]}
-      />
+      <IndustriesTeaser />
     </>
   );
 }
