@@ -97,7 +97,10 @@ export default function BrandShowcase() {
                       {brand.images.length <= 1 ? (
                         <div className="flex justify-center">
                           {brand.images.map((img, idx) => (
-                            <div key={idx} className="p-1 rounded-md bg-white overflow-visible">
+                            <div
+                              key={idx}
+                              className="p-1 rounded-md bg-white overflow-visible"
+                            >
                               <motion.img
                                 src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
                                 alt={`${brand.name} product ${idx + 1}`}
@@ -122,7 +125,10 @@ export default function BrandShowcase() {
                                   <div
                                     key={idx}
                                     className="p-1 rounded-md bg-white overflow-visible"
-                                    style={{ flexBasis: itemWidth, maxWidth: itemWidth }}
+                                    style={{
+                                      flexBasis: itemWidth,
+                                      maxWidth: itemWidth,
+                                    }}
                                   >
                                     <motion.img
                                       src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
@@ -140,11 +146,16 @@ export default function BrandShowcase() {
                                     <div
                                       key={idx}
                                       className="p-1 rounded-md bg-white overflow-visible"
-                                      style={{ flexBasis: itemWidth, maxWidth: itemWidth }}
+                                      style={{
+                                        flexBasis: itemWidth,
+                                        maxWidth: itemWidth,
+                                      }}
                                     >
                                       <motion.img
                                         src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
-                                        alt={`${brand.name} product ${topCount + idx + 1}`}
+                                        alt={`${brand.name} product ${
+                                          topCount + idx + 1
+                                        }`}
                                         className="rounded-sm object-contain h-36 w-full transition-transform duration-300 transform-gpu relative z-0 hover:z-10 hover:scale-105 shadow-sm"
                                         loading="lazy"
                                       />
@@ -201,7 +212,7 @@ const categories = [
         description:
           "A fast-growing lifestyle and backpack brand offering trendy, functional, and urban carry solutions.",
         link: "https://aecooly.com/",
-        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+        images: ["1.webp", "2.webp", "3.jpg", "4.webp", "5.png"],
       },
       {
         name: "Tifosi",
@@ -275,7 +286,7 @@ const categories = [
         description:
           "Swiss brand offering backpacks and lifestyle accessories crafted with durability and sleek design.",
         link: "https://www.wenger.ch/",
-        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+        images: ["1.jpg", "2.jpg", "3.jpg", "4.webp"],
       },
       {
         name: "Tomtoc",
