@@ -62,7 +62,7 @@ const IndustriesPage: React.FC = () => (
 
     <CTASection
       title="Ready to partner with us?"
-      subtitle="Discover how Sambahvi Agencies can help your brand grow in the Indian market."
+      subtitle="Discover how Sambhavi Agencies can help your brand grow in the Indian market."
       ctaText="Contact Us"
       ctaLink="/contact"
     />

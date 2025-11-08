@@ -29,7 +29,7 @@
 //       <div className="max-w-7xl mx-auto px-6 text-center">
 //         {/* Section Heading */}
 //         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-//           Why Choose Sambahvi?
+//           Why Choose Sambhavi?
 //         </h2>
 //         <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-12">
 //           Combining global expertise with local trust, we deliver premium

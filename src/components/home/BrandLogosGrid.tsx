@@ -13,7 +13,7 @@ const brands = [
   { name: "Tifosi", logo: "Tifosi-logo.png" },
   { name: "Kodak", logo: "Kodak-logo.png" },
   { name: "Tomtoc", logo: "Tomtoc-logo.png" },
-  { name: "Travel Blue", logo: "Travel-Blue-Logo.png" },
+  { name: "Travel Blue", logo: "Travel-Blue-logo.png" },
 ];
 
 export default function BrandLogosGrid() {

@@ -83,7 +83,7 @@ export default function LifestyleDistribution() {
             transition={{ duration: 0.8 }}
             className="text-gray-700 mb-6 leading-relaxed text-lg"
           >
-            Sambahvi Agencies Pvt. Ltd. is an{" "}
+            Sambhavi Agencies Pvt. Ltd. is an{" "}
             <span className="text-primary-primary font-medium">
               authorized and exclusive e-commerce distributor
             </span>{" "}

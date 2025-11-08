@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       <HeroBanner
-        title="About Sambahvi Agencies"
+        title="About Sambhavi Agencies"
         tagline="Empowering brands. Enabling growth. Delivering trust."
       />
       <CompanyStory />
