@@ -7,9 +7,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 const FlyoutLink = ({
   children,
   FlyoutContent,
+  to,
 }: {
   children: React.ReactNode;
   FlyoutContent?: React.ElementType;
+  to?: string;
 }) => {
   const [open, setOpen] = useState(false);
   const showFlyout = FlyoutContent && open;
@@ -20,9 +22,19 @@ const FlyoutLink = ({
       onMouseLeave={() => setOpen(false)}
       className="relative"
     >
-      <button className="flex items-center font-medium text-gray-700 hover:text-primary-primary">
-        {children}
-      </button>
+      {/* Render clickable label so it both navigates on click and still shows flyout on hover */}
+      {to ? (
+        <Link
+          to={to}
+          className="flex items-center font-medium text-gray-700 hover:text-primary-primary"
+        >
+          {children}
+        </Link>
+      ) : (
+        <button className="flex items-center font-medium text-gray-700 hover:text-primary-primary">
+          {children}
+        </button>
+      )}
 
       <AnimatePresence>
         {showFlyout && (
@@ -47,16 +59,10 @@ const FlyoutLink = ({
 // Solutions Dropdown Content
 const SolutionsContent = () => (
   <div className="w-56 p-4 space-y-2">
-    <Link
-      to="/industries"
-      className="block text-sm hover:text-primary-primary"
-    >
+    <Link to="/industries" className="block text-sm hover:text-primary-primary">
       Industries We Serve
     </Link>
-    <Link
-      to="/expertise"
-      className="block text-sm hover:text-primary-primary"
-    >
+    <Link to="/expertise" className="block text-sm hover:text-primary-primary">
       Our Expertise
     </Link>
     {/* <Link to="/channels" className="block text-sm hover:text-primary-primary">
@@ -86,7 +92,11 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center z-50">
-            <img src="../../assets/websiteLogo/sambhavilogo.png" alt="Sambahvi Logo" className="h-20 w-auto" />
+            <img
+              src="../../assets/websiteLogo/sambhavilogo.png"
+              alt="Sambahvi Logo"
+              className="h-20 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -99,12 +109,12 @@ export default function Navbar() {
               About Us
             </Link>
             {/* Partners Dropdown: Brands and Channels */}
-            <FlyoutLink FlyoutContent={PartnersContent}>
+            <FlyoutLink FlyoutContent={PartnersContent} to="/brands">
               <span className="hover:underline underline-offset-8 transition-all z-50">
                 Partners
               </span>
             </FlyoutLink>
-            <FlyoutLink FlyoutContent={SolutionsContent}>
+            <FlyoutLink FlyoutContent={SolutionsContent} to="/industries">
               <span className="hover:underline underline-offset-8 transition-all z-50">
                 Solutions
               </span>
@@ -182,7 +192,7 @@ export default function Navbar() {
           >
             Distribution Network
           </Link> */}
-          
+
           <div className="border-t border-gray-200 my-2" />
 
           <Link
