@@ -8,7 +8,7 @@ export default function BrandShowcase() {
           <motion.div
             key={idx}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: idx * 0.2 }}
             className="mb-20"
@@ -32,7 +32,7 @@ export default function BrandShowcase() {
                       opacity: 0,
                       // x: isReversed ? 100 : -100,
                     }}
-                    whileInView={{
+                    animate={{
                       opacity: 1,
                       x: 0,
                     }}
@@ -89,7 +89,7 @@ export default function BrandShowcase() {
                     {/* Product Image Strip */}
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      animate={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6 }}
                       className="bg-[#f9fafb] border-t border-[#e5e7eb] p-4 w-full"
