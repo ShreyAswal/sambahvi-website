@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from "../assets/websiteLogo/sambhavilogo.png";
 
 // Flyout Wrapper
 const FlyoutLink = ({
@@ -87,7 +86,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center z-50">
-            <img src={logo} alt="Sambahvi Logo" className="h-20 w-auto" />
+            <img src="../../assets/websiteLogo/sambhavilogo.png" alt="Sambahvi Logo" className="h-20 w-auto" />
           </Link>
 
           {/* Desktop Nav */}

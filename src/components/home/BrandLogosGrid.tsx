@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-// import policeLogo from "../../assets/brands/police-logo.png";
 
 const brands = [
   { name: "Police", logo: "Police-logo.png" },
@@ -14,7 +13,7 @@ const brands = [
   { name: "Tifosi", logo: "Tifosi-logo.png" },
   { name: "Kodak", logo: "Kodak-logo.png" },
   { name: "Tomtoc", logo: "Tomtoc-logo.png" },
-  { name: "Travel Blue", logo: "Travel-Blue-logo.png" },
+  { name: "Travel Blue", logo: "Travel-Blue-Logo.png" },
 ];
 
 export default function BrandLogosGrid() {
@@ -35,7 +34,7 @@ export default function BrandLogosGrid() {
               className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center transform-gpu transition-all duration-300 group overflow-hidden border border-transparent hover:-translate-y-1 hover:shadow-lg group-hover:ring-8 group-hover:ring-primary-primary/10"
             >
               <motion.img
-                src={`src/assets/brands/${brand.logo}`}
+                src={`/assets/brands/${brand.logo}`}
                 alt={brand.name}
                   className="h-14 w-auto object-contain transition duration-300"
                 whileHover={{ scale: 1.05 }}

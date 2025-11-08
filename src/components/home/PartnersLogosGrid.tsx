@@ -22,7 +22,7 @@ export default function PartnersLogosGrid() {
                  transition-all"
             >
               <motion.img
-                src={`src/assets/partners/${partner.logo}`}
+                src={`/assets/partners/${partner.logo}`}
                 alt={partner.name}
                 className="h-14 w-auto object-contain hover:grayscale-0 transition duration-300"
                 whileHover={{ scale: 1.05 }}

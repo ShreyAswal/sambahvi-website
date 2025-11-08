@@ -1,8 +1,3 @@
-// import video from "../../assets/homePageVideo/heroPageVid.mp4";
-import video2 from "../../assets/homePageVideo/HeroPageVid2.mp4";
-
-
-
 export default function Hero() {
   return (
     <>
@@ -10,7 +5,7 @@ export default function Hero() {
         {/* Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
-          src={video2}
+          src="../../../assets/homePageVideo/HeroPageVid2.mp4"
           autoPlay
           loop
           muted

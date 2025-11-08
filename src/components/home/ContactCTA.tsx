@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import logo from "../../assets/websiteLogo/sambhavilogo.png"; // replace with actual logo path
 
 export default function ContactCTA() {
   return (
@@ -68,7 +67,7 @@ export default function ContactCTA() {
             className="bg-[#003135]/60 backdrop-blur-md p-8 rounded-3xl ring-2 ring-[#0FA4AF]/30 flex items-center justify-center"
           >
             <img
-              src={logo}
+              src="../../assets/websiteLogo/sambhavilogo.png"
               alt="Company Logo"
               className="w-40 h-auto object-contain drop-shadow-[0_0_20px_rgba(175,221,229,0.4)]"
             />

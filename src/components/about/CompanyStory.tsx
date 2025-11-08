@@ -1,4 +1,3 @@
-import peopleSitting from "../../assets/photos/people-sitting.jpg";
 import { motion } from "framer-motion";
 
 export default function OurStory() {
@@ -33,7 +32,7 @@ export default function OurStory() {
         {/* Visual / Image */}
         <div className="flex justify-center">
           <img
-            src={peopleSitting}
+            src="../../../assets/photos/people-sitting.jpg"
             alt="Our Story"
             className="rounded-2xl shadow-lg w-full max-w-md border-4 border-indigo-100 transition-transform duration-300 hover:-translate-y-2"
           />

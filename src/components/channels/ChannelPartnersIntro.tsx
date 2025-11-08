@@ -55,7 +55,7 @@ const generateSquares = () => {
       className="w-full h-full flex items-center justify-center p-2 bg-white rounded-lg shadow-sm"
     >
       <img
-        src={`src/assets/partners/${p.logo}`}
+        src={`/assets/partners/${p.logo}`}
         alt={p.name}
         className="max-h-12 object-contain hover:grayscale-0 transition duration-300"
       />

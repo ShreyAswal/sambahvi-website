@@ -43,7 +43,7 @@ export default function LeadershipTeam() {
                 {/* Image */}
                 <div className="md:w-1/3 w-full flex justify-center md:justify-start p-6">
                   <img
-                    src={`src/assets/leadership/${member.image}`}
+                    src={`/assets/leadership/${member.image}`}
                     alt={member.name}
                     className="w-36 h-36 md:w-40 md:h-40 object-cover rounded-full shadow-md border-4 border-white group-hover:scale-105 transition-transform duration-300"
                   />

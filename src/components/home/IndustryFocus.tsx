@@ -103,14 +103,14 @@ export default function IndustryFocus() {
                   images:
                     item.title === "Coworking Spaces"
                       ? [
-                          "src/assets/office/office1.webp",
-                          "src/assets/office/office2.webp",
-                          "src/assets/office/office3.webp",
+                          "/assets/office/office1.webp",
+                          "/assets/office/office2.webp",
+                          "/assets/office/office3.webp",
                         ]
                       : [
-                          "src/assets/distribution/d2c5.jpg",
-                          "src/assets/distribution/d2c2.jpg",
-                          "src/assets/distribution/d2c1.jpg",
+                          "/assets/distribution/d2c5.jpg",
+                          "/assets/distribution/d2c2.jpg",
+                          "/assets/distribution/d2c1.jpg",
                         ],
                 })
               }

@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, Copy, CheckCircle2 } from "lucide-react";
-import logo from "../../assets/websiteLogo/sambhavilogo.png";
 
 export default function ContactUs() {
   const [copied, setCopied] = useState<string | null>(null);
@@ -49,7 +48,7 @@ export default function ContactUs() {
           className="flex-1 text-center md:text-left space-y-6"
         >
           <img
-            src={logo}
+            src="../../../assets/websiteLogo/sambhavilogo.png"
             alt="SAPL Logo"
             className="w-28 mx-auto md:mx-0 mb-2 drop-shadow-sm"
           />

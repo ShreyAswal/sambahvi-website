@@ -52,7 +52,7 @@ export default function BrandShowcase() {
                         className="bg-white border border-[#e5e7eb] rounded-2xl p-5 shadow-sm flex items-center justify-center w-40 h-40 relative z-10"
                       >
                         <img
-                          src={`src/assets/brands/${brand.logo}`}
+                          src={`/assets/brands/${brand.logo}`}
                           alt={brand.name}
                           className="h-20 w-auto object-contain"
                         />
@@ -102,7 +102,7 @@ export default function BrandShowcase() {
                               className="p-1 rounded-md bg-white overflow-visible"
                             >
                               <motion.img
-                                src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
+                                src={`/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
                                 alt={`${brand.name} product ${idx + 1}`}
                                 className="rounded-sm object-contain h-36 w-full max-w-md transition-transform duration-300 transform-gpu relative z-0 hover:z-10 hover:scale-105 shadow-sm"
                                 loading="lazy"
@@ -131,7 +131,7 @@ export default function BrandShowcase() {
                                     }}
                                   >
                                     <motion.img
-                                      src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
+                                      src={`/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
                                       alt={`${brand.name} product ${idx + 1}`}
                                       className="rounded-sm object-contain h-36 w-full transition-transform duration-300 transform-gpu relative z-0 hover:z-10 hover:scale-105 shadow-sm"
                                       loading="lazy"
@@ -152,7 +152,7 @@ export default function BrandShowcase() {
                                       }}
                                     >
                                       <motion.img
-                                        src={`src/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
+                                        src={`/assets/brandProducts/${brand.name.toLowerCase()}/${img}`}
                                         alt={`${brand.name} product ${
                                           topCount + idx + 1
                                         }`}

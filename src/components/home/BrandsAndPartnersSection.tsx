@@ -1,18 +1,3 @@
-// import victorinox from "../../assets/brands/Victorinox-logo.png";
-// import wenger from "../../assets/brands/Wenger-logo.png";
-// import police from "../../assets/brands/police-logo.png";
-// import travelblue from "../../assets/brands/Travel-Blue-Logo.png";
-// import amazon from "../../assets/partners/amazon-logo.png";
-// import flipkart from "../../assets/partners/flipkart-logo.png";
-// import myntra from "../../assets/partners/myntra-logo.png";
-// import tatacliq from "../../assets/partners/tata-cliq-logo.png";
-// import tatacliqluxury from "../../assets/partners/tata-cliq-luxury-logo.png";
-// import ajio from "../../assets/partners/ajio-logo.png";
-// import fancode from "../../assets/brands/fancode-logo.png";
-// import firstcry from "../../assets/partners/firstcry-logo.png";
-// import limeroad from "../../assets/partners/limeroad-logo.png";
-// import industrybuying from "../../assets/partners/industrybuying-logo.png";
-import background from "../../assets/backgrounds/low-poly-grid-haikei.svg";
 import { motion } from "framer-motion";
 import BrandLogosGrid from "./BrandLogosGrid";
 import PartnersLogosGrid from "./PartnersLogosGrid";
@@ -42,7 +27,7 @@ export default function BrandsAndPartnersSection() {
     <section className="relative py-20 bg-gray-50">
       {/* Background Pattern */}
       <img
-        src={background}
+        src="../../../assets/backgrounds/low-poly-grid-haikei.svg"
         alt="Background Grid"
         className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
       />

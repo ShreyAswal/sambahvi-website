@@ -137,7 +137,7 @@ export default function OmnichannelGrowth() {
                     transition={{ type: "spring", stiffness: 150, damping: 10 }}
                   >
                     <img
-                      src={`src/assets/partners/${logoSrc}`}
+                      src={`/assets/partners/${logoSrc}`}
                       alt={channel.name}
                       className="max-h-full max-w-full object-contain"
                     />
