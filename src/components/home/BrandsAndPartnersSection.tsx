@@ -34,7 +34,7 @@ export default function BrandsAndPartnersSection() {
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="relative max-w-7xl mx-auto px-6 lg:px-12"

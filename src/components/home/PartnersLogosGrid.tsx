@@ -14,7 +14,7 @@ export default function PartnersLogosGrid() {
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center 

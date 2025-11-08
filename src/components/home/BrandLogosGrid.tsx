@@ -28,7 +28,7 @@ export default function BrandLogosGrid() {
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center transform-gpu transition-all duration-300 group overflow-hidden border border-transparent hover:-translate-y-1 hover:shadow-lg group-hover:ring-8 group-hover:ring-primary-primary/10"
