@@ -95,8 +95,16 @@ export default function Navbar() {
             <img
               src="../../assets/websiteLogo/sambhavilogo.png"
               alt="Sambhavi Logo"
-              className="h-20 w-auto"
+              className="h-12 md:h-20 w-auto"
             />
+            <div className="ml-3 leading-tight">
+              <span className="block text-lg md:text-2xl font-semibold text-gray-900">
+                Sambhavi Agencies Pvt. Ltd.
+              </span>
+              {/* <span className="block text-xs md:text-sm text-gray-600">
+                Pvt. Ltd.
+              </span> */}
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -186,12 +194,6 @@ export default function Navbar() {
           >
             Our Expertise
           </Link>
-          {/* <Link
-            to="/channels"
-            className="block text-gray-700 hover:text-primary-primary pl-2"
-          >
-            Distribution Network
-          </Link> */}
 
           <div className="border-t border-gray-200 my-2" />
 

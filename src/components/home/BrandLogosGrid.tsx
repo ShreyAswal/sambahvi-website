@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
+// ...existing code...
+// import { motion } from "framer-motion";
 
 const brands = [
   { name: "Police", logo: "Police-logo.png" },
-  { name: "Victory Knox", logo: "Victorinox-logo.png" },
+  { name: "Victorinox", logo: "Victorinox-logo.png" },
   { name: "Wenger", logo: "Wenger-logo.png" },
   { name: "Ugreen", logo: "Ugreen-logo.png" },
   { name: "Aecooly", logo: "Aecooly-logo.png" },
@@ -17,32 +18,77 @@ const brands = [
 ];
 
 export default function BrandLogosGrid() {
+  // adjust duration (s) for speed: larger = slower
+  const duration = 22;
+
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          Our Brand Partners
-        </h2> */}
-        <div className="flex flex-wrap justify-center gap-8">
-          {brands.map((brand, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center transform-gpu transition-all duration-300 group overflow-hidden border border-transparent hover:-translate-y-1 hover:shadow-lg group-hover:ring-8 group-hover:ring-primary-primary/10"
-            >
-              <motion.img
-                src={`/assets/brands/${brand.logo}`}
-                alt={brand.name}
-                  className="h-14 w-auto object-contain transition duration-300"
-                whileHover={{ scale: 1.05 }}
-              />
-            </motion.div>
-          ))}
+    <section className="py-8">
+      <div className="max-w-7xl mx-auto  px-6 lg:px-12">
+        {/* marquee wrapper */}
+        <div className="overflow-hidden py-4">
+          <div
+            className="brand-marquee-track flex items-center"
+            style={{
+              // CSS defined below relies on CSS variables
+              ["--marquee-duration" as any]: `${duration}s`,
+            }}
+          >
+            {/* two groups duplicated for seamless loop */}
+            {[0, 1].map((rep) => (
+              <div
+                key={rep}
+                className="brand-marquee-group flex items-center gap-8 flex-shrink-0"
+                aria-hidden={rep === 1}
+              >
+                {brands.map((brand, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center justify-center bg-white rounded-xl p-3 shadow-sm border border-transparent transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    style={{ minWidth: 140 }}
+                  >
+                    <img
+                      src={`/assets/brands/${brand.logo}`}
+                      alt={brand.name}
+                      className="h-14 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* local styles for marquee */}
+      <style>{`
+        .brand-marquee-track {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          /* total width is groups side-by-side; translate by 50% (one group) */
+          animation: marquee var(--marquee-duration) linear infinite;
+        }
+
+        .brand-marquee-group {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        /* Pause on hover */
+        .brand-marquee-track:hover {
+          animation-play-state: paused;
+        }
+
+        /* Make sure duplicated group occupies equal width */
+        .brand-marquee-group { flex: 0 0 auto; }
+      `}</style>
     </section>
   );
 }
+// ...existing code...

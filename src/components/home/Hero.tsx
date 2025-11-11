@@ -18,13 +18,13 @@ export default function Hero() {
         <div className="relative z-20 max-w-3xl text-left mt-20 mb-5">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-8">
-            Connecting Global Brands with Indian Consumers
+            Exclusive / distributor for world-renowned lifestyle and tech brands
           </h1>
 
           {/* Italic Line */}
           <p className="text-md md:text-lg italic text-gray-200 mb-4">
-            Delivering premium experiences through efficient distribution,
-            seamless online availability, and trusted global partnerships.
+            With a 10,000 sq. ft. Warehouse - located in heart of Tech City
+            Bangalore ( JP Nagar) set to commence operations shortly,
           </p>
 
           {/* CTA Buttons */}

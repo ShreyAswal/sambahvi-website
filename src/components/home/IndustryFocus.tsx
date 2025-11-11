@@ -77,12 +77,6 @@ export default function IndustryFocus() {
 
   return (
     <section className="relative py-20 bg-gradient-to-b from-white to-gray-50 px-6 md:px-12 lg:px-20">
-      {/* <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      > */}
       <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
@@ -95,7 +89,7 @@ export default function IndustryFocus() {
           {highlighted.map((item, idx) => (
             <div
               key={idx}
-              className="group relative bg-white rounded-xl p-10 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)] transition duration-300 cursor-pointer border border-gold hover:border-primary/40"
+              className="group relative bg-white rounded-xl p-10  transition duration-300 cursor-pointer border border-gray-200 hover:border-primary/40"
               onClick={() =>
                 setModalData({
                   open: true,
@@ -116,16 +110,16 @@ export default function IndustryFocus() {
               }
             >
               {/* Featured Ribbon */}
-              <div className="absolute top-3 left-3 bg-amber-400 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+              {/* <div className="absolute top-3 left-3 bg-amber-400 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 Featured
-              </div>
+              </div> */}
 
               <div className="flex flex-col items-center">
                 {item.icon}
                 <h3 className="mt-4 text-xl font-semibold text-gray-900">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-gray-600 text-sm transition duration-300 md:transform md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                <p className="mt-2 text-gray-600 text-sm transition duration-300 md:transform md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 ">
                   {item.description}
                 </p>
               </div>
@@ -138,7 +132,7 @@ export default function IndustryFocus() {
           {others.map((item, idx) => (
             <div
               key={idx}
-              className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-gray-200 hover:border-primary/40"
+              className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300  border border-gray-200 hover:border-primary/40"
             >
               <div className="flex flex-col items-center">
                 {item.icon}
