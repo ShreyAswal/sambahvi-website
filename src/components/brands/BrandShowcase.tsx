@@ -191,12 +191,12 @@ const categories = [
     title: "Fashion & Lifestyle",
     brands: [
       {
-        name: "Police",
-        logo: "Police-logo.png",
+        name: "Aecooly",
+        logo: "Aecooly-logo.png",
         description:
-          "An Italian design house known for bold eyewear and accessories that embody individuality and modern urban style.",
-        link: "https://www.policelifestyle.com/",
-        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+          "A fast-growing lifestyle and backpack brand offering trendy, functional, and urban carry solutions.",
+        link: "https://aecooly.com/",
+        images: ["1.webp", "2.webp", "3.jpg", "4.webp", "5.png"],
       },
       {
         name: "Doughnut",
@@ -207,12 +207,12 @@ const categories = [
         images: ["1.webp", "2.webp", "3.webp", "4.webp", "5.jpg"],
       },
       {
-        name: "Aecooly",
-        logo: "Aecooly-logo.png",
+        name: "Police",
+        logo: "Police-logo.png",
         description:
-          "A fast-growing lifestyle and backpack brand offering trendy, functional, and urban carry solutions.",
-        link: "https://aecooly.com/",
-        images: ["1.webp", "2.webp", "3.jpg", "4.webp", "5.png"],
+          "An Italian design house known for bold eyewear and accessories that embody individuality and modern urban style.",
+        link: "https://www.policelifestyle.com/",
+        images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
       },
       {
         name: "Tifosi",
@@ -228,6 +228,14 @@ const categories = [
     title: "Technology & Gadgets",
     brands: [
       {
+        name: "Edifier",
+        logo: "Edifier-logo.png",
+        description:
+          "Global leader in premium audio devices designed to deliver immersive sound with aesthetic precision.",
+        link: "https://www.edifier.com/",
+        images: ["1.jpg", "2.webp", "3.jpg", "4.jpeg"],
+      },
+      {
         name: "Hyperice",
         logo: "Hyperice-logo.png",
         description:
@@ -242,14 +250,6 @@ const categories = [
           "An iconic imaging brand providing digital accessories, storage solutions, and photographic equipment for creative professionals and everyday users.",
         link: "https://kodak.com",
         images: ["1.webp", "2.jpeg", "3.webp", "4.avif", "5.jpg"],
-      },
-      {
-        name: "Edifier",
-        logo: "Edifier-logo.png",
-        description:
-          "Global leader in premium audio devices designed to deliver immersive sound with aesthetic precision.",
-        link: "https://www.edifier.com/",
-        images: ["1.jpg", "2.webp", "3.jpg", "4.jpeg"],
       },
       {
         name: "Shokz",
@@ -272,22 +272,6 @@ const categories = [
   {
     title: "Travel & Utility",
     brands: [
-      {
-        name: "Victorinox",
-        logo: "Victorinox-logo.png",
-        description:
-          "Renowned for Swiss precision, Victorinox offers premium travel gear designed for functionality and endurance.",
-        link: "https://www.victorinox.com/",
-        images: ["1.jpg", "2.jpg", "3.jpeg", "4.webp", "5.webp"],
-      },
-      {
-        name: "Wenger",
-        logo: "Wenger-logo.png",
-        description:
-          "Swiss brand offering backpacks and lifestyle accessories crafted with durability and sleek design.",
-        link: "https://www.wenger.ch/",
-        images: ["1.jpg", "2.jpg", "3.jpg", "4.webp"],
-      },
       {
         name: "Tomtoc",
         logo: "Tomtoc-logo.png",
@@ -312,6 +296,22 @@ const categories = [
           "7.webp",
           "8.jpg",
         ],
+      },
+      {
+        name: "Victorinox",
+        logo: "Victorinox-logo.png",
+        description:
+          "Renowned for Swiss precision, Victorinox offers premium travel gear designed for functionality and endurance.",
+        link: "https://www.victorinox.com/",
+        images: ["1.jpg", "2.jpg", "3.jpeg", "4.webp", "5.webp"],
+      },
+      {
+        name: "Wenger",
+        logo: "Wenger-logo.png",
+        description:
+          "Swiss brand offering backpacks and lifestyle accessories crafted with durability and sleek design.",
+        link: "https://www.wenger.ch/",
+        images: ["1.jpg", "2.jpg", "3.jpg", "4.webp"],
       },
     ],
   },

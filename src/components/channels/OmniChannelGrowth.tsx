@@ -14,6 +14,18 @@ const getLogo = (name: string): string | undefined =>
 export default function OmnichannelGrowth() {
   const channels = [
     {
+      name: "AJIO",
+      website: "ajio.com",
+      description:
+        "India’s trend-forward lifestyle platform blending fashion, function, and innovation.",
+      focus:
+        "Sunglasses, travel wallets, designer backpacks, and premium travel accessories.",
+      operations:
+        "Catalog design, brand coordination, and content optimization.",
+      growth:
+        "Premium positioning via curated drops, storytelling, and collaboration-led growth.",
+    },
+    {
       name: "Amazon",
       website: "amazon.com",
       description:
@@ -24,17 +36,6 @@ export default function OmnichannelGrowth() {
         "Brand storefront management with optimized listings and A+ content. Fulfillment via Amazon FBA and integrated networks.",
       growth:
         "Nationwide visibility through curated product selections, optimized brand stores, and data-led marketplace strategies.",
-    },
-    {
-      name: "Flipkart",
-      website: "flipkart.com",
-      description:
-        "Leading marketplace for value-driven consumers across travel, lifestyle, and electronics.",
-      focus: "Backpacks, headphones, sunglasses, massagers, and accessories.",
-      operations:
-        "Flipkart Smart Fulfillment for fast delivery and top listing performance.",
-      growth:
-        "Strong presence via Big Billion Days and seasonal campaigns with optimized pricing.",
     },
     {
       name: "FirstCry",
@@ -48,29 +49,17 @@ export default function OmnichannelGrowth() {
         "Curated listings catering to families seeking comfort-focused, travel-friendly lifestyle solutions.",
     },
     {
-      name: "AJIO",
-      website: "ajio.com",
+      name: "Flipkart",
+      website: "flipkart.com",
       description:
-        "India’s trend-forward lifestyle platform blending fashion, function, and innovation.",
-      focus:
-        "Sunglasses, travel wallets, designer backpacks, and premium travel accessories.",
+        "Leading marketplace for value-driven consumers across travel, lifestyle, and electronics.",
+      focus: "Backpacks, headphones, sunglasses, massagers, and accessories.",
       operations:
-        "Catalog design, brand coordination, and content optimization.",
+        "Flipkart Smart Fulfillment for fast delivery and top listing performance.",
       growth:
-        "Premium positioning via curated drops, storytelling, and collaboration-led growth.",
+        "Strong presence via Big Billion Days and seasonal campaigns with optimized pricing.",
     },
-    {
-      name: "Tata Cliq",
-      website: "tatacliq.com",
-      description:
-        "Premium retail space emphasizing authenticity and trusted brand experiences.",
-      focus:
-        "Premium luggage, headphones, electronic accessories, and travel tech.",
-      operations:
-        "Brand-controlled listings emphasizing presentation and service quality.",
-      growth:
-        "Selective representation highlighting design-driven travel range.",
-    },
+
     {
       name: "Myntra",
       website: "myntra.com",
@@ -94,6 +83,18 @@ export default function OmnichannelGrowth() {
         "Managed logistics ensuring safe handling and timely delivery.",
       growth:
         "Wellness-focused expansion leveraging Nykaa’s content-driven engagement.",
+    },
+    {
+      name: "Tata Cliq",
+      website: "tatacliq.com",
+      description:
+        "Premium retail space emphasizing authenticity and trusted brand experiences.",
+      focus:
+        "Premium luggage, headphones, electronic accessories, and travel tech.",
+      operations:
+        "Brand-controlled listings emphasizing presentation and service quality.",
+      growth:
+        "Selective representation highlighting design-driven travel range.",
     },
   ];
 

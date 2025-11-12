@@ -3,26 +3,6 @@ import BrandLogosGrid from "./BrandLogosGrid";
 import PartnersLogosGrid from "./PartnersLogosGrid";
 
 export default function BrandsAndPartnersSection() {
-  // const brandLogos = [
-  //   victorinox,
-  //   wenger,
-  //   police,
-  //   travelblue,
-  //   fancode,
-  //   firstcry,
-  // ];
-
-  // const partnerLogos = [
-  //   amazon,
-  //   flipkart,
-  //   myntra,
-  //   ajio,
-  //   tatacliq,
-  //   tatacliqluxury,
-  //   limeroad,
-  //   industrybuying,
-  // ];
-
   return (
     <section className="relative py-20 bg-gray-50">
       {/* Background Pattern */}
@@ -58,7 +38,7 @@ export default function BrandsAndPartnersSection() {
             Exclusive distributor for world-renowned lifestyle and tech brands.
           </p>
           {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6"> */}
-            <BrandLogosGrid />
+          <BrandLogosGrid />
           {/* </div> */}
           {/* CTA for Brands */}
           <div className="text-center mt-8">
