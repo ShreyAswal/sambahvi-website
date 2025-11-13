@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="relative z-20 max-w-3xl text-left mt-20 mb-5">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-8">
-            Exclusive / distributor for world-renowned lifestyle and tech brands
+            Exclusive/Distributor For World-Renowned Lifestyle And Tech Brands
           </h1>
 
           {/* Italic Line */}

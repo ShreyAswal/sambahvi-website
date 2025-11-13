@@ -93,7 +93,7 @@ export default function ContactUs() {
                 <div className="flex-1 min-w-0">
                   <p className="text-gray-700 font-medium">Email</p>
                   <a
-                    href="mailto:cmd@saplonline.com"
+                    href="mailto:ebusiness@saplonline.com"
                     className="text-primary-primary font-semibold hover:underline break-all"
                     onClick={(e) => {
                       if (
@@ -101,17 +101,17 @@ export default function ContactUs() {
                         window.innerWidth < 768
                       ) {
                         e.preventDefault();
-                        handleCopy("cmd@saplonline.com", "email");
+                        handleCopy("ebusiness@saplonline.com", "email");
                       }
                     }}
                     title="Click to compose on desktop, tap to copy on mobile"
                   >
-                    cmd@saplonline.com
+                    ebusiness@saplonline.com
                   </a>
                 </div>
               </div>
               <button
-                onClick={() => handleCopy("cmd@saplonline.com", "email")}
+                onClick={() => handleCopy("ebusiness@saplonline.com", "email")}
                 className="hidden sm:inline-flex p-2 hover:bg-gray-100 rounded-lg transition flex-shrink-0"
                 aria-label="Copy email"
               >

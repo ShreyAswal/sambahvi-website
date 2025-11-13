@@ -24,10 +24,10 @@ export default function ContactCTA() {
             <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">
               📧
               <a
-                href="mailto:cmd@saplonline.com"
+                href="mailto:ebusiness@saplonline.com"
                 className="text-[#0FA4AF] hover:underline transition"
               >
-                cmd@saplonline.com
+                ebusiness@saplonline.com
               </a>
             </p>
             <p className="flex items-center justify-center lg:justify-start gap-3 font-medium">

@@ -92,7 +92,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="mb-2">📧 cmd@saplonline.com</p>
+            <p className="mb-2">📧 ebusiness@saplonline.com</p>
             <p className="mb-4">📞 +91 90359 08886</p>
           </div>
 
