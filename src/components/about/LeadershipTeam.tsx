@@ -11,7 +11,7 @@ const leadershipTeam = [
   },
   {
     name: "Ankita Jain",
-    title: "CEO, Pandesara Infrastructure Ltd",
+    title: "Co Founder",
     bio: "Experienced professional with strong background in infrastructure, legal affairs, and operations. Known for leadership in regulatory and project-driven environments across Gujarat.",
     image: "Ankita.jpg",
     linkedin: "http://linkedin.com/in/ankita-jain-268b4b59",
@@ -55,7 +55,12 @@ export default function LeadershipTeam() {
                     {member.name}
                   </h3>
                   <p className="text-[#024950] font-medium mb-3">
-                    {member.title}
+                    {member.title ? (
+                      member.title
+                    ) : (
+                      // keep space when title is missing so content aligns
+                      <span className="invisible">Placeholder</span>
+                    )}
                   </p>
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">
                     {member.bio}
