@@ -43,7 +43,7 @@ export default function BrandLogosGrid() {
                 {brands.map((brand, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center justify-center bg-white rounded-xl p-3 shadow-sm border border-transparent transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    className="flex items-center justify-center bg-white rounded-xl p-3 shadow-sm border border-[#FFD966]/30 transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{ minWidth: 140 }}
                   >
                     <img

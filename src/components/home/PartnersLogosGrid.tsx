@@ -8,7 +8,7 @@ export default function PartnersLogosGrid() {
   return (
     <section className="py-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-2xl font-bold text-center text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-center text-[#1F2937] mb-6">
           Trusted Sales Channels
         </h2>
 
@@ -29,10 +29,7 @@ export default function PartnersLogosGrid() {
                 {partnersLogos.map((partner, idx) => (
                   <div
                     key={idx}
-                    // initial={{ opacity: 0, y: 6 }}
-                    // animate={{ opacity: 1, y: 0 }}
-                    // transition={{ duration: 0.4, delay: idx * 0.03 }}
-                    className="flex items-center justify-center bg-white rounded-xl p-3 shadow-sm border border-transparent transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    className="flex items-center justify-center bg-white rounded-xl p-3 shadow-sm border border-[#FFD966]/30 transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{ minWidth: 140 }}
                   >
                     <img

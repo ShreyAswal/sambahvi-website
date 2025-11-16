@@ -7,7 +7,7 @@ export default function IndustryFocus() {
   const highlighted = [
     {
       icon: (
-        <Building2 className="h-12 w-12 text-primary group-hover:text-accent transition-colors duration-300" />
+        <Building2 className="h-12 w-12 text-white group-hover:text-[#D4AF37] transition-colors duration-300" />
       ),
       title: "Coworking Spaces",
       description:
@@ -15,7 +15,7 @@ export default function IndustryFocus() {
     },
     {
       icon: (
-        <ShoppingBag className="h-12 w-12 text-primary group-hover:text-accent transition-colors duration-300" />
+        <ShoppingBag className="h-12 w-12 text-white group-hover:text-[#D4AF37] transition-colors duration-300" />
       ),
       title: "D2C Distribution",
       description:
@@ -26,7 +26,7 @@ export default function IndustryFocus() {
   const others = [
     {
       icon: (
-        <Shirt className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+        <Shirt className="h-10 w-10 text-white group-hover:text-[#D4AF37] transition-colors duration-300" />
       ),
       title: "Fashion & Apparels",
       description:
@@ -34,21 +34,21 @@ export default function IndustryFocus() {
     },
     {
       icon: (
-        <Gem className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+        <Gem className="h-10 w-10 text-white group-hover:text-[#D4AF37] transition-colors duration-300" />
       ),
       title: "Luxury Accessories",
       description: "Premium global brands delivering elegance and durability.",
     },
     {
       icon: (
-        <Tv className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+        <Tv className="h-10 w-10 text-white group-hover:text-[#D4AF37] transition-colors duration-300" />
       ),
       title: "Consumer Durables",
       description: "Reliable products that elevate everyday living.",
     },
     {
       icon: (
-        <Home className="h-10 w-10 text-primary group-hover:text-accent transition-colors duration-300" />
+        <Home className="h-10 w-10 text-white group-hover:text-[#D4AF37] transition-colors duration-300" />
       ),
       title: "Consumer Appliances",
       description:
@@ -76,20 +76,19 @@ export default function IndustryFocus() {
   }, [modalData.open]);
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-white to-gray-50 px-6 md:px-12 lg:px-20">
-      <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent" />
+    <section className="relative py-20 bg-black text-white px-6 md:px-12 lg:px-20">
+      {/* subtle gold accent band */}
+      {/* <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#FFD966]" /> */}
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-          Industry Focus
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-12">Industry Focus</h2>
 
         {/* Highlighted Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {highlighted.map((item, idx) => (
             <div
               key={idx}
-              className="group relative bg-white rounded-xl p-10  transition duration-300 cursor-pointer border border-gray-200 hover:border-primary/40"
+              className="group relative bg-[#0b0b0b] rounded-xl p-10 shadow-[0_0_18px_rgba(212,175,55,0.08)] hover:shadow-[0_0_25px_rgba(212,175,55,0.14)] transition duration-300 cursor-pointer border border-transparent hover:border-[#D4AF37]"
               onClick={() =>
                 setModalData({
                   open: true,
@@ -97,31 +96,27 @@ export default function IndustryFocus() {
                   images:
                     item.title === "Coworking Spaces"
                       ? [
-                          "/assets/office/office1.webp",
-                          "/assets/office/office2.webp",
-                          "/assets/office/office3.webp",
+                          "assets/office/office1.webp",
+                          "assets/office/office2.webp",
+                          "assets/office/office3.webp",
                         ]
                       : [
-                          "/assets/distribution/d2c5.jpg",
-                          "/assets/distribution/d2c2.jpg",
-                          "/assets/distribution/d2c1.jpg",
+                          "assets/distribution/d2c5.jpg",
+                          "assets/distribution/d2c2.jpg",
+                          "assets/distribution/d2c1.jpg",
                         ],
                 })
               }
             >
-              {/* Featured Ribbon */}
-              {/* <div className="absolute top-3 left-3 bg-amber-400 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+              {/* subtle featured tag preserved, now gold */}
+              <div className="absolute top-3 left-3 bg-[#D4AF37] text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 Featured
-              </div> */}
+              </div>
 
               <div className="flex flex-col items-center">
                 {item.icon}
-                <h3 className="mt-4 text-xl font-semibold text-gray-900">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-gray-600 text-sm transition duration-300 md:transform md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 ">
-                  {item.description}
-                </p>
+                <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-white/80 text-sm transition duration-300 md:transform md:translate-y-0">{item.description}</p>
               </div>
             </div>
           ))}
@@ -132,16 +127,12 @@ export default function IndustryFocus() {
           {others.map((item, idx) => (
             <div
               key={idx}
-              className="group relative bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300  border border-gray-200 hover:border-primary/40"
+              className="group relative bg-[#0b0b0b] rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-transparent hover:border-[#D4AF37]"
             >
               <div className="flex flex-col items-center">
                 {item.icon}
-                <h3 className="mt-4 text-xl font-semibold text-gray-900">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-gray-600 text-sm transition duration-300 md:transform md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-                  {item.description}
-                </p>
+                <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-white/80 text-sm">{item.description}</p>
               </div>
             </div>
           ))}
