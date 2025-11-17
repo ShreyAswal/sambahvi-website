@@ -136,10 +136,6 @@ export default function IndustriesWeServe() {
               }
               className="group relative bg-[#0f0f10] border border-transparent hover:border-[#D4AF37]/20 rounded-2xl p:10 md:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.12)] cursor-pointer overflow-hidden transition-all duration-500"
             >
-              <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
-                Featured
-              </div>
-
               <div className="flex flex-col items-center text-center space-y-4">
                 <item.Icon className="w-14 h-14 text-white" />
                 <h3 className="text-2xl font-semibold text-white">

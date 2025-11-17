@@ -45,7 +45,7 @@ export default function CompanyTimeline() {
   ];
 
   return (
-    <section className="relative py-20 bg-[#07122A] text-white">
+    <section className="relative py-20 bg-black text-white">
       <div className="relative max-w-4xl mx-auto py-16 px-4 sm:px-6">
         {/* Vertical timeline line (subtle gold) */}
         <div className="absolute left-1/2 top-0 h-full w-1 bg-[#D4AF37]/10" />
