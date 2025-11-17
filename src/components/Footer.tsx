@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gray-900 text-white overflow-hidden">
+    <footer className="relative bg-[#0b0b0b] text-white overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -17,8 +17,8 @@ export default function Footer() {
             preserveAspectRatio="none"
           >
             <path
-              fill="#1490ca"
-              fillOpacity="0.2"
+              fill="#D4AF37"
+              fillOpacity="0.06"
               d="M0,64L48,69.3C96,75,192,85,288,101.3C384,117,480,139,576,144C672,149,768,139,864,128C960,117,1056,107,1152,112C1248,117,1344,139,1392,149.3L1440,160L1440,0L0,0Z"
             />
           </svg>
@@ -27,12 +27,14 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-4 gap-12 text-center md:text-left relative z-10">
           {/* Main Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Main Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#D4AF37]">
+              Main Links
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="/brands"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
+                  className="hover:text-[#D4AF37] transition-colors duration-300"
                 >
                   Brands
                 </a>
@@ -40,7 +42,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/channels"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
+                  className="hover:text-[#D4AF37] transition-colors duration-300"
                 >
                   Channels
                 </a>
@@ -49,7 +51,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/about"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
+                  className="hover:text-[#D4AF37] transition-colors duration-300"
                 >
                   About Us
                 </a>
@@ -59,12 +61,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#D4AF37]">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="/expertise"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
+                  className="hover:text-[#D4AF37] transition-colors duration-300"
                 >
                   Our Expertise
                 </a>
@@ -72,7 +76,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/industries"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
+                  className="hover:text-[#D4AF37] transition-colors duration-300"
                 >
                   Industries We Serve
                 </a>
@@ -81,7 +85,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/contact"
-                  className="hover:text-[#1490ca] transition-colors duration-300"
+                  className="hover:text-[#D4AF37] transition-colors duration-300"
                 >
                   Contact Us
                 </a>
@@ -91,9 +95,11 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="mb-2">📧 ebusiness@saplonline.com</p>
-            <p className="mb-4">📞 +91 90359 08886</p>
+            <h3 className="text-lg font-semibold mb-4 text-[#D4AF37]">
+              Contact
+            </h3>
+            <p className="mb-2 text-white/80">📧 ebusiness@saplonline.com</p>
+            <p className="mb-4 text-white/80">📞 +91 90359 08886</p>
           </div>
 
           {/* CTA */}
@@ -101,14 +107,14 @@ export default function Footer() {
             <img
               src="/assets/websiteLogo/sambhavilogo.png"
               alt="Sambhavi Agencies Logo"
-              className="h-36 w-auto mx-auto md:ml-16 drop-shadow-lg border-t border-gray-500/40 rounded-3xl transition-all duration-300 hover:scale-105 hover:brightness-110 hover:ring-4 hover:ring-[#1490ca]/30 cursor-pointer"
+              className="h-36 w-auto mx-auto md:ml-16 drop-shadow-lg rounded-3xl transition-all duration-300 hover:scale-105 hover:brightness-110 hover:ring-4 hover:ring-[#D4AF37]/20 cursor-pointer"
               onClick={() => (window.location.href = "/")}
             />
           </div>
         </div>
 
         {/* Bottom Copyright */}
-        <div className="mt-8 py-4 text-center text-sm text-gray-400 relative z-10">
+        <div className="mt-8 py-4 text-center text-sm text-white/60 relative z-10">
           &copy; {new Date().getFullYear()} Sambhavi Agencies Pvt. Ltd. All
           rights reserved.
         </div>
