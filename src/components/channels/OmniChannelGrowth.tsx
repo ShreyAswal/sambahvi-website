@@ -99,13 +99,13 @@ export default function OmnichannelGrowth() {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-[#F9FAFB] to-[#E6F4F1]">
+    <section className="relative py-24 bg-[#000000] text-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#024950]"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#D4AF37]"
         >
           Omnichannel Growth Partners
         </motion.h2>
@@ -123,11 +123,11 @@ export default function OmnichannelGrowth() {
                 transition={{ duration: 0.6 }}
                 className={`flex flex-col md:flex-row ${
                   isReversed ? "md:flex-row-reverse" : ""
-                } items-stretch overflow-hidden rounded-3xl shadow-lg bg-white`}
+                } items-stretch overflow-hidden rounded-3xl shadow-lg bg-[#0f0f10]`}
               >
                 {/* Logo Panel */}
-                <div className="md:w-1/3 relative flex justify-center items-center bg-[#E6F4F1] h-48 md:h-auto">
-                  <div className="absolute inset-0 opacity-10 md:opacity-0 md:group-hover:opacity-10 bg-gradient-to-r from-[#1490ca] via-[#27acea] to-[#4fb5e0] transition-all duration-500" />
+                <div className="md:w-1/3 relative flex justify-center items-center bg-[#0b0b0b] h-48 md:h-auto">
+                  <div className="absolute inset-0 opacity-0 md:group-hover:opacity-5 bg-gradient-to-r from-[#D4AF37]/6 via-[#B8860B]/6 to-[#FFD966]/6 transition-all duration-500" />
                   <motion.div
                     className="bg-white p-4 rounded-2xl flex items-center justify-center w-40 h-24 lg:w-48 lg:h-28 shadow-md z-10"
                     whileHover={{
@@ -146,9 +146,9 @@ export default function OmnichannelGrowth() {
                 </div>
 
                 {/* Content Panel */}
-                <div className="md:w-2/3 relative bg-white p-10 flex flex-col justify-center">
-                  <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#024950] via-[#27ACEA] to-transparent rounded-r-lg" />
-                  <h3 className="text-2xl font-semibold text-[#024950] mb-3">
+                <div className="md:w-2/3 relative bg-[#0b0b0b] p-10 flex flex-col justify-center">
+                  <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#D4AF37]/40 to-transparent rounded-r-lg" />
+                  <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">
                     <motion.a
                       href={`https://${channel.website}`}
                       target="_blank"
@@ -156,7 +156,7 @@ export default function OmnichannelGrowth() {
                       className="underline cursor-pointer text-inherit"
                       whileHover={{
                         scale: 1.08,
-                        color: "#1490ca",
+                        color: "#D4AF37",
                         textDecorationThickness: "3px",
                         textUnderlineOffset: 6,
                       }}
@@ -169,30 +169,30 @@ export default function OmnichannelGrowth() {
                       {channel.name}
                     </motion.a>
                   </h3>
-                  <p className="text-gray-700 mb-6">{channel.description}</p>
+                  <p className="text-white/80 mb-6">{channel.description}</p>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                     <div>
-                      <h4 className="font-semibold text-[#003135] mb-1">
+                      <h4 className="font-semibold text-[#D4AF37] mb-1">
                         Our Focus
                       </h4>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-white/80 leading-relaxed">
                         {channel.focus}
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#003135] mb-1">
+                      <h4 className="font-semibold text-[#D4AF37] mb-1">
                         Operations
                       </h4>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-white/80 leading-relaxed">
                         {channel.operations}
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#003135] mb-1">
+                      <h4 className="font-semibold text-[#D4AF37] mb-1">
                         Growth & Scale
                       </h4>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-white/80 leading-relaxed">
                         {channel.growth}
                       </p>
                     </div>

@@ -4,26 +4,22 @@ import { partners } from "./partners";
 
 const ChannelPartners = () => {
   return (
-    <section className="py-14 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-    <div className="w-full px-8 py-12  grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
-      
-      {/* Left Text */}
-      <div>
-        {/* <span className="block mb-3 text-xs md:text-sm text-indigo-500 font-medium">
-          Our Channel Partners
-        </span> */}
-        <h3 className="text-3xl md:text-5xl font-semibold">
-          Trusted by India’s Leading Distribution Brands
-        </h3>
-        <p className="text-base md:text-lg text-slate-600 mt-4 md:mt-6">
-          From e-commerce giants to premium retailers, we partner with
-          India’s most recognized platforms to deliver scale and reach.
-        </p>
-      </div>
+    <section className="py-14 bg-[#0b0b0b] text-white relative overflow-hidden">
+      <div className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
+        {/* Left Text */}
+        <div>
+          <h3 className="text-3xl md:text-5xl font-semibold text-[#D4AF37]">
+            Trusted by India’s Leading Distribution Brands
+          </h3>
+          <p className="text-base md:text-lg text-slate-300 mt-4 md:mt-6">
+            From e-commerce giants to premium retailers, we partner with India’s
+            most recognized platforms to deliver scale and reach.
+          </p>
+        </div>
 
-      {/* Right Shuffle Logos */}
-      <ShuffleGrid />
-    </div>
+        {/* Right Shuffle Logos */}
+        <ShuffleGrid />
+      </div>
     </section>
   );
 };
