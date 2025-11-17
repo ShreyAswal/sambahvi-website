@@ -133,17 +133,17 @@ export default function BusinessModel() {
   }, [active]);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#0b0b0b] text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 relative inline-block mx-auto lg:mx-0 text-center lg:text-left">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-8 relative inline-block mx-auto lg:mx-0 text-center lg:text-left">
           <span className="inline-block relative">
             Business
             {/* small-screen underline anchored to the word 'Business' */}
-            <span className="absolute left-6 -bottom-3 w-12 h-1 rounded-full bg-primary-primary transform -translate-x-1/2 lg:hidden" />
+            <span className="absolute left-6 -bottom-3 w-12 h-1 rounded-full bg-[#D4AF37] /> transform -translate-x-1/2 lg:hidden" />
           </span>{" "}
           Models We Drive
           {/* large-screen underline: left-aligned under the heading start */}
-          <span className="hidden lg:block absolute left-0 -bottom-3 w-16 h-1 rounded-full bg-primary-primary" />
+          <span className="hidden lg:block absolute left-0 -bottom-3 w-16 h-1 rounded-full bg-[#D4AF37]" />
         </h2>
 
         <BusinessContent

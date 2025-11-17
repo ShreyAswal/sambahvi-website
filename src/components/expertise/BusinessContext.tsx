@@ -31,10 +31,26 @@ export default function BusinessContent({
   setOpenAccordion,
   rightRef,
 }: Props) {
+  // brief highlight for nav items when programmatically changing selection
+  const highlightTimer = React.useRef<number | null>(null);
+  const [highlightId, setHighlightId] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    return () => {
+      if (highlightTimer.current) window.clearTimeout(highlightTimer.current);
+    };
+  }, []);
+
+  const triggerHighlight = (id: string) => {
+    setHighlightId(id);
+    if (highlightTimer.current) window.clearTimeout(highlightTimer.current);
+    highlightTimer.current = window.setTimeout(() => setHighlightId(null), 900);
+  };
+
   return (
     <div className="mt-8 ">
       {/* Desktop Split View */}
-      <div className="hidden md:grid md:grid-cols-12 gap-8 bg-[#f9fafb] p-6 rounded-2xl">
+      <div className="hidden md:grid md:grid-cols-12 gap-8 bg-[#0b0b0b] p-6 rounded-2xl">
         {/* Left: Sticky Navigation */}
         <aside className="md:col-span-4 lg:col-span-3">
           <nav className="sticky top-24 space-y-3">
@@ -43,37 +59,40 @@ export default function BusinessContent({
               return (
                 <motion.button
                   key={m.id}
-                  onClick={() => setActive(m.id)}
+                  onClick={() => {
+                    setActive(m.id);
+                    triggerHighlight(m.id);
+                  }}
                   custom={i}
                   initial="hidden"
                   animate="show"
                   variants={listItemVariants}
                   className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 flex items-start gap-3 ${
-                    isActive
-                      ? "bg-[rgba(37,99,235,0.06)] border border-primary-primary shadow-sm"
-                      : "hover:bg-gray-50"
+                    isActive || highlightId === m.id
+                      ? " border-[#D4AF37]/20 shadow-sm"
+                      : "hover:bg-[#111111]"
                   }`}
                 >
                   <div
                     className={`flex items-center justify-center rounded-lg p-2 ${
-                      isActive ? "bg-primary-primary/10" : "bg-white"
+                      isActive ? "bg-[#D4AF37]/10" : "bg-[#0f0f10]"
                     }`}
                   >
                     <m.Icon
                       className={`w-5 h-5 ${
-                        isActive ? "text-primary-primary" : "text-gray-500"
+                        isActive ? "text-[#D4AF37]" : "text-white/80"
                       }`}
                     />
                   </div>
                   <div className="flex-1">
                     <h4
-                      className={`font-semibold text-sm text-gray-900 ${
-                        isActive ? "text-primary-primary" : ""
+                      className={`font-semibold text-sm text-white ${
+                        isActive ? "text-[#D4AF37]" : ""
                       }`}
                     >
                       {m.title}
                     </h4>
-                    <p className="text-xs text-gray-600 mt-1">{m.short}</p>
+                    <p className="text-xs text-white/80 mt-1">{m.short}</p>
                   </div>
                 </motion.button>
               );
@@ -85,7 +104,7 @@ export default function BusinessContent({
         <div className="md:col-span-8 lg:col-span-9">
           <div
             ref={rightRef}
-            className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm min-h-[280px] overflow-hidden"
+            className="bg-[#0f0f10] rounded-2xl p-8 border border-transparent shadow-sm min-h-[280px] overflow-hidden"
           >
             <AnimatePresence mode="wait">
               {MODELS.map(
@@ -101,22 +120,22 @@ export default function BusinessContent({
                     >
                       <div className="flex flex-col md:flex-row gap-6">
                         <div className="md:w-1/2">
-                          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                          <h3 className="text-2xl font-bold text-[#D4AF37] mb-4">
                             {m.title}
                           </h3>
-                          <p className="text-gray-700 mb-4">{m.short}</p>
+                          <p className="text-white/80 mb-4">{m.short}</p>
 
                           <div className="space-y-3">
-                            <h5 className="text-sm font-semibold text-gray-800">
+                            <h5 className="text-sm font-semibold text-white">
                               How it works
                             </h5>
-                            <ul className="list-inside space-y-2 text-gray-600 text-sm">
+                            <ul className="list-inside space-y-2 text-white/80 text-sm">
                               {m.description.map((d, idx) => (
                                 <li
                                   key={idx}
                                   className="flex items-start gap-3"
                                 >
-                                  <span className="mt-[3px] text-primary-primary">
+                                  <span className="mt-[3px] text-[#D4AF37]">
                                     •
                                   </span>
                                   <span>{d}</span>
@@ -126,10 +145,10 @@ export default function BusinessContent({
                           </div>
 
                           <div className="mt-6">
-                            <h5 className="text-sm font-semibold text-gray-800">
+                            <h5 className="text-sm font-semibold text-white">
                               Ideal for
                             </h5>
-                            <p className="text-sm text-gray-600 mt-2">
+                            <p className="text-sm text-white/80 mt-2">
                               {m.idealFor}
                             </p>
                           </div>
@@ -141,15 +160,15 @@ export default function BusinessContent({
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="w-full bg-gray-50 border border-gray-100 rounded-xl p-6 shadow-sm overflow-y-hidden max-h-[420px]"
+                            className="w-full bg-[#0b0b0b] border border-transparent rounded-xl p-6 shadow-sm overflow-y-hidden max-h-[420px]"
                           >
-                            <h5 className="text-base font-semibold text-gray-800 mb-3">
+                            <h5 className="text-base font-semibold text-white mb-3">
                               <span className="inline-flex items-center gap-2">
-                                <m.Icon className="w-5 h-5 text-primary-primary" />
+                                <m.Icon className="w-5 h-5 text-[#D4AF37]" />
                                 Case Study
                               </span>
                             </h5>
-                            <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
+                            <p className="text-sm text-white/80 leading-relaxed whitespace-pre-line">
                               {m.caseStudy}
                             </p>
                           </motion.div>
@@ -160,7 +179,7 @@ export default function BusinessContent({
                       <div className="mt-6 flex items-center gap-4">
                         <a
                           href="/contact"
-                          className="inline-flex items-center gap-3 bg-primary-primary text-white px-5 py-2 rounded-full font-medium shadow-sm hover:brightness-95 transition"
+                          className="inline-flex items-center gap-3 bg-[#D4AF37] text-black px-5 py-2 rounded-full font-medium shadow-sm hover:bg-[#B8860B] transition"
                         >
                           Talk to our team
                         </a>
@@ -174,14 +193,16 @@ export default function BusinessContent({
                               top: 0,
                               behavior: "smooth",
                             });
+                            // highlight the newly activated nav item briefly
+                            triggerHighlight(MODELS[nextIdx].id);
                           }}
                           aria-label="Next model"
                           title="Next model"
-                          className="inline-flex items-center gap-2 text-sm font-medium text-primary-primary px-3 py-1.5 rounded-full border border-primary-primary/10 bg-white hover:bg-primary-primary/5 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-primary/20"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-[#D4AF37] px-3 py-1.5 rounded-full border border-[#D4AF37]/10 bg-[#0f0f10] hover:bg-[#0b0b0b]/80 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]/20"
                         >
                           <span>Next model</span>
                           <svg
-                            className="w-4 h-4 text-primary-primary"
+                            className="w-4 h-4 text-[#D4AF37]"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -209,7 +230,7 @@ export default function BusinessContent({
           return (
             <div
               key={m.id}
-              className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
+              className="bg-[#0f0f10] rounded-2xl border border-transparent shadow-sm overflow-hidden"
             >
               <button
                 onClick={() =>
@@ -218,17 +239,17 @@ export default function BusinessContent({
                 className="w-full flex items-center gap-3 p-4 text-left"
                 aria-expanded={isOpen}
               >
-                <div className="p-2 rounded-lg bg-white">
-                  <m.Icon className="w-6 h-6 text-[#1490ca]" />
+                <div className="p-2 rounded-lg bg-[#0b0b0b]">
+                  <m.Icon className="w-6 h-6 text-[#D4AF37]" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <h4 className="font-semibold text-gray-900">{m.title}</h4>
-                    <span className="text-xs text-gray-500">
+                    <h4 className="font-semibold text-white">{m.title}</h4>
+                    <span className="text-xs text-white/80">
                       {isOpen ? "Close" : "Open"}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-600 mt-1">{m.short}</p>
+                  <p className="text-xs text-white/80 mt-1">{m.short}</p>
                 </div>
               </button>
 
@@ -241,7 +262,7 @@ export default function BusinessContent({
                     transition={{ duration: 0.35 }}
                     className="px-4 pb-4"
                   >
-                    <div className="text-sm text-gray-700">
+                    <div className="text-sm text-white/80">
                       <h5 className="font-medium mt-2">How it works</h5>
                       <ul className="list-disc ml-5 mt-2 space-y-1">
                         {m.description.map((d, i) => (
@@ -250,7 +271,7 @@ export default function BusinessContent({
                       </ul>
                       <div className="mt-3">
                         <h5 className="font-medium">Ideal for</h5>
-                        <p className="text-sm text-gray-600 mt-1">
+                        <p className="text-sm text-white/80 mt-1">
                           {m.idealFor}
                         </p>
                       </div>
@@ -258,7 +279,7 @@ export default function BusinessContent({
                       <div className="mt-4">
                         <a
                           href="/contact"
-                          className="inline-block bg-primary-primary text-white px-4 py-2 rounded-full text-sm"
+                          className="inline-block bg-[#D4AF37] text-black px-4 py-2 rounded-full text-sm font-semibold"
                         >
                           Contact us
                         </a>
