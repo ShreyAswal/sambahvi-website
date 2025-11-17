@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function BrandShowcase() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-[#f9fafb] to-[#eef6fa] relative overflow-hidden">
+    <section className="py-20 bg-[#0b0b0b] text-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 lg:px-10 relative z-10">
         {categories.map((category, idx) => (
           <motion.div
@@ -15,10 +15,10 @@ export default function BrandShowcase() {
           >
             {/* Category Title */}
             <div className="flex flex-col items-center mb-10">
-              <h3 className="text-2xl font-semibold text-[#0e6b99]">
+              <h3 className="text-2xl font-semibold text-[#D4AF37]">
                 {category.title}
               </h3>
-              <div className="h-1 w-28 bg-gradient-to-r from-[#1490ca] via-[#27acea] to-[#4fb5e0] mt-2 rounded-full" />
+              <div className="h-1 w-28 bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#FFD966] mt-2 rounded-full opacity-90" />
             </div>
 
             {/* Brand Cards */}
@@ -38,18 +38,17 @@ export default function BrandShowcase() {
                     }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
-                    className={`bg-white rounded-2xl shadow-md hover:shadow-xl border border-[#e5e7eb] transition-all overflow-hidden group 
+                    className={`bg-[#0f0f10] rounded-2xl shadow-md hover:shadow-xl border border-transparent transition-all overflow-hidden group 
                      flex flex-col md:flex-row items-center`}
                   >
-                    <div className="relative w-full md:w-1/2 flex justify-center md:justify-center items-center bg-gradient-to-br from-white to-[#f5f9fc] p-10">
-                      {/* Subtle gradient overlay for hover */}
-                      {/* gradient overlay: visible by default on small screens, hover-controlled on md+ */}
-                      <div className="absolute inset-0 opacity-10 md:opacity-0 md:group-hover:opacity-10 bg-gradient-to-r from-[#1490ca] via-[#27acea] to-[#4fb5e0] transition-all duration-500" />
+                    <div className="relative w-full md:w-1/2 flex justify-center md:justify-center items-center bg-[#0b0b0b] p-10">
+                      {/* Subtle gold overlay for hover (kept behavior) */}
+                      <div className="absolute inset-0 opacity-0 md:group-hover:opacity-5 bg-gradient-to-r from-[#D4AF37]/6 via-[#B8860B]/6 to-[#FFD966]/6 transition-all duration-500" />
 
                       <motion.div
                         whileHover={{ scale: 1.05, rotate: 1 }}
                         transition={{ type: "spring", stiffness: 200 }}
-                        className="bg-white border border-[#e5e7eb] rounded-2xl p-5 shadow-sm flex items-center justify-center w-40 h-40 relative z-10"
+                        className="bg-white border border-transparent rounded-2xl p-5 shadow-sm flex items-center justify-center w-40 h-40 relative z-10"
                       >
                         <img
                           src={`/assets/brands/${brand.logo}`}
@@ -64,25 +63,23 @@ export default function BrandShowcase() {
                         href={brand.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-2xl font-semibold text-[#1490ca] hover:text-[#0e6b99] transition-colors"
+                        className="text-2xl font-semibold text-[#D4AF37] hover:text-[#FFD966] transition-colors"
                       >
                         {brand.name}
                       </a>
-                      <p className="text-gray-600 mt-3 leading-relaxed text-base md:text-lg">
+                      <p className="text-white/80 mt-3 leading-relaxed text-base md:text-lg">
                         {brand.description}
                       </p>
                       <a
                         href={brand.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mt-5 px-6 py-2 rounded-full text-[#024950] text-sm font-semibold
-             border border-[#024950] bg-transparent relative overflow-hidden
-             transition-all duration-300 group"
+                        className="inline-block mt-5 px-6 py-2 rounded-full text-[#D4AF37] text-sm font-semibold border border-[#D4AF37] bg-transparent relative overflow-hidden transition-all duration-300 group"
                       >
-                        <span className="relative z-10 text-white md:text-[#024950] md:group-hover:text-white transition-colors duration-300">
+                        <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
                           Visit Website
                         </span>
-                        <span className="absolute inset-0 bg-[#024950] scale-x-100 md:scale-x-0 md:group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                        <span className="absolute inset-0 bg-[#D4AF37] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
                       </a>
                     </div>
 
@@ -92,7 +89,7 @@ export default function BrandShowcase() {
                       animate={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6 }}
-                      className="bg-[#f9fafb] border-t border-[#e5e7eb] p-4 w-full"
+                      className="bg-transparent border-t border-transparent p-4 w-full"
                     >
                       {brand.images.length <= 1 ? (
                         <div className="flex justify-center">
@@ -177,8 +174,8 @@ export default function BrandShowcase() {
       </div>
 
       {/* Background accent blur */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-[#1490ca]/10 blur-3xl rounded-full" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#27acea]/10 blur-3xl rounded-full" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#D4AF37]/10 blur-3xl rounded-full" />
+      <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#B8860B]/10 blur-3xl rounded-full" />
     </section>
   );
 }
