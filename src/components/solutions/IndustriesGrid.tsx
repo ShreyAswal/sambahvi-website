@@ -107,7 +107,7 @@ export default function IndustriesWeServe() {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="relative py-24 bg-[#0b0b0b] px-6 md:px-12 lg:px-20 overflow-hidden text-white">
       <motion.div
         initial={{ opacity: 0, y: 1 }}
         animate={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export default function IndustriesWeServe() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-7xl mx-auto text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-[#024950] mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-16">
           Industries We Serve
         </h2>
 
@@ -134,21 +134,21 @@ export default function IndustriesWeServe() {
                   images: item.images,
                 })
               }
-              className="group relative bg-white border border-gray-200 hover:border-[#1490ca]/40 rounded-2xl p-10 shadow-[0_4px_20px_rgba(0,0,0,0.05)] cursor-pointer overflow-hidden transition-all duration-500"
+              className="group relative bg-[#0f0f10] border border-transparent hover:border-[#D4AF37]/20 rounded-2xl p:10 md:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.12)] cursor-pointer overflow-hidden transition-all duration-500"
             >
               <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 Featured
               </div>
 
               <div className="flex flex-col items-center text-center space-y-4">
-                <item.Icon className="w-14 h-14 text-[#024950]" />
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <item.Icon className="w-14 h-14 text-white" />
+                <h3 className="text-2xl font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 max-w-md">
+                <p className="text-white/80 max-w-md">
                   {item.description.slice(0, 120)}...
                 </p>
-                <button className="mt-4 bg-[#024950] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#00383E] transition-all duration-300">
+                <button className="mt-4 bg-[#D4AF37] text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-[#B8860B] transition-all duration-300">
                   Learn More
                 </button>
               </div>
@@ -163,29 +163,33 @@ export default function IndustriesWeServe() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
               className={
-                "group relative bg-white text-[#01292C] border border-[#E6F3F3] rounded-2xl shadow-sm overflow-hidden transition-all duration-500 w-full max-w-[320px]"
+                "group relative bg-[#0f0f10] text-white border border-transparent rounded-2xl shadow-sm overflow-hidden transition-all duration-500 w-full max-w-[320px]"
               }
             >
               {/* Mobile (always visible) layout */}
               <div className="flex flex-col items-center justify-center text-center p-8 h-auto md:hidden">
                 <div className="mb-4">
                   <div className="inline-flex items-center justify-center rounded-lg p-3 bg-white">
-                    <Icon className="w-12 h-12 text-[#024950]" />
+                    <Icon className="w-12 h-12 text-[#D4AF37]" />
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold mb-3">{title}</h3>
-                <p className="text-sm leading-relaxed">{description}</p>
+                <h3 className="text-lg font-semibold mb-3 text-white">
+                  {title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/80">
+                  {description}
+                </p>
               </div>
 
               {/* Desktop / Tablet Hover Layout */}
               <div className="hidden md:flex flex-col items-center justify-center text-center p-8 h-64 relative z-10">
                 <div className="mb-4 transition-transform duration-500 ease-out group-hover:-translate-y-10">
-                  <div className="inline-flex items-center justify-center rounded-lg p-3 bg-white transform transition-transform duration-300 scale-100 group-hover:scale-110 opacity-90 group-hover:opacity-100">
-                    <Icon className="w-12 h-12 text-[#024950]" />
+                  <div className="inline-flex items-center justify-center rounded-lg p-3 bg-black transform transition-transform duration-300 scale-100 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <Icon className="w-12 h-12 text-white" />
                   </div>
                 </div>
 
-                <h3 className="text-lg font-semibold text-[#01292C] transition-all duration-500 ease-out group-hover:-translate-y-10 opacity-100 group-hover:opacity-0">
+                <h3 className="text-lg font-semibold text-white transition-all duration-500 ease-out group-hover:-translate-y-10 opacity-100 group-hover:opacity-0">
                   {title}
                 </h3>
               </div>
@@ -195,7 +199,7 @@ export default function IndustriesWeServe() {
                 className="hidden md:block absolute left-0 right-0 bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-450 ease-in-out"
                 style={{ transitionDuration: "420ms" }}
               >
-                <div className="p-6 bg-gradient-to-b from-[#024950]/95 to-[#003135]/95 text-white rounded-b-2xl">
+                <div className="p-6 bg-gradient-to-b from-[#D4AF37]/95 to-transparent text-white rounded-b-2xl">
                   <p className="text-sm md:text-base leading-relaxed">
                     {description}
                   </p>
@@ -211,7 +215,7 @@ export default function IndustriesWeServe() {
                   <div
                     style={{
                       boxShadow:
-                        "0 12px 30px rgba(2,73,80,0.08), 0 6px 18px rgba(2,73,80,0.06), inset 0 1px 0 rgba(255,255,255,0.02)",
+                        "0 12px 30px rgba(212,175,55,0.08), 0 6px 18px rgba(212,175,55,0.06), inset 0 1px 0 rgba(255,255,255,0.02)",
                     }}
                     className="w-full h-full rounded-2xl"
                   />
