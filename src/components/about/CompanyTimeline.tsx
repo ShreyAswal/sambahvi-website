@@ -45,12 +45,10 @@ export default function CompanyTimeline() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-[#EEF3F4] to-[#F9FAFB]">
-      {/* Top gradient stripe to match the previous section's diagonal gradient and blend edges */}
-      <div className="absolute -top-12 left-0 w-full h-24 pointer-events-none bg-gradient-to-br from-[#F9FAFB] to-[#EEF3F4] opacity-95 blur-sm" />
+    <section className="relative py-20 bg-[#07122A] text-white">
       <div className="relative max-w-4xl mx-auto py-16 px-4 sm:px-6">
-        {/* Vertical line */}
-        <div className="absolute left-1/2 top-0 h-full w-1 bg-gray-200" />
+        {/* Vertical timeline line (subtle gold) */}
+        <div className="absolute left-1/2 top-0 h-full w-1 bg-[#D4AF37]/10" />
 
         {events.map((e, i) => (
           <motion.div
@@ -66,17 +64,17 @@ export default function CompanyTimeline() {
                 i % 2 !== 0 ? "invisible" : ""
               }`}
             >
-              <h3 className="text-xl font-semibold text-gray-800">{e.year}</h3>
-              <p className="text-lg text-primary-light">{e.title}</p>
-              <p className="text-gray-500">{e.description}</p>
+              <h3 className="text-xl font-semibold text-[#D4AF37]">{e.year}</h3>
+              <p className="text-lg text-white">{e.title}</p>
+              <p className="text-white/80">{e.description}</p>
             </div>
 
             {/* Timeline dot */}
             {/* small-screen centered dot */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 z-10 w-6 h-6 bg-[#1490ca] rounded-full border-4 border-white shadow-md lg:hidden" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 z-10 w-6 h-6 bg-[#D4AF37] rounded-full border-4 border-[#07122A] shadow-md lg:hidden" />
 
             {/* large-screen inline dot to preserve spacing between columns */}
-            <div className="relative z-10 w-6 h-6 bg-[#1490ca] rounded-full border-4 border-white shadow-md hidden lg:block mx-6" />
+            <div className="relative z-10 w-6 h-6 bg-[#D4AF37] rounded-full border-4 border-[#07122A] shadow-md hidden lg:block mx-6" />
 
             {/* Right side content */}
             <div
@@ -84,9 +82,9 @@ export default function CompanyTimeline() {
                 i % 2 === 0 ? "invisible" : ""
               }`}
             >
-              <h3 className="text-xl font-semibold text-gray-800">{e.year}</h3>
-              <p className="text-lg text-primary-light">{e.title}</p>
-              <p className="text-gray-500">{e.description}</p>
+              <h3 className="text-xl font-semibold text-[#D4AF37]">{e.year}</h3>
+              <p className="text-lg text-white">{e.title}</p>
+              <p className="text-white/80">{e.description}</p>
             </div>
           </motion.div>
         ))}

@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, ShieldCheck, Users2, Layers, Globe2 } from "lucide-react";
 
@@ -31,18 +32,10 @@ const values = [
 
 export default function OurValues() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Smooth background fade from previous section */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(to bottom, rgba(255,255,255,0) 0%, #F3FAFB 20%, #E9F6F8 100%)`,
-        }}
-      />
-
+    <section className="relative py-24 overflow-hidden bg-black text-white">
       <div className="relative max-w-6xl mx-auto px-6 lg:px-12">
         {/* Section Title */}
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-10">
+        <h2 className="text-4xl font-bold text-center text-[#D4AF37] mb-10">
           Our Values
         </h2>
 
@@ -52,7 +45,7 @@ export default function OurValues() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center mb-20"
+          className="text-lg text-white/80 leading-relaxed max-w-4xl mx-auto text-center mb-20"
         >
           We believe in operating in the Blue Ocean — creating new value spaces
           rather than competing in crowded ones. In today’s VUCA world — marked
@@ -83,13 +76,16 @@ export default function OurValues() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex flex-col items-center text-center space-y-3"
               >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0FA4AF]/10 mb-2">
-                  {value.icon}
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#D4AF37]/10 mb-2">
+                  {/* icon color will show as gold */}
+                  {React.cloneElement(value.icon, {
+                    className: "w-6 h-6 text-[#D4AF37]",
+                  })}
                 </div>
-                <h3 className="text-xl font-semibold text-[#024950]">
+                <h3 className="text-xl font-semibold text-white">
                   {value.title}
                 </h3>
-                <p className="text-gray-700 text-sm max-w-xs leading-relaxed">
+                <p className="text-white/80 text-sm max-w-xs leading-relaxed">
                   {value.text}
                 </p>
               </motion.div>
@@ -106,13 +102,15 @@ export default function OurValues() {
                 transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
                 className="flex flex-col items-center text-center space-y-3 w-full md:min-w-[260px]"
               >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0FA4AF]/10 mb-2">
-                  {value.icon}
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#D4AF37]/10 mb-2">
+                  {React.cloneElement(value.icon, {
+                    className: "w-6 h-6 text-[#D4AF37]",
+                  })}
                 </div>
-                <h3 className="text-xl font-semibold text-[#024950]">
+                <h3 className="text-xl font-semibold text-white">
                   {value.title}
                 </h3>
-                <p className="text-gray-700 text-sm max-w-xs leading-relaxed">
+                <p className="text-white/80 text-sm max-w-xs leading-relaxed">
                   {value.text}
                 </p>
               </motion.div>
@@ -126,11 +124,11 @@ export default function OurValues() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center text-lg md:text-xl font-medium text-[#003135] mt-20"
+          className="text-center text-lg md:text-xl font-medium text-white mt-20"
         >
           We don’t just compete — we create. We don’t just react — we reshape.
           <br />
-          <span className="text-[#0FA4AF] font-semibold">
+          <span className="text-[#D4AF37] font-semibold">
             Our journey is driven by a clear purpose:
           </span>{" "}
           to deliver sustainable growth and shared success in every partnership

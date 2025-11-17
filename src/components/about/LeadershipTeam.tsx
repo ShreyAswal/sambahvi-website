@@ -20,12 +20,12 @@ const leadershipTeam = [
 
 export default function LeadershipTeam() {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-[#F9FAFB] to-[#EEF3F4] overflow-hidden">
+    <section className="relative py-24 bg-[#000000] text-white overflow-hidden">
       {/* Decorative Gradient Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(2,73,80,0.08)_0%,_transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(212,175,55,0.06)_0%,_transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 z-10">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
+        <h2 className="text-4xl font-bold text-center text-[#D4AF37] mb-16">
           Leadership Team
         </h2>
 
@@ -37,7 +37,7 @@ export default function LeadershipTeam() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+              className="bg-[#0f0f10] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group border border-transparent hover:border-[#D4AF37]/20"
             >
               <div className="flex flex-col md:flex-row items-center md:items-start">
                 {/* Image */}
@@ -45,16 +45,16 @@ export default function LeadershipTeam() {
                   <img
                     src={`/assets/leadership/${member.image}`}
                     alt={member.name}
-                    className="w-36 h-36 md:w-40 md:h-40 object-cover rounded-full shadow-md border-4 border-white group-hover:scale-105 transition-transform duration-300"
+                    className="w-36 h-36 md:w-40 md:h-40 object-cover rounded-full shadow-md border-2 border-[#0b0b0b] group-hover:scale-105 group-hover:border-[#D4AF37]/20 group-hover:ring-1 group-hover:ring-[#D4AF37]/10 transition-transform transition-colors duration-300"
                   />
                 </div>
 
                 {/* Text Content */}
                 <div className="md:w-2/3 w-full p-6 md:pl-0 text-center md:text-left">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-semibold text-[#D4AF37] mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-[#024950] font-medium mb-3">
+                  <p className="text-white/70 font-medium mb-3">
                     {member.title ? (
                       member.title
                     ) : (
@@ -62,14 +62,14 @@ export default function LeadershipTeam() {
                       <span className="invisible">Placeholder</span>
                     )}
                   </p>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                  <p className="text-white/80 text-sm leading-relaxed mb-4">
                     {member.bio}
                   </p>
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#024950] font-medium hover:underline hover:text-[#036A72] transition-colors"
+                    className="inline-flex items-center gap-2 text-[#D4AF37] font-medium hover:underline hover:text-[#FFD966] transition-colors"
                   >
                     <Linkedin className="w-5 h-5" />
                     LinkedIn

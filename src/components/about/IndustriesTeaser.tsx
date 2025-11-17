@@ -13,35 +13,51 @@ import {
 export default function IndustriesTeaser() {
   const industries = [
     {
-      icon: <ShoppingBag className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <ShoppingBag className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "E-Commerce & Online Retailers",
     },
     {
-      icon: <Plane className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <Plane className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "Travel & Hospitality",
     },
     {
-      icon: <Gift className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <Gift className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "Corporate & Gifting Solutions",
     },
     {
-      icon: <HeartPulse className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <HeartPulse className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "Health & Wellness",
     },
     {
-      icon: <Shirt className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <Shirt className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "Fashion & Lifestyle Retail",
     },
     {
-      icon: <Cpu className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <Cpu className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "Technology & Consumer Electronics",
     },
     {
-      icon: <Building2 className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <Building2 className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "Co-Working Spaces",
     },
     {
-      icon: <Package className="w-10 h-10 text-[#0FA4AF]" />,
+      icon: (
+        <Package className="w-10 h-10 text-white group-hover:text-[#D4AF37] transition-colors duration-200" />
+      ),
       name: "Distribution & Logistics Partners",
     },
   ];
@@ -69,14 +85,14 @@ export default function IndustriesTeaser() {
   }, [paused, scrollPos]);
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-[#024950]/10 to-white">
+    <section className="relative py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#003135] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-4">
             Industries We Serve
           </h2>
-          <p className="text-[#024950] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/80 max-w-2xl mx-auto leading-relaxed">
             We empower businesses across diverse sectors by providing premium
             products that combine style, functionality, and innovation — helping
             partners grow and enhance customer experiences.
@@ -98,15 +114,15 @@ export default function IndustriesTeaser() {
           flex-shrink-0
           w-32 xs:w-36 sm:w-44 md:w-52 lg:w-60
           p-4 sm:p-6 md:p-8
-          bg-white/90 rounded-xl sm:rounded-2xl
-          shadow-md border border-[#AFDDE5]/60 text-center
-          group transition-all duration-200 hover:bg-[#AFDDE5]
+          bg-[#0b0b0b] rounded-xl sm:rounded-2xl
+          shadow-md border border-transparent text-center
+          group transition-all duration-200 hover:border-[#D4AF37]/30 hover:shadow-[0_10px_30px_rgba(212,175,55,0.06)]
         "
               >
                 <div className="flex justify-center mb-3 sm:mb-4 text-xl sm:text-2xl">
                   {industry.icon}
                 </div>
-                <h3 className="mt-1 sm:mt-2 font-semibold text-[#003135] text-sm sm:text-base">
+                <h3 className="mt-1 sm:mt-2 font-semibold text-white text-sm sm:text-base">
                   {industry.name}
                 </h3>
               </div>
@@ -114,18 +130,10 @@ export default function IndustriesTeaser() {
           </div>
         </div>
 
-        {/* Approach Section with top fade */}
+        {/* Approach Section */}
         <div className="relative text-center mt-16 max-w-3xl mx-auto">
-          {/* Top fade gradient */}
-          <div
-            className="absolute top-0 left-0 w-full h-8 pointer-events-none z-10"
-            style={{
-              background:
-                "linear-gradient(to bottom, #F3FAFB 0%, rgba(243,250,251,0) 100%)",
-            }}
-          />
-          <p className="relative text-[#024950] text-lg leading-relaxed z-20">
-            <span className="font-semibold text-[#0FA4AF]">Our Approach:</span>{" "}
+          <p className="relative text-white/80 text-lg leading-relaxed z-20">
+            <span className="font-semibold text-[#D4AF37]">Our Approach:</span>{" "}
             We bridge innovation, functionality, and style — helping our
             partners scale their business while delivering exceptional value to
             their customers.
@@ -134,8 +142,8 @@ export default function IndustriesTeaser() {
           <a
             href="/industries"
             className="inline-block mt-10 px-8 py-3 rounded-lg font-semibold
-             text-white bg-primary-primary
-             hover:bg-primary-light hover:text-gray-900
+             text-black bg-[#D4AF37]
+             hover:bg-[#B8860B] hover:text-white
              transition-all duration-300 shadow-md hover:shadow-lg"
           >
             Explore All Industries
