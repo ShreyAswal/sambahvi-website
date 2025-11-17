@@ -38,7 +38,7 @@ export default function ContactUs() {
   }, []);
 
   return (
-    <section className="bg-gradient-to-b from-white to-blue-50 py-20 px-6">
+    <section className="bg-[#0b0b0b] py-20 px-6 text-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Left Side — Logo + Text */}
         <motion.div
@@ -52,10 +52,8 @@ export default function ContactUs() {
             alt="SAPL Logo"
             className="w-28 mx-auto md:mx-0 mb-2 drop-shadow-sm"
           />
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Get in Touch
-          </h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto md:mx-0">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37]">Get in Touch</h2>
+          <p className="text-white/80 text-lg leading-relaxed max-w-md mx-auto md:mx-0">
             We'd love to hear from you. Reach out for partnerships,
             collaborations, or any business inquiries — our team will respond
             within 24 hours.
@@ -69,7 +67,7 @@ export default function ContactUs() {
           transition={{ duration: 0.6 }}
           className="flex-1 w-full max-w-md"
         >
-          <div className="relative bg-white/80 backdrop-blur-md border border-gray-100 shadow-lg rounded-2xl p-8 space-y-6">
+          <div className="relative bg-[#0f0f10] border border-transparent shadow-lg rounded-2xl p-8 space-y-6">
             {/* Copy notification */}
             {copied && (
               <div
@@ -87,14 +85,14 @@ export default function ContactUs() {
             {/* Email */}
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-4 min-w-0 flex-shrink">
-                <div className="p-3 rounded-full bg-primary-primary/10 flex-shrink-0">
-                  <Mail className="w-5 h-5 text-primary-primary" />
+                <div className="p-3 rounded-full bg-[#D4AF37]/8 flex-shrink-0">
+                  <Mail className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-gray-700 font-medium">Email</p>
+                  <p className="text-white font-medium">Email</p>
                   <a
                     href="mailto:ebusiness@saplonline.com"
-                    className="text-primary-primary font-semibold hover:underline break-all"
+                    className="text-[#D4AF37] font-semibold hover:underline break-all"
                     onClick={(e) => {
                       if (
                         typeof window !== "undefined" &&
@@ -112,13 +110,13 @@ export default function ContactUs() {
               </div>
               <button
                 onClick={() => handleCopy("ebusiness@saplonline.com", "email")}
-                className="hidden sm:inline-flex p-2 hover:bg-gray-100 rounded-lg transition flex-shrink-0"
+                className="hidden sm:inline-flex p-2 hover:bg-white/5 rounded-lg transition flex-shrink-0"
                 aria-label="Copy email"
               >
                 {copied === "email" ? (
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
                 ) : (
-                  <Copy className="w-5 h-5 text-gray-500" />
+                  <Copy className="w-5 h-5 text-white/80" />
                 )}
               </button>
             </div>
@@ -126,14 +124,14 @@ export default function ContactUs() {
             {/* Phone */}
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-4 min-w-0 flex-shrink">
-                <div className="p-3 rounded-full bg-primary-primary/10 flex-shrink-0">
-                  <Phone className="w-5 h-5 text-primary-primary" />
+                <div className="p-3 rounded-full bg-[#D4AF37]/8 flex-shrink-0">
+                  <Phone className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-gray-700 font-medium">Phone</p>
+                  <p className="text-white font-medium">Phone</p>
                   <a
                     href="tel:9035908886"
-                    className="text-primary-primary font-semibold hover:underline"
+                    className="text-[#D4AF37] font-semibold hover:underline"
                     onClick={(e) => {
                       if (
                         typeof window !== "undefined" &&
@@ -151,13 +149,13 @@ export default function ContactUs() {
               </div>
               <button
                 onClick={() => handleCopy("9035908886", "phone")}
-                className="hidden sm:inline-flex p-2 hover:bg-gray-100 rounded-lg transition flex-shrink-0"
+                className="hidden sm:inline-flex p-2 hover:bg-white/5 rounded-lg transition flex-shrink-0"
                 aria-label="Copy phone"
               >
                 {copied === "phone" ? (
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
                 ) : (
-                  <Copy className="w-5 h-5 text-gray-500" />
+                  <Copy className="w-5 h-5 text-white/80" />
                 )}
               </button>
             </div>
