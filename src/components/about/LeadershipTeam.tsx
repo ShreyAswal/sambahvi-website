@@ -12,7 +12,7 @@ const leadershipTeam = [
   {
     name: "Ankita Jain",
     title: "Co Founder",
-    bio: "Experienced professional with strong background in infrastructure, legal affairs, and operations. Known for leadership in regulatory and project-driven environments across Gujarat.",
+    bio: "Experienced professional with strong background in administration, legal affairs, and operations. Known for leadership in regulatory and project-driven environments across Gujarat.",
     image: "Ankita.jpg",
     linkedin: "http://linkedin.com/in/ankita-jain-268b4b59",
   },
