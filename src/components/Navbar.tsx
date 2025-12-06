@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center z-50">
             <img
-              src="../../assets/websiteLogo/sambhavilogo.png"
+              src="../../assets/websiteLogo/finalSambhaviLogo.png"
               alt="Sambhavi Logo"
               className="h-12 md:h-20 w-auto"
             />

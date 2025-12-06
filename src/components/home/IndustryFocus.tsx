@@ -81,7 +81,9 @@ export default function IndustryFocus() {
       {/* <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#FFD966]" /> */}
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-12">Industry Focus</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-12">
+          Industry Focus
+        </h2>
 
         {/* Highlighted Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
@@ -108,15 +110,19 @@ export default function IndustryFocus() {
                 })
               }
             >
-              {/* subtle featured tag preserved, now gold */}
+              {/* subtle featured tag preserved, now gold
               <div className="absolute top-3 left-3 bg-[#D4AF37] text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 Featured
-              </div>
+              </div> */}
 
               <div className="flex flex-col items-center">
                 {item.icon}
-                <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-white/80 text-sm transition duration-300 md:transform md:translate-y-0">{item.description}</p>
+                <h3 className="mt-4 text-xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-white/80 text-sm transition duration-300 md:transform md:translate-y-0">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
@@ -131,7 +137,9 @@ export default function IndustryFocus() {
             >
               <div className="flex flex-col items-center">
                 {item.icon}
-                <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
+                <h3 className="mt-4 text-xl font-semibold text-white">
+                  {item.title}
+                </h3>
                 <p className="mt-2 text-white/80 text-sm">{item.description}</p>
               </div>
             </div>
