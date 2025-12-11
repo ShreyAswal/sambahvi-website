@@ -1,5 +1,4 @@
-// ...existing code...
-// import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const brands = [
   { name: "Police", logo: "Police-logo.png" },
@@ -18,77 +17,87 @@ const brands = [
 ];
 
 export default function BrandLogosGrid() {
-  // adjust duration (s) for speed: larger = slower
-  const duration = 22;
+  // pixels per animation frame (adjust for speed)
+  const speed = 0.8; // increase for faster scroll (match partners)
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const posRef = useRef(0);
+  const pausedRef = useRef(false);
+  const [paused, setPaused] = useState(false);
+
+  // number of full cycles to scroll before wrapping
+  const cycles = 5; // go through logos five times
+  const groups = cycles + 1; // duplicate groups so there's always content
+  const repeated = Array.from({ length: groups }).flatMap(() => brands);
+
+  useEffect(() => {
+    pausedRef.current = paused;
+  }, [paused]);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    // Ensure the inner width is at least groups*visible area so duplication works
+    let raf = 0;
+
+    const animate = () => {
+      if (!pausedRef.current && el) {
+        const groupWidth = el.scrollWidth / groups;
+        const resetThreshold = groupWidth * cycles; // wrap after 'cycles' groups
+        let next = posRef.current + speed;
+        if (next >= resetThreshold) next = next - resetThreshold;
+        posRef.current = next;
+        el.scrollLeft = next;
+      }
+      raf = requestAnimationFrame(animate);
+    };
+
+    // initialize to avoid a visible jump on first paint
+    posRef.current = 0;
+    el.scrollLeft = 0;
+    raf = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="py-8">
-      <div className="max-w-7xl mx-auto  px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* marquee wrapper */}
-        <div className="overflow-hidden py-4">
-          <div
-            className="brand-marquee-track flex items-center"
-            style={{
-              // CSS defined below relies on CSS variables
-              ["--marquee-duration" as any]: `${duration}s`,
-            }}
-          >
-            {/* two groups duplicated for seamless loop */}
-            {[0, 1].map((rep) => (
+        <div
+          className="overflow-x-auto overflow-y-hidden py-4"
+          ref={containerRef}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          // hide native scrollbars
+          style={{ scrollbarWidth: "none" as any }}
+        >
+          <div className="flex items-center gap-8 w-max">
+            {repeated.map((brand, idx) => (
               <div
-                key={rep}
-                className="brand-marquee-group flex items-center gap-8 flex-shrink-0"
-                aria-hidden={rep === 1}
+                key={idx}
+                className="flex items-center justify-center bg-white rounded-xl p-3 shadow-sm border border-[#FFD966]/30 transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{ minWidth: 140 }}
+                aria-hidden={idx >= brands.length}
               >
-                {brands.map((brand, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-center bg-white rounded-xl p-3 shadow-sm border border-[#FFD966]/30 transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{ minWidth: 140 }}
-                  >
-                    <img
-                      src={`/assets/brands/${brand.logo}`}
-                      alt={brand.name}
-                      className="h-14 w-auto object-contain"
-                    />
-                  </div>
-                ))}
+                <img
+                  src={`/assets/brands/${brand.logo}`}
+                  alt={brand.name}
+                  className="h-14 w-auto object-contain"
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* local styles for marquee */}
+      {/* small CSS to hide scrollbar on WebKit */}
       <style>{`
-        .brand-marquee-track {
-          display: flex;
-          gap: 2rem;
-          align-items: center;
-          /* total width is groups side-by-side; translate by 50% (one group) */
-          animation: marquee var(--marquee-duration) linear infinite;
-        }
-
-        .brand-marquee-group {
-          display: flex;
-          gap: 2rem;
-          align-items: center;
-        }
-
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
-        /* Pause on hover */
-        .brand-marquee-track:hover {
-          animation-play-state: paused;
-        }
-
-        /* Make sure duplicated group occupies equal width */
-        .brand-marquee-group { flex: 0 0 auto; }
+        /* hide scrollbar for webkit browsers */
+        .brand-marquee-track::-webkit-scrollbar { display: none; }
+        .overflow-x-auto { -ms-overflow-style: none; }
       `}</style>
     </section>
   );
 }
-// ...existing code...
