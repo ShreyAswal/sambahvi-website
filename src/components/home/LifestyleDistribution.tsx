@@ -35,7 +35,7 @@ export default function LifestyleDistribution() {
       {/* Supporting Paragraph Section - BELOW video */}
 
       <section className="relative py-20 bg-black text-white overflow-hidden">
-       {/* soft gold glows */}
+        {/* soft gold glows */}
         <div className="absolute -left-24 top-16 w-72 h-72 bg-[#D4AF37]/8 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -right-24 bottom-10 w-72 h-72 bg-[#B8860B]/8 rounded-full blur-3xl pointer-events-none" />
 
@@ -95,9 +95,10 @@ export default function LifestyleDistribution() {
                 authorized and exclusive e-commerce distributor
               </span>{" "}
               for a distinguished portfolio of global brands including
-              Victorinox, Wenger, and Police, alongside other leading names
-              across lifestyle, fashion, audio, wellness, imaging, eyewear, and
-              tech accessories.
+              Victorinox, Wenger, Police, Aecooly, Doughnut, Edifier, Fancode,
+              Flipkart, Kodak, Shokz, Tifosi, Tomtoc, Ugreen, alongside other
+              leading names across lifestyle, fashion, audio, wellness, imaging,
+              eyewear, and tech accessories.
             </motion.p>
 
             <motion.p

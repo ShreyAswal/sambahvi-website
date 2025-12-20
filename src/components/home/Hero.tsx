@@ -5,7 +5,7 @@ export default function Hero() {
         {/* Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
-          src="../../../assets/homePageVideo/HeroPageVid2.mp4"
+          src="../../../assets/homePageVideo/heroPageVidFinal.mp4"
           autoPlay
           loop
           muted
@@ -18,13 +18,13 @@ export default function Hero() {
         <div className="relative z-20 max-w-3xl text-left mt-20 mb-5">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-8">
-            Exclusive/Distributor For World-Renowned Lifestyle And Tech Brands
+            Distributor For World-Renowned Lifestyle And Tech Brands
           </h1>
 
           {/* Italic Line */}
           <p className="text-md md:text-lg italic text-gray-200 mb-4">
             With a 10,000 sq. ft. Warehouse - located in heart of Tech City
-            Bangalore ( JP Nagar) set to commence operations shortly,
+            Bangalore ( JP Nagar )
           </p>
 
           {/* CTA Buttons */}

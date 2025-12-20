@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import showroom from "../../../public/assets/finalAlllPagesImages/expertise-elegant-corporate-showroom.png";
 
 const expertise = [
   "Business Transformation & Market Entry Strategy",
@@ -43,65 +44,89 @@ export default function CoreExpertise() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-12 relative inline-block mx-auto lg:mx-0 text-center lg:text-left">
-          <span className="inline-block relative">
-            Core
-            <span className="absolute left-6 -bottom-2 w-10 h-1 bg-[#D4AF37] rounded-full transform -translate-x-1/2 lg:hidden" />
-          </span>{" "}
-          Capabilities
-          <span className="hidden lg:block absolute left-0 -bottom-2 w-10 h-1 bg-[#D4AF37] rounded-full" />
-        </h2>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left: Heading + Expertise Grid */}
+          <div className="text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-6 relative inline-block">
+              <span className="inline-block relative">
+                Core
+                <span className="absolute left-6 -bottom-2 w-10 h-1 bg-[#D4AF37] rounded-full transform -translate-x-1/2 lg:hidden" />
+              </span>{" "}
+              Capabilities
+              <span className="hidden lg:block absolute left-0 -bottom-2 w-10 h-1 bg-[#D4AF37] rounded-full" />
+            </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {expertise.map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-[#0f0f10] rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 flex items-start gap-3 border border-transparent hover:border-[#D4AF37]/20"
-            >
-              <motion.span
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.3 + idx * 0.1 }}
-                className="font-bold text-xl"
-              >
-                {/* Gold Tick SVG */}
-                <motion.svg
-                  initial={{ scale: 0.9 }}
-                  animate={{ scale: [0.9, 1.05, 0.9] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 2,
-                    ease: "easeInOut",
-                  }}
-                  width="28"
-                  height="28"
-                  viewBox="0 0 20 20"
-                  fill="none"
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {expertise.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: idx * 0.08 }}
+                  className="bg-[#0f0f10] rounded-2xl p-5 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 flex items-start gap-4 border border-transparent hover:border-[#D4AF37]/20"
                 >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="10"
-                    fill="#D4AF37"
-                    fillOpacity="0.12"
-                  />
-                  <path
-                    d="M6 10.5l2.5 2.5 5-5"
-                    stroke="#D4AF37"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </motion.svg>
-              </motion.span>
-              <p className="text-white/80 font-medium">{item}</p>
-            </motion.div>
-          ))}
+                  <motion.span
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.15 + idx * 0.06 }}
+                    className="font-bold text-xl"
+                  >
+                    <motion.svg
+                      initial={{ scale: 0.9 }}
+                      animate={{ scale: [0.9, 1.05, 0.9] }}
+                      transition={{
+                        repeat: Infinity,
+                        duration: 2,
+                        ease: "easeInOut",
+                      }}
+                      width="28"
+                      height="28"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="10"
+                        fill="#D4AF37"
+                        fillOpacity="0.12"
+                      />
+                      <path
+                        d="M6 10.5l2.5 2.5 5-5"
+                        stroke="#D4AF37"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </motion.svg>
+                  </motion.span>
+                  <p className="text-white/80 font-medium">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Showroom image card (visible lg+) */}
+          <div className="mt-8 lg:mt-28 flex justify-center lg:justify-end">
+            <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-xl bg-gradient-to-b from-[#0b0b0b] to-transparent">
+              <img
+                src={showroom}
+                alt="Showroom"
+                className="w-full h-64 sm:h-80 object-cover"
+              />
+              <div className="p-6 bg-gradient-to-t from-black/50 to-transparent text-white">
+                <h3 className="text-lg font-semibold">
+                  Experience Our Showroom
+                </h3>
+                <p className="text-sm text-white/80 mt-2">
+                  Visit our curated space to explore products, displays, and
+                  retail-ready setups tailored for market impact.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
